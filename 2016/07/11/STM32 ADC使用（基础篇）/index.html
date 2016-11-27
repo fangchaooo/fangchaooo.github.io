@@ -1,0 +1,726 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="stm32,ADC," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="求索之路" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="STM32上集成的ADC（Analog to Digital Convert）外设很强大。在以前用89C51时，还需要芯片来处理AD/DA,而现在用stm32显然方便很多。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="STM32 ADC使用（基础篇）">
+<meta property="og:url" content="http://yoursite.com/2016/07/11/STM32 ADC使用（基础篇）/index.html">
+<meta property="og:site_name" content="求索之路">
+<meta property="og:description" content="STM32上集成的ADC（Analog to Digital Convert）外设很强大。在以前用89C51时，还需要芯片来处理AD/DA,而现在用stm32显然方便很多。">
+<meta property="og:updated_time" content="2016-08-18T00:39:40.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="STM32 ADC使用（基础篇）">
+<meta name="twitter:description" content="STM32上集成的ADC（Analog to Digital Convert）外设很强大。在以前用89C51时，还需要芯片来处理AD/DA,而现在用stm32显然方便很多。">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6289412446020961000,
+      author: '不痛不痒'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/07/11/STM32 ADC使用（基础篇）/"/>
+
+  <title> STM32 ADC使用（基础篇） | 求索之路 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">求索之路</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                STM32 ADC使用（基础篇）
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-11T17:39:14+08:00" content="2016-07-11">
+              2016-07-11
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/ARM学习/" itemprop="url" rel="index">
+                    <span itemprop="name">ARM学习</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/11/STM32 ADC使用（基础篇）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/11/STM32 ADC使用（基础篇）/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>STM32上集成的ADC（Analog to Digital Convert）外设很强大。在以前用89C51时，还需要芯片来处理AD/DA,而现在用stm32显然方便很多。<br><a id="more"></a></p>
+<p>STM32（F10x系列）有3个12位的ADC，每个ADC有12个通道。各个通道的A/D转换可以单次也可以多次，连续，扫描，间断执行。ADC的结果可以左对齐或者右对齐的方式进行存储在16位的数据寄存器中。模拟看门狗允许应用程序检测电压是否超出规定阈值。</p>
+<p>ADC基本配置可以参考《STM32库开发实战指南》,至于在ADC转换的过程中使用注入、中断、看门狗等在进阶篇再介绍，在此只详细记录三种AD转换。</p>
+<blockquote>
+<ol>
+<li>ADC单通道转换。</li>
+<li>ADC单通道转换（DMA方式）。</li>
+<li>ADC多通道转换（DMA方式）。</li>
+</ol>
+</blockquote>
+<h2 id="ADC单通道转换"><a href="#ADC单通道转换" class="headerlink" title="ADC单通道转换"></a>ADC单通道转换</h2><h4 id="直接贴代码叙述"><a href="#直接贴代码叙述" class="headerlink" title="直接贴代码叙述"></a>直接贴代码叙述</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span>  <span class="title">Adc_Init</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">    &#123;   </div><div class="line">        ADC_InitTypeDef ADC_InitStructure;</div><div class="line">        GPIO_InitTypeDef GPIO_InitStructure;</div><div class="line"></div><div class="line">        RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA |RCC_APB2Periph_ADC1, ENABLE );  </div><div class="line">        <span class="comment">//使能ADC1通道时钟，并使能接受ADC转换的GPIO</span></div><div class="line">        RCC_ADCCLKConfig(RCC_PCLK2_Div6);   </div><div class="line">        <span class="comment">//设置ADC分频因子6 72M/6=12,ADC最大时间不能超过14M，（可设置的分频系数为2、4、6、8）</span></div><div class="line"></div><div class="line">         <span class="comment">//PA1 作为模拟通道输入引脚                         </span></div><div class="line">        GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1;</div><div class="line">        GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AIN;                   <span class="comment">//模拟输入引脚</span></div><div class="line">        GPIO_Init(GPIOA, &amp;GPIO_InitStructure);  </div><div class="line"></div><div class="line">        ADC_DeInit(ADC1);  <span class="comment">//复位ADC1</span></div><div class="line">        ADC_InitStructure.ADC_Mode = ADC_Mode_Independent;  <span class="comment">//ADC工作模式:STM32有多种工作模式，而不同的ADC又是共用通道，当两个ADC采集同一个通道的先后顺序和时间间隔不同，就有不同的方式。具体的各个方式可在手册中查询。</span></div><div class="line">        ADC_InitStructure.ADC_ScanConvMode = DISABLE;   <span class="comment">//模数转换工作在单通道模式。当多通道需要ADC采集时，可把ADC配置为按一定顺序对各个通道进行扫描转换，即进行轮流采集各通道的值。若采集多个通道，则必须开启此模式。</span></div><div class="line">        ADC_InitStructure.ADC_ContinuousConvMode = DISABLE; <span class="comment">//模数转换工作在单次转换模式。可设置为连续和单次。</span></div><div class="line">        ADC_InitStructure.ADC_ExternalTrigConv = ADC_ExternalTrigConv_None; <span class="comment">//转换由软件而不是外部触发启动</span></div><div class="line">        ADC_InitStructure.ADC_DataAlign = ADC_DataAlign_Right;  <span class="comment">//ADC数据右对齐（ADC的转换精度为12位，而ADC的数据存储器-ADC_DR为16位，所以就有了左对齐和右对齐）</span></div><div class="line">        ADC_InitStructure.ADC_NbrOfChannel = <span class="number">1</span>; <span class="comment">//顺序进行规则转换的ADC通道的数目（1-16)</span></div><div class="line">        ADC_Init(ADC1, &amp;ADC_InitStructure); <span class="comment">//根据ADC_InitStruct中指定的参数初始化外设ADCx的寄存器   </span></div><div class="line"></div><div class="line"></div><div class="line">        ADC_Cmd(ADC1, ENABLE);  <span class="comment">//使能指定的ADC1</span></div><div class="line">        ADC_ResetCalibration(ADC1); <span class="comment">//使能复位校准  </span></div><div class="line">        <span class="keyword">while</span>(ADC_GetResetCalibrationStatus(ADC1)); <span class="comment">//等待复位校准结束</span></div><div class="line">        ADC_StartCalibration(ADC1);  <span class="comment">//开启AD校准</span></div><div class="line">        <span class="keyword">while</span>(ADC_GetCalibrationStatus(ADC1));   <span class="comment">//等待校准结束</span></div><div class="line">    <span class="comment">//  ADC_SoftwareStartConvCmd(ADC1, ENABLE);     //使能指定的ADC1的软件转换启动功能</span></div><div class="line">     &#125;</div><div class="line"></div><div class="line"></div><div class="line">    <span class="comment">//获得ADC值</span></div><div class="line">    <span class="comment">//ch:通道值 0~3 ADC_Channel_0(0-17)</span></div><div class="line">    <span class="function">u16 <span class="title">Get_Adc</span><span class="params">(u8 ch)</span>   </span></div><div class="line">    &#123;</div><div class="line">        <span class="comment">//设置指定ADC的规则组通道，一个序列，采样时间</span></div><div class="line">        ADC_RegularChannelConfig(ADC1, ch, <span class="number">1</span>, ADC_SampleTime_239Cycles5 );  <span class="comment">//ADC1,ADC通道,采样时间为239.5周期（T=采样周期+12.5个周期）</span></div><div class="line">        ADC_SoftwareStartConvCmd(ADC1, ENABLE);     <span class="comment">//使能指定的ADC1的软件转换启动功能    </span></div><div class="line">        <span class="keyword">while</span>(!ADC_GetFlagStatus(ADC1, ADC_FLAG_EOC ));<span class="comment">//等待转换结束</span></div><div class="line"></div><div class="line">        <span class="keyword">return</span> ADC_GetConversionValue(ADC1);    <span class="comment">//返回最近一次ADC1规则组的转换结果</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function">u16 <span class="title">Get_Adc_Average</span><span class="params">(u8 ch,u8 times)</span></span></div><div class="line">    &#123;</div><div class="line">        u32 temp_val=<span class="number">0</span>;</div><div class="line">        u8 t;</div><div class="line">        <span class="keyword">for</span>(t=<span class="number">0</span>;t&lt;times;t++)</div><div class="line">        &#123;</div><div class="line">            temp_val+=Get_Adc(ch);</div><div class="line">            delay_ms(<span class="number">5</span>);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> temp_val/times;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>在<code>main</code>函数中只要调用<code>adcx=Get_Adc_Average(ADC_Channel_1,10);</code>之类的就可以读取转换的值。</p>
+<h2 id="ADC单通道转换-DMA方式"><a href="#ADC单通道转换-DMA方式" class="headerlink" title="ADC单通道转换(DMA方式)"></a>ADC单通道转换(DMA方式)</h2><h4 id="为什么要用DMA方式"><a href="#为什么要用DMA方式" class="headerlink" title="为什么要用DMA方式"></a>为什么要用DMA方式</h4><p>在上述的ADC转换中，CPU要处理由ADC外设采集回来的数据时，CPU首先要把数据从ADC外设的寄存器读取到CPU内存中，然后进行运算。但是用CPU来转换数据是有些<strong>杀鸡用牛刀</strong>，用DMA方式可以大大减轻CPU工作，从而提高运算效率。</p>
+<h4 id="贴代码"><a href="#贴代码" class="headerlink" title="贴代码"></a>贴代码</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> ADC1_DR_Address    ((u32)0x40012400+0x4c)<span class="comment">//DMA传输的外设地址ADC1_DR_Address是一个自定义的宏ADC_DR保存了ADC转换的值，以它作为DMA传输的源地址。</span></span></div><div class="line"></div><div class="line">__IO <span class="keyword">uint16_t</span> ADC_ConvertedValue;<span class="comment">//在传输地址中定义一个基地址</span></div><div class="line"><span class="comment">//__IO u16 ADC_ConvertedValueLocal;</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">ADC1_GPIO_Config</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">&#123;</div><div class="line">    GPIO_InitTypeDef GPIO_InitStructure;</div><div class="line"></div><div class="line">    <span class="comment">/* 使能DMA时钟 */</span></div><div class="line">    RCC_AHBPeriphClockCmd(RCC_AHBPeriph_DMA1, ENABLE);</div><div class="line">    RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC1 | RCC_APB2Periph_GPIOC, ENABLE);</div><div class="line"></div><div class="line">    <span class="comment">/* 输入的GPIO口定义*/</span></div><div class="line">    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1;</div><div class="line">    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AIN;<span class="comment">//ADC必须为模拟输入（输入后ADC转换为二进制）</span></div><div class="line">    GPIO_Init(GPIOC, &amp;GPIO_InitStructure);              <span class="comment">// PC1,输入时不用设置速率</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">ADC1_Mode_Config</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">&#123;</div><div class="line">    DMA_InitTypeDef DMA_InitStructure;</div><div class="line">    ADC_InitTypeDef ADC_InitStructure;</div><div class="line"></div><div class="line">    <span class="comment">/* DMA channel1 configuration */</span></div><div class="line">    DMA_DeInit(DMA1_Channel1);</div><div class="line">    DMA_InitStructure.DMA_PeripheralBaseAddr = ADC1_DR_Address;  <span class="comment">//ADC地址</span></div><div class="line">    DMA_InitStructure.DMA_MemoryBaseAddr = (u32)&amp;ADC_ConvertedValue;<span class="comment">//内存地址</span></div><div class="line">    DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralSRC;</div><div class="line">    DMA_InitStructure.DMA_BufferSize = <span class="number">1</span>;</div><div class="line">    DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable;<span class="comment">//外设地址固定</span></div><div class="line">    DMA_InitStructure.DMA_MemoryInc = DMA_MemoryInc_Disable;  <span class="comment">//内存地址固定</span></div><div class="line">    DMA_InitStructure.DMA_PeripheralDataSize = DMA_PeripheralDataSize_HalfWord; <span class="comment">//半字</span></div><div class="line">    DMA_InitStructure.DMA_MemoryDataSize = DMA_MemoryDataSize_HalfWord;</div><div class="line">    DMA_InitStructure.DMA_Mode = DMA_Mode_Circular;     <span class="comment">//循环传输</span></div><div class="line">    DMA_InitStructure.DMA_Priority = DMA_Priority_High;</div><div class="line">    DMA_InitStructure.DMA_M2M = DMA_M2M_Disable;</div><div class="line">    DMA_Init(DMA1_Channel1, &amp;DMA_InitStructure);</div><div class="line"></div><div class="line">    <span class="comment">/* Enable DMA channel1 */</span></div><div class="line">    DMA_Cmd(DMA1_Channel1, ENABLE);</div><div class="line"></div><div class="line">    <span class="comment">/* ADC1 configuration */</span></div><div class="line"></div><div class="line">    ADC_InitStructure.ADC_Mode = ADC_Mode_Independent;  <span class="comment">//独立ADC模式</span></div><div class="line">    ADC_InitStructure.ADC_ScanConvMode = DISABLE ;   <span class="comment">//禁止扫描模式，扫描模式用于多通道采集</span></div><div class="line">    ADC_InitStructure.ADC_ContinuousConvMode = ENABLE;  <span class="comment">//开启连续转换模式，即不停地进行ADC转换</span></div><div class="line">    ADC_InitStructure.ADC_ExternalTrigConv = ADC_ExternalTrigConv_None; <span class="comment">//不使用外部触发转换</span></div><div class="line">    ADC_InitStructure.ADC_DataAlign = ADC_DataAlign_Right;  <span class="comment">//采集数据右对齐</span></div><div class="line">    ADC_InitStructure.ADC_NbrOfChannel = <span class="number">1</span>;     <span class="comment">//要转换的通道数目1</span></div><div class="line">    ADC_Init(ADC1, &amp;ADC_InitStructure);</div><div class="line"></div><div class="line">    <span class="comment">/*配置ADC时钟，为PCLK2的8分频，即9Hz*/</span></div><div class="line">    RCC_ADCCLKConfig(RCC_PCLK2_Div8);</div><div class="line">    <span class="comment">/*配置ADC1的通道11为55.   5个采样周期，序列为1 */</span></div><div class="line">    ADC_RegularChannelConfig(ADC1, ADC_Channel_11, <span class="number">1</span>, ADC_SampleTime_55Cycles5);</div><div class="line"></div><div class="line">    <span class="comment">/* Enable ADC1 DMA */</span></div><div class="line">    ADC_DMACmd(ADC1, ENABLE);</div><div class="line"></div><div class="line">    <span class="comment">/* Enable ADC1 */</span></div><div class="line">    ADC_Cmd(ADC1, ENABLE);</div><div class="line"></div><div class="line">    <span class="comment">/*复位校准寄存器 */</span>   </div><div class="line">    ADC_ResetCalibration(ADC1);</div><div class="line">    <span class="comment">/*等待校准寄存器复位完成 */</span></div><div class="line">    <span class="keyword">while</span>(ADC_GetResetCalibrationStatus(ADC1));</div><div class="line"></div><div class="line">    <span class="comment">/* ADC校准 */</span></div><div class="line">    ADC_StartCalibration(ADC1);</div><div class="line">    <span class="comment">/* 等待校准完成*/</span></div><div class="line">    <span class="keyword">while</span>(ADC_GetCalibrationStatus(ADC1));</div><div class="line"></div><div class="line">    <span class="comment">/* 由于没有采用外部触发，所以使用软件触发ADC转换 */</span></div><div class="line">    ADC_SoftwareStartConvCmd(ADC1, ENABLE);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">ADC1_Init</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">&#123;</div><div class="line">    ADC1_GPIO_Config();</div><div class="line">    ADC1_Mode_Config();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>在<code>main</code>函数中读取<code>ADC_ConvertedValue</code>就为转换的到的值（一般来说转换为电压较好<code>ADC_ConvertedValueLocal =(float) ADC_ConvertedValue/4096*3.3;</code>)，记住必须在前面<code>extern</code>下。</p>
+<h2 id="ADC多通道转换（ADC多通道转换必须为DMA方式）"><a href="#ADC多通道转换（ADC多通道转换必须为DMA方式）" class="headerlink" title="ADC多通道转换（ADC多通道转换必须为DMA方式）"></a>ADC多通道转换（ADC多通道转换必须为DMA方式）</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div></pre></td><td class="code"><pre><div class="line"> u8 DMA1_MEM_LEN;</div><div class="line"><span class="comment">//DMA1的各通道配置</span></div><div class="line"><span class="comment">//这里的传输形式是固定的,这点要根据不同的情况来修改</span></div><div class="line"><span class="comment">//从外设模式-&gt;存储器/16位数据宽度/存储器增量模式</span></div><div class="line"> <span class="comment">//cmar:存储器地址（自己定义的存储地址AD_DATA[4]） cndtr:数据传输量,实际上就是ADC要转换的路数（N）</span></div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> ADC1_DR_Address  ((u32)0x40012400+0x4c)<span class="comment">//DMA传输的外设地址ADC1_DR_Address是一个自定义的宏ADC_DR保存了ADC转换的值，以它作为DMA传输的源地址。</span></span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">DMA_Config</span><span class="params">(u32 cmar,u16 cndtr)</span></span></div><div class="line">&#123;     </div><div class="line">    DMA_InitTypeDef DMA_InitStructure;</div><div class="line">    RCC_AHBPeriphClockCmd(RCC_AHBPeriph_DMA1, ENABLE);  <span class="comment">//使能DMA时钟</span></div><div class="line"></div><div class="line">    DMA_DeInit(DMA1_Channel1);   <span class="comment">//使用DMA的通道1，stm32有两个DMA，每个有7个通道</span></div><div class="line">    DMA_InitStructure.DMA_PeripheralBaseAddr = ADC1_DR_Address;  <span class="comment">//DMA外设基地址</span></div><div class="line">    DMA_InitStructure.DMA_MemoryBaseAddr = cmar;  <span class="comment">//DMA内存基地址</span></div><div class="line">    DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralSRC;  <span class="comment">//数据传输方向，从外设发送到内存  DMA_CCRX位4</span></div><div class="line">    DMA_InitStructure.DMA_BufferSize = cndtr;  <span class="comment">//DMA通道的DMA缓存的大小</span></div><div class="line">    DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable;  <span class="comment">//外设地址寄存器不变</span></div><div class="line">    DMA_InitStructure.DMA_MemoryInc = DMA_MemoryInc_Enable;  <span class="comment">//内存地址寄存器递增</span></div><div class="line">    DMA_InitStructure.DMA_PeripheralDataSize = DMA_PeripheralDataSize_HalfWord;  <span class="comment">//外设数据宽度为16位</span></div><div class="line">    DMA_InitStructure.DMA_MemoryDataSize = DMA_MemoryDataSize_HalfWord; <span class="comment">//内存数据宽度为16位</span></div><div class="line">    DMA_InitStructure.DMA_Mode = DMA_Mode_Circular;  <span class="comment">//工作在循环缓存模式</span></div><div class="line">    DMA_InitStructure.DMA_Priority = DMA_Priority_High; <span class="comment">//DMA通道 x拥有高优先级</span></div><div class="line">    DMA_InitStructure.DMA_M2M = DMA_M2M_Disable;  <span class="comment">//DMA通道x没有设置为内存到内存传输</span></div><div class="line">    DMA_Init(DMA1_Channel1, &amp;DMA_InitStructure);  <span class="comment">//根据DMA_InitStruct中指定的参数初始化DMA的通道USART1_Tx_DMA_Channel所标识的寄存器</span></div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N  4<span class="comment">//ADC1的通道数</span></span></div><div class="line"><span class="keyword">extern</span> u16 AD_DATA[<span class="number">4</span>];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span>  <span class="title">Adc_Init</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">&#123;</div><div class="line">  ADC_InitTypeDef ADC_InitStructure;</div><div class="line">  GPIO_InitTypeDef GPIO_InitStructure;</div><div class="line"></div><div class="line">  RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA |RCC_APB2Periph_ADC1,ENABLE );<span class="comment">//使能端口1的时钟和ADC1的时钟，因为ADC1的通道1在PA1上</span></div><div class="line">  RCC_ADCCLKConfig(RCC_PCLK2_Div6);   <span class="comment">//设置ADC分频因子6 72M/6=12M,ADC最大时间不能超过14M，也就是ADC的时钟频率为12MHz</span></div><div class="line"></div><div class="line">  <span class="comment">//PAx 作为模拟通道输入引脚                         </span></div><div class="line">  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0|GPIO_Pin_1|GPIO_Pin_3|GPIO_Pin_2;</div><div class="line">  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AIN;     <span class="comment">//模拟输入引脚</span></div><div class="line">  GPIO_Init(GPIOA, &amp;GPIO_InitStructure);</div><div class="line"></div><div class="line">  ADC_DeInit(ADC1);  <span class="comment">//复位ADC1,将外设 ADC1 的全部寄存器重设为缺省值</span></div><div class="line">  ADC_InitStructure.ADC_Mode = ADC_Mode_Independent;    <span class="comment">//本次实验使用的是ADC1，并ADC1工作在独立模式ADC_CR1的位19:16,即这几位为0000</span></div><div class="line">  ADC_InitStructure.ADC_ScanConvMode = ENABLE;  <span class="comment">//ADC_ScanConvMode 用来设置是否开启扫描模式，本实验开启扫面模式.ADC_CR1的位8</span></div><div class="line">  ADC_InitStructure.ADC_ContinuousConvMode = ENABLE;    <span class="comment">//ADC_ContinuousConvMode 用来设置是否开启连续转换模式 模数转换工作在连续转换模式，ADC_CR2的位1</span></div><div class="line">  ADC_InitStructure.ADC_ExternalTrigConv = ADC_ExternalTrigConv_None;   <span class="comment">//转换由软件而不是外部触发启动 ADC_CR2的位19:17</span></div><div class="line">  ADC_InitStructure.ADC_DataAlign = ADC_DataAlign_Right;    <span class="comment">//ADC数据右对齐ADC_CR2的位11</span></div><div class="line">  ADC_InitStructure.ADC_NbrOfChannel = N;   <span class="comment">//顺序进行规则转换的ADC通道的数目ADC_SQR1位23:20</span></div><div class="line">  ADC_Init(ADC1, &amp;ADC_InitStructure);   <span class="comment">//根据ADC_InitStruct中指定的参数初始化外设ADCx的寄存器   </span></div><div class="line"></div><div class="line">  ADC_RegularChannelConfig(ADC1, ADC_Channel_0, <span class="number">1</span>, ADC_SampleTime_55Cycles5 );<span class="comment">//ADC1；ADC1通道0；第1转换；采样时间为55周期</span></div><div class="line">  ADC_RegularChannelConfig(ADC1, ADC_Channel_1, <span class="number">2</span>, ADC_SampleTime_55Cycles5 );<span class="comment">//ADC1；ADC1通道1；第2转换；采样时间为55周期</span></div><div class="line">  ADC_RegularChannelConfig(ADC1, ADC_Channel_2, <span class="number">3</span>, ADC_SampleTime_55Cycles5 );</div><div class="line">  <span class="comment">//ADC1；ADC1通道1；第3转换；采样时间为55周期</span></div><div class="line">    ADC_RegularChannelConfig(ADC1, ADC_Channel_3, <span class="number">4</span>, ADC_SampleTime_55Cycles5 );<span class="comment">//ADC1；ADC1通道3；第4转换；采样时间为55周期</span></div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line">这里的ADC_SampleTime可配置1.5、7.5、13.5、28.5、41.5、55.5、71.5、239.5 其计算公式为T=采样周期+12.5个周期</div><div class="line">本代码中转换时间T=（55.5+12.5）/12  ----12为ADC时钟配置</div><div class="line">注意你要输入的进行规则转换的通道数N要全部进行通道配置</div><div class="line">**/</div><div class="line">  ADC_DMACmd(ADC1, ENABLE); <span class="comment">//使能ADC1的DMA传输，ADC_CR2位8</span></div><div class="line"></div><div class="line">  ADC_Cmd(ADC1, ENABLE);    <span class="comment">//使能的ADC1,ADC_CR2位0</span></div><div class="line"></div><div class="line">  ADC_ResetCalibration(ADC1);   <span class="comment">//使能复位校准，ADC_CR2位3  </span></div><div class="line">  <span class="keyword">while</span>(ADC_GetResetCalibrationStatus(ADC1));   <span class="comment">//等待复位校准结束</span></div><div class="line"></div><div class="line">  ADC_StartCalibration(ADC1);    <span class="comment">//开启AD校准，ADC_CR2位2</span></div><div class="line">  <span class="keyword">while</span>(ADC_GetCalibrationStatus(ADC1));     <span class="comment">//等待校准结束</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>在<code>main</code>函数中先声明<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N  4<span class="comment">//ADC1的通道数</span></span></div><div class="line">u16 AD_DATA[N];<span class="comment">//AD转换的数字量</span></div><div class="line"><span class="keyword">float</span> value[N];<span class="comment">//AD转换的模拟量</span></div></pre></td></tr></table></figure></p>
+<p>然后启动DMA<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Adc_Init();</div><div class="line">DMA_Config((u32)&amp;AD_DATA,N)</div><div class="line">DMA_Cmd(DMA1_Channel1, ENABLE);<span class="comment">//启动DMA通道</span></div><div class="line">ADC_SoftwareStartConvCmd(ADC1, ENABLE);<span class="comment">//软件启动AD转换</span></div></pre></td></tr></table></figure></p>
+<p>最后转换为电压即可<br><code>value[i] =(float) AD_DATA[i]*(3.3/4095)</code></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/path/to/wechat-reward-image" alt="fang chao WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="C:\Hexo\source\image 1468244026185.jpg" alt="fang chao Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/stm32/" rel="tag">#stm32</a>
+          
+            <a href="/tags/ADC/" rel="tag">#ADC</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/08/11/Java之旅/" rel="prev" title="Java之旅">
+                Java之旅 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  <p>热评文章</p>
+  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/07/11/STM32 ADC使用（基础篇）/"
+           data-title="STM32 ADC使用（基础篇）" data-url="http://yoursite.com/2016/07/11/STM32 ADC使用（基础篇）/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://pm1.narvii.com/5937/9f83d72b0c7ec0c60efc964c674c77b474ac6d00_hq.jpg"
+               alt="fang chao" />
+          <p class="site-author-name" itemprop="name">fang chao</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/fangchaooo" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/fang-chao-38-39" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ADC单通道转换"><span class="nav-number">1.</span> <span class="nav-text">ADC单通道转换</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#直接贴代码叙述"><span class="nav-number">1.0.1.</span> <span class="nav-text">直接贴代码叙述</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ADC单通道转换-DMA方式"><span class="nav-number">2.</span> <span class="nav-text">ADC单通道转换(DMA方式)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么要用DMA方式"><span class="nav-number">2.0.1.</span> <span class="nav-text">为什么要用DMA方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#贴代码"><span class="nav-number">2.0.2.</span> <span class="nav-text">贴代码</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ADC多通道转换（ADC多通道转换必须为DMA方式）"><span class="nav-number">3.</span> <span class="nav-text">ADC多通道转换（ADC多通道转换必须为DMA方式）</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">fang chao</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"fangchaooo"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+
+  
+
+</body>
+</html>

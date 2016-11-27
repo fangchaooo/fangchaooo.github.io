@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>求索之路</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2016-11-27T07:11:00.770Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>fang chao</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2016/11/27/hello-world/"/>
+    <id>http://yoursite.com/2016/11/27/hello-world/</id>
+    <published>2016-11-27T07:03:31.962Z</published>
+    <updated>2016-11-27T07:11:00.770Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Java-类</title>
+    <link href="http://yoursite.com/2016/10/02/Java-%E7%B1%BB/"/>
+    <id>http://yoursite.com/2016/10/02/Java-类/</id>
+    <published>2016-10-02T08:20:31.000Z</published>
+    <updated>2016-10-02T08:20:32.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Java基本程序结构</title>
+    <link href="http://yoursite.com/2016/09/18/Java%E5%9F%BA%E6%9C%AC%E7%A8%8B%E5%BA%8F%E7%BB%93%E6%9E%84/"/>
+    <id>http://yoursite.com/2016/09/18/Java基本程序结构/</id>
+    <published>2016-09-18T14:05:20.000Z</published>
+    <updated>2016-09-22T15:54:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Java的基本语法（与C/C++相对比）<br><a id="more"></a></p>
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2> <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line">  * 文档注释</div><div class="line">  */</div><div class="line"></div><div class="line"> <span class="comment">//单行注释</span></div><div class="line"></div><div class="line"> <span class="comment">/*长篇注释 */</span></div></pre></td></tr></table></figure>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>  <strong>Java没有任何无符号类型</strong></p>
+<ul>
+<li><h4 id="整形"><a href="#整形" class="headerlink" title="整形"></a>整形</h4><p><code>java</code>的整型范围与所在的机器无关</p>
+<p>|类型    |存储需求   |   取值范围|<br>|——–|———|———|<br>|<code>int</code>   |    4字节 |-2147483648~2147483647|<br>|<code>short</code> | 2字节    |-32768~32767|<br>|<code>long</code>  |8字节     |             |<br>|<code>byte</code>|   1字节   |-128~127|</p>
+<p>长整型有后缀<code>L</code></p>
+<p>二进制的前缀<code>0b</code></p>
+</li>
+<li><h4 id="浮点类型"><a href="#浮点类型" class="headerlink" title="浮点类型"></a>浮点类型</h4><p>|类型|存储需求|<br>|—-|—-|<br>|float|4字节|<br>|double|8字节|</p>
+<p><code>float</code>类型后加<code>f</code>,默认为’double’.</p>
+<p>浮点数的计算遵循IEEE754规则（参考csapp第一章）。</p>
+<p>特殊浮点数：</p>
+<ul>
+<li>正无穷大</li>
+<li>负无穷大</li>
+<li><p>NaN</p>
+<p>一个正整数除以0的结果为正无穷大。计算0/0或者负数的平方根结果为NaN。</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><h4 id="char类型"><a href="#char类型" class="headerlink" title="char类型"></a><code>char</code>类型</h4><p>Java中,char类型用UTF-16编码描述一个代码单元。</p>
+<p>  <strong>强烈建议不要在程序中使用char类型，最好将需要处理的字符串用抽象数据类型表示</strong></p>
+</li>
+<li><h4 id="boolean类型"><a href="#boolean类型" class="headerlink" title="boolean类型"></a><code>boolean</code>类型</h4><p>java中整数不能转换为布尔值。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(x=<span class="number">0</span>)<span class="comment">//不能通过编译</span></div><div class="line">  System.out.println(<span class="string">"oo-oo"</span>)l;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>java中声明一个变量之后，必须用赋值语句对变量进行显式初始化，千万不能使用未使用初始化的变量。<br><strong>java中不区分变量的额定义和声明。</strong></p>
+<p><code>final</code>指示常量。</p>
+<p><strong><code>++,--</code>运算符解析</strong></p>
+<blockquote>
+<p><strong>在c/c++中</strong><br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; <span class="keyword">int</span> i=<span class="number">0</span>,j=<span class="number">0</span>;</div><div class="line">&gt; j=++i+++i+i++；</div><div class="line">&gt;</div></pre></td></tr></table></figure></p>
+<p>这种代码常见于各类“谭书”中，经常出现在各种新手论坛中或某计算<br>机考试中，这样的问题实在是不应该浪费时间，因为它们几乎都是“未指明的行为”或“由实现定义的行为”。另一方面，程序的错误或Bugs，通常是由于“未定义的行为”。<br>使用了未定义行为的程序都是错误的，即使程序能够运行，也只是巧合。未定义行为源于编译器不能检测到的程序错误或太麻烦以至无法检测的错误。<br>不幸的是，含有未定义行为的程序在有些环境或编译器中可以正确执行，但并不能保证同一程序在不同编译器中甚至在当前编译器的后继版本中会继续正确运行，也不能保证程序在一组输入上可以正确运行且在另一组输入上也能正确运行。<br> 程序不应该依赖未定义行为。</p>
+<p><strong>在Java中</strong></p>
+</blockquote>
+<h2 id="数值转换"><a href="#数值转换" class="headerlink" title="数值转换"></a>数值转换</h2><ul>
+<li>两个操作数有一个是double，另一个也会转换为double。</li>
+<li>否则，其中一个是float，另一个也将转换为flaot。</li>
+<li>否则，其中一个是long，另一个也将转换为long。</li>
+<li>否则，两个都将转换为int。</li>
+</ul>
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>java字符串就是Unicode字符序列。</p>
+<ul>
+<li><h4 id="子串"><a href="#子串" class="headerlink" title="子串"></a>子串</h4><p>使用<code>substring</code>方法可以从一个大的字符串中提取一个子串。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">String greeting = <span class="string">"hello"</span>;</div><div class="line">String s = greeting.substring(<span class="number">0</span>,<span class="number">3</span>);<span class="comment">//s=hel</span></div></pre></td></tr></table></figure>
+</li>
+<li><h4 id="拼接"><a href="#拼接" class="headerlink" title="拼接"></a>拼接</h4><p>java使用<code>+</code>拼接字符串。(任何一个java对象都可以转化为字符串)</p>
+</li>
+<li><h4 id="不可变字符串"><a href="#不可变字符串" class="headerlink" title="不可变字符串"></a>不可变字符串</h4><p>String类没有提供可以修改字符串的方法。但是java可以用重新创建字符串的方法进行修改。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">String str = <span class="string">"hello"</span>;</div><div class="line">str = str.substring(<span class="number">0</span>,<span class="number">3</span>)+<span class="string">"p!"</span>;<span class="comment">//str="help!"</span></div></pre></td></tr></table></figure>
+<p>在Java切忌认为String是字符数组，事实上，java的String更像是char*指针。</p>
+ <figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">char</span>* str = <span class="string">"hello"</span>;</div><div class="line"><span class="keyword">char</span>* temp = <span class="built_in">malloc</span>(<span class="number">6</span>);<span class="comment">//字符串末尾还有'\0'</span></div><div class="line"><span class="built_in">strncpy</span>(temp,str,<span class="number">3</span>);</div><div class="line">strnpy(temp+<span class="number">3</span>,<span class="string">"p!"</span>,<span class="number">3</span>);</div><div class="line">str = temp;</div></pre></td></tr></table></figure>
+</li>
+<li><h4 id="检测字符串相等"><a href="#检测字符串相等" class="headerlink" title="检测字符串相等"></a>检测字符串相等</h4><p><code>s.equals(t);</code></p>
+<p>不区分大小写的是<code>equalsIgnoreCase</code>.</p>
+<p><code>==</code>只能比较字符串是否在同一个内存中。</p>
+<p><code>&quot;&quot;</code>是长度为0的字符串</p>
+</li>
+<li><h4 id="代码点和代码单元"><a href="#代码点和代码单元" class="headerlink" title="代码点和代码单元"></a>代码点和代码单元</h4><p>java字符串由char序列组成，char数据类型是一个采用UTF-16编码表示Unicode代码点的代码单元。</p>
+<p>而大多数的常用Unicode字符使用一个代码单元就可以表示，而辅助字符却需要两个。</p>
+<blockquote>
+<p>学过《深入理解计算机系统》（csapp）这些问题都是很简单的。</p>
+<p>字符是抽象的最小文本单位。它没有固定的形状（可能是一个字形），而且没有值。“A”是一个字符，“€”（德国、法国和许多其他欧洲国家通用货币的标志）也是一个字符。</p>
+<p> 字符集是字符的集合。例如，汉字字符是中国人最先发明的字符，在中文、日文、韩文和越南文的书写中使用。</p>
+<p> 编码字符集是一个字符集，它为每一个字符分配一个唯一数字。Unicode 标准的核心是一个编码字符集，字母“A”的编码为 004116 和字符“€”的编码为20AC16.Unicode 标准始终使用十六进制数字，而且在书写时在前面加上前缀“U+”，所以“A”的编码书写为“U+0041”。</p>
+<p> 代码点是指可用于编码字符集的数字。编码字符集定义一个有效的代码点范围，但是并不一定将字符分配给所有这些代码点。有效的 Unicode 代码点范围是 U+0000 至 U+10FFFF.Unicode 4.0 将字符分配给一百多万个代码点中的 96，382 代码点。</p>
+<p> 增补字符是代码点在 U+10000 至 U+10FFFF 范围之间的字符，也就是那些使用原始的 Unicode 的 16 位设计无法表示的字符。从 U+0000 至 U+FFFF 之间的字符集有时候被称为基本多语言面 （BMP）。因此，每一个 Unicode 字符要么属于 BMP，要么属于增补字符。</p>
+<p> 字符编码方案是从一个或多个编码字符集到一个或多个固定宽度代码单元序列的映射。最常用的代码单元是字节，但是 16 位或 32 位整数也可用于内部处理。UTF-32、UTF-16 和 UTF-8 是 Unicode 标准的编码字符集的字符编码方案。</p>
+<p> UTF-32 即将每一个 Unicode 代码点表示为相同值的 32 位整数。很明显，它是内部处理最方便的表达方式，但是，如果作为一般字符串表达方式，则要消耗更多的内存。</p>
+<p> UTF-16 使用一个或两个未分配的 16 位代码单元的序列对 Unicode 代码点进行编码。值 U+0000 至 U+FFFF 编码为一个相同值的 16 位单元。增补字符编码为两个代码单元，第一个单元来自于高代理范围（U+D800 至 U+DBFF），第二个单元来自于低代理范围（U+DC00 至 U+DFFF）。这在概念上可能看起来类似于多字节编码，但是其中有一个重要区别：值 U+D800 至 U+DFFF 保留用于 UTF-16；没有这些值分配字符作为代码点。这意味着，对于一个字符串中的每个单独的代码单元，软件可以识别是否该代码单元表示某个单单元字符，或者是 否该代码单元是某个双单元字符的第一个或第二单元。这相当于某些传统的多字节字符编码来说是一个显著的改进，在传统的多字节字符编码中，字节值 0x41 既可能表示字母“A”，也可能是一个双字节字符的第二个字节。</p>
+<p> UTF-8 使用一至四个字节的序列对编码 Unicode 代码点进行编码。U+0000 至 U+007F 使用一个字节编码，U+0080 至 U+07FF 使用两个字节，U+0800 至 U+FFFF 使用三个字节，而 U+10000 至 U+10FFFF 使用四个字节。UTF-8 设计原理为：字节值 0x00 至 0x7F 始终表示代码点 U+0000 至 U+007F（Basic Latin 字符子集，它对应 ASCII 字符集）。这些字节值永远不会表示其他代码点，这一特性使 UTF-8 可以很方便地在软件中将特殊的含义赋予某些 ASCII 字符。</p>
+<p>| Unicode代码点 | U+0041| U+00DF| U+6771| U+10400<br>|————–|———|—-|——-|—–|<br>|表示字形    |<br>|UTF-32代码单元|00000041|000000DF|00006771|00010400|<br>|UTF-16代码单元|0041|00DF|6771|D801 DC00|<br>|UTF-8代码单元|41|C3 9F|E6 9D B1|F0 90 90 80|</p>
+</blockquote>
+<p><code>length</code>方法得到的是采用UTF-16编码表示的给定字符串所需要的代码单元数量。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">String greeting = <span class="string">"hello"</span>;</div><div class="line"><span class="keyword">int</span> n = greeting.length();<span class="comment">//5</span></div></pre></td></tr></table></figure>
+<p>而要得到实际的长度，即代码点数量，需要调用：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> cpCount = greeting.codePointCount(<span class="number">0</span>,greeting.length())`</div></pre></td></tr></table></figure>
+</li>
+<li><p>####构建字符串</p>
+<p>在前面采用的连接重建字符串的方法是非常慢，这一点不罗曼缇克。<br>使用<code>StringBuilder</code>就好了。</p>
+<p><code>StringBuilder builder = new StringBuilder()</code></p>
+<p>添加时用<code>append</code>，构建新的时候用<code>toString</code>就好。</p>
+<p>这部分面试的时候会经常问，所以后面会在构造器深入记录。</p>
+</li>
+</ul>
+<h2 id="输入输出"><a href="#输入输出" class="headerlink" title="输入输出"></a>输入输出</h2><ul>
+<li><h4 id="读取输入"><a href="#读取输入" class="headerlink" title="读取输入"></a>读取输入</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Scanner in = <span class="keyword">new</span> Scanner(System.in);</div><div class="line">String name = in.nextLine();<span class="comment">//读取一行</span></div><div class="line">String word = in.next();<span class="comment">//读取一个单词</span></div><div class="line">String number = in.nextInt();<span class="comment">//读取一个int数</span></div></pre></td></tr></table></figure>
+</li>
+<li><h4 id="格式化输出"><a href="#格式化输出" class="headerlink" title="格式化输出"></a>格式化输出</h4><p>与<strong>c</strong>基本相同</p>
+</li>
+<li><h4 id="文件输入输出"><a href="#文件输入输出" class="headerlink" title="文件输入输出"></a>文件输入输出</h4><p>读取文件要构造一个<code>Scanner</code>对象。</p>
+<p><code>Scanner in = new Scanner(Paths.get(&quot;&quot;))</code></p>
+<p>写入文件要构造<code>PrintWrite</code>对象。</p>
+<p><code>PrintWrite in = new PrintWrite(&quot;&quot;)</code></p>
+<h2 id="控制流程"><a href="#控制流程" class="headerlink" title="控制流程"></a>控制流程</h2><p>与<code>c</code>相同，多了<code>for each</code></p>
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><p>创建数组：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span>[] a = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">100</span>];</div><div class="line">String[] a = <span class="keyword">new</span> String[<span class="number">100</span>];</div></pre></td></tr></table></figure>
+<p>创建一个数字数组时，所有元素初始化为<code>0</code>；创建一个boolean数组时，所有对象初始化为<code>false</code>;创建一个对象数组，则所有元素会被初始化为<code>null</code>。</p>
+</li>
+<li><h4 id="for-each"><a href="#for-each" class="headerlink" title="for each"></a>for each</h4><p>格式：</p>
+<p><code>for (variable : collection) statement</code></p>
+<p>表示为每一个变量是暂存于集合中的变量，这个集合表达式必须是一个数组或者实现了<code>Iterable</code>的接口。</p>
+</li>
+<li><h4 id="数组初始化"><a href="#数组初始化" class="headerlink" title="数组初始化"></a>数组初始化</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span>[] ArrayInt = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>&#125;；<span class="comment">//创建数组对象并同时初始化</span></div><div class="line">OtherArrayInt = <span class="keyword">new</span> <span class="keyword">int</span>[] &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>&#125;<span class="comment">//相当于int[] ArrayInt = &#123;1,2,3,5&#125;；OtherArrayInt=ArrayInt；</span></div><div class="line"><span class="keyword">new</span> elementType[<span class="number">0</span>];<span class="comment">//创建一个长度为0的数组</span></div></pre></td></tr></table></figure>
+</li>
+<li><h4 id="多维数组"><a href="#多维数组" class="headerlink" title="多维数组"></a>多维数组</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span>[][] Array = &#123;</div><div class="line">  &#123;<span class="number">1</span>,<span class="number">2</span>&#125;,</div><div class="line">  &#123;<span class="number">1</span>,<span class="number">24</span>&#125;,</div><div class="line">  &#123;<span class="number">7</span>,<span class="number">8</span>,&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><h4 id="不规则数组"><a href="#不规则数组" class="headerlink" title="不规则数组"></a>不规则数组</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> NMAX = <span class="number">10</span>;</div><div class="line"><span class="keyword">int</span>[][] odds = <span class="keyword">new</span> <span class="keyword">int</span> [NMAX+<span class="number">1</span>][];</div><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> n = <span class="number">0</span>;n&lt;= NMAX;n++)</div><div class="line">  odds[n] = <span class="keyword">new</span> <span class="keyword">int</span>[n+<span class="number">1</span>];</div><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> n =<span class="number">0</span>;n&lt;odds.length;n++)</div><div class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> k = <span class="number">0</span>; k&lt;odds[n].length;k++)</div><div class="line">  &#123;</div><div class="line">    <span class="keyword">int</span> lotteryOdds = <span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">1</span>;i&lt;=k;i++)</div><div class="line">      lotteryOdds = lotteryOdds*(n-i+<span class="number">1</span>)/i;</div><div class="line">    odds[n][k] = lotteryOdds;</div><div class="line">  &#125;</div><div class="line">  <span class="comment">//compute n*(n-1)*(n-2)*...*(n-k+1)/(1*2*3*...*k)</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Java的基本语法（与C/C++相对比）&lt;br&gt;
+    
+    </summary>
+    
+      <category term="编程" scheme="http://yoursite.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="java" scheme="http://yoursite.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript-ECMAScript(基础)</title>
+    <link href="http://yoursite.com/2016/08/16/JavaScript-ECMAScript/"/>
+    <id>http://yoursite.com/2016/08/16/JavaScript-ECMAScript/</id>
+    <published>2016-08-16T10:55:28.000Z</published>
+    <updated>2016-08-18T00:38:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>对javascript中的基础做一些总结，使用版本为ECMAScript 3.1.<br><a id="more"></a></p>
+<h1 id="JavaScript在HTML中使用"><a href="#JavaScript在HTML中使用" class="headerlink" title="JavaScript在HTML中使用"></a>JavaScript在HTML中使用</h1><ul>
+<li><p>内部嵌入</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript&gt;&lt;/script&gt;</span></span></div></pre></td></tr></table></figure>
+</li>
+<li><p>外部嵌入</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span>  <span class="attr">src</span>=<span class="string">"example.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>注意：</p>
+<ul>
+<li>第二个js脚本可能在第一个脚本之后进行覆盖，所以要确保不会发生冲突。</li>
+<li>在内部嵌入的js脚本要写在<code>&lt;body&gt;&lt;/body&gt;</code>的末尾，为了在加载js时不影响阅读。</li>
+</ul>
+<h1 id="JavaScript基本语法"><a href="#JavaScript基本语法" class="headerlink" title="JavaScript基本语法"></a>JavaScript基本语法</h1><h3 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h3><p>js的ECMAScript是区分大小写，其标识符由字母、数字、下划线、$构成，标识符的第一个字母不能为数字。</p>
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>注释和C一样，分单行和多行。</p>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><ul>
+<li>typeof</li>
+<li><p>undefined</p>
+<p>使用<code>var</code>但没有对其初始化的变量的类型。</p>
+</li>
+<li>Null</li>
+<li>Boolean</li>
+<li><p>Number</p>
+<p>使用的是IEEE754格式</p>
+<ol>
+<li>浮点数</li>
+<li><p>数值范围</p>
+<p> ECMAScript的最小数值为<code>5e-324</code>，最大则是<code>1.79769313448623157e+308</code>。<br> 超过范围的数会被转换为<code>Infinity</code>和<code>-Infinity</code>.</p>
+</li>
+<li><p>NaN</p>
+<p>这是一个特殊的值，表示一个本来要返回数值的操作数未返回数值的情况。<br>涉及到<code>NaN</code>的操作都会返回<code>NaN</code>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">alert(<span class="literal">NaN</span> == <span class="literal">NaN</span>); <span class="comment">//false</span></div><div class="line">alert(<span class="number">0</span>/<span class="number">0</span>);   <span class="comment">//NaM</span></div><div class="line">alert(<span class="number">1</span>/<span class="number">0</span>);   <span class="comment">//Infinity</span></div><div class="line">alert(<span class="number">-1</span>/<span class="number">0</span>);  <span class="comment">//-Infinity</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>数值转换</p>
+<p>转换字符串 <code>parseInt()</code>-忽略前面的空格，直至找到第一个非空格字符，如果第一个字符不是数字字符或者负号，就会返回NaN。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> num1 = <span class="built_in">parseInt</span>（<span class="string">"1234blue"</span>); <span class="comment">//1234blue</span></div><div class="line"><span class="keyword">var</span> num2 = <span class="built_in">parseInt</span>(<span class="string">""</span>);          <span class="comment">//NaN</span></div><div class="line"><span class="keyword">var</span> num3 = <span class="built_in">parseInt</span>(<span class="string">"0xA"</span>);       <span class="comment">//10</span></div><div class="line"><span class="keyword">var</span> num4 = <span class="built_in">parseInt</span>(<span class="string">"22.5"</span>);      <span class="comment">//22</span></div></pre></td></tr></table></figure>
+<p>为了消除<code>parseInt</code>的一些影响，为其添加第二个参数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> num1 = <span class="built_in">parseInt</span>(<span class="string">"AF"</span>,<span class="number">16</span>)  <span class="comment">//175</span></div><div class="line"><span class="keyword">var</span> num2 = <span class="built_in">parseInt</span>(<span class="string">"AF"</span>);   <span class="comment">//NaN</span></div><div class="line"><span class="keyword">var</span> num3 = <span class="built_in">parseInt</span>(<span class="string">"10"</span>,<span class="number">2</span>); <span class="comment">//2（按照二进制）</span></div><div class="line"><span class="keyword">var</span> num3 = <span class="built_in">parseInt</span>(<span class="string">"10"</span>,<span class="number">8</span>); <span class="comment">//8</span></div><div class="line"><span class="keyword">var</span> num3 = <span class="built_in">parseInt</span>(<span class="string">"10"</span>,<span class="number">10</span>); <span class="comment">//10</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p>String</p>
+<p>js里面的单双引号的作用是相同的。</p>
+</li>
+<li><p>Object</p>
+</li>
+</ul>
+<h3 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h3><p>  <code>==</code>操作符</p>
+<p>  如果两个操作数相等，返回<code>true</code>，反之<code>false</code>。两个操作符在比较之时会先转换（强制转换），然后再进行比较。</p>
+<ul>
+<li>如果有一个操作数是布尔型，则比较的相等性时先将其转换为数值false转换为0，而true转换为1。</li>
+<li>如果有一个操作数是字符串，另一个是数值，在比较时先将字符串转换为数值。</li>
+<li>如果一个操作数是对象，另一个不是，则调用对象的<code>valueOf()</code>方法，用得到的基本类型值按照前面的规则比较。</li>
+<li><code>null</code>和<code>undefined</code>是相等的。</li>
+<li>要比较相等性之前，不能将<code>null</code>和<code>undefined</code>转换为其他值。</li>
+<li>如果有一个操作数是<code>NaN</code>，则相等操作符返回<code>false</code>。</li>
+<li>如果两个操作数都是对象，则比较它们是不是同一个对象。如果两个操作数是同一对象，则返回<code>true</code>，否则<code>false</code>。</li>
+</ul>
+<p>  <code>===</code>操作符</p>
+<p>  在未转换的情况下进行比较。</p>
+<p>  <strong>其余操作符均与C、java相同。</strong></p>
+<h3 id="语句"><a href="#语句" class="headerlink" title="语句"></a>语句</h3><ul>
+<li>if</li>
+<li>do-while</li>
+<li>while</li>
+<li>for</li>
+<li>for-in</li>
+<li>label</li>
+<li>break,continue</li>
+<li>with</li>
+<li>switch</li>
+</ul>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">functionName</span>(<span class="params">arg0,arg1,arg2,...,argN</span>)</span>&#123;</div><div class="line">  statements；</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>  <strong>没有重载</strong></p>
+<p>  在ECMAScript中定义两个相同名字的函数，则该名字只属于后定义的函数。</p>
+<h1 id="基本类型"><a href="#基本类型" class="headerlink" title="基本类型"></a>基本类型</h1><p>ECMAScript变量包含两种不同数据类型的的值：基本类型值和引用类型值。</p>
+<p>ECMAScript中所有函数的参数都是按值传递的。很多同学都以为对象不是按值传递：<br>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">setName</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  obj.name = <span class="string">"Nichols"</span>;</div><div class="line">  obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">  obj.name = <span class="string">"Greg"</span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">setName(person);</div><div class="line">alert(person.name);<span class="comment">//"Nichols"</span></div><div class="line"><span class="comment">/*</span></div><div class="line">即使在函数内部改变参数的值，单原始的引用仍然没有变。</div><div class="line">实际上，当在函数内部重写obj的时候，这个变量引用的已经是一个局部对象了。这个对象会在函数执行完毕之后被销毁。</div><div class="line">*/</div></pre></td></tr></table></figure></p>
+<h3 id="引用类型-类"><a href="#引用类型-类" class="headerlink" title="引用类型-类"></a>引用类型-类</h3><p>引用类型的值（对象）是引用类型的实例。在ECMASript中，引用类型是一种数据结构，用于把数据和功能组织到一起。它也常被称作<strong>类</strong>。</p>
+<h3 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h3><p>创建Object实例有两种方法：</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>();<span class="comment">//第一种方法</span></div><div class="line">person.name = <span class="string">"wangli"</span>;</div><div class="line">person.age = <span class="number">18</span>;</div><div class="line"></div><div class="line"><span class="keyword">var</span> person = &#123;</div><div class="line">  <span class="attr">name</span> : <span class="string">"wangli"</span>;<span class="comment">//第二种方法</span></div><div class="line">  age : <span class="number">18</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h3><p>创建数组也有两种方法：<br>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>();</div><div class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">"red"</span>,<span class="string">"blue"</span>,<span class="string">"green"</span>);</div><div class="line"></div><div class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>,<span class="string">"blue"</span>];</div><div class="line"><span class="keyword">var</span> name = [];</div></pre></td></tr></table></figure></p>
+<p><strong>数组常用方法</strong></p>
+<ul>
+<li><p><code>toString</code></p>
+<p>返回由数组中每个值的字符串形式拼接而成的一个以逗号分隔的字符串。</p>
+</li>
+<li><code>pop(),push()</code></li>
+<li><p>队列方法（先进先出）</p>
+<p><code>shift(),unshift()</code>在数组第一位进行操作</p>
+</li>
+<li><p>排序</p>
+<p><code>sort() reverse()</code></p>
+</li>
+<li><p><code>concat(),slice(),splice()</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>,<span class="string">"green"</span>,<span class="string">"blue"</span>];</div><div class="line"><span class="keyword">var</span> color1 = colors.concat(<span class="string">"yellow"</span>,[<span class="string">"black"</span>,<span class="string">"brown"</span>]);</div><div class="line"><span class="keyword">var</span> color2 = colors.slice(<span class="number">1</span>);</div><div class="line"><span class="keyword">var</span> color3 = color1.slice(<span class="number">1</span>,<span class="number">3</span>);</div><div class="line">alert(colors);  <span class="comment">//red,green,blue</span></div><div class="line">alert(color1);  <span class="comment">//red,green,blue,yellow,black,brown</span></div><div class="line">alert(color2);  <span class="comment">//green,blue</span></div><div class="line">alert(color3);  <span class="comment">//grenn,blue,yellow</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>,<span class="string">"green"</span>,<span class="string">"blue"</span>];</div><div class="line"><span class="keyword">var</span> removed = color.splice(<span class="number">0</span>,<span class="number">1</span>);<span class="comment">//删除第一项</span></div><div class="line">alert(colors);  <span class="comment">//green,blue</span></div><div class="line">alert(removed); <span class="comment">//red</span></div><div class="line">removed = colors.splice(<span class="number">1</span>,<span class="number">0</span>,<span class="string">"yellow"</span>,<span class="string">"orange"</span>);<span class="comment">//从位置1处插入两项</span></div><div class="line">alert(colors);<span class="comment">//green,yellow,orange,blue</span></div><div class="line">alert(colors);<span class="comment">//返回一个空数组</span></div><div class="line">removed = colors.splice(<span class="number">1</span>,<span class="number">1</span>,<span class="string">"red"</span>,<span class="string">"purple"</span>)<span class="comment">//插入两项，删除一项</span></div><div class="line">alert(colors); <span class="comment">//green,red,purple,orange,blue</span></div><div class="line">alert(removed);<span class="comment">//yellow,返回的数组中只包含一项</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>位置方法</p>
+<p><code>indexOf()</code>从数组开头位置查找<br><code>lastIndexOf()</code>从数组末尾开始向前查找</p>
+</li>
+<li><p>迭代方法</p>
+<p><code>every</code>对数组的每一项运行指定函数，如果每项都返回true，则返回true。</p>
+<p><code>filter()</code>对数组中每个返回true的项组成数组并返回。</p>
+<p><code>map(),some()</code>都是用来查询数组中的项是否满足某个条件。对于every，传入的函数必须对每一项返回true,才会返回true，否则是false。而some（）则是只要有一项返回true，则返回true。</p>
+</li>
+<li>归并方法<br><code>reduce(),reduceRight()</code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> values = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</div><div class="line"><span class="keyword">var</span> sum = values.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">prex,cur,index,array</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> prev+cur;</div><div class="line">&#125;)  </div><div class="line">alert(sum); <span class="comment">//15</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Date类型"><a href="#Date类型" class="headerlink" title="Date类型"></a>Date类型</h3><h3 id="RegExp-类型"><a href="#RegExp-类型" class="headerlink" title="RegExp 类型"></a>RegExp 类型</h3><p>RegExp的每个实例都有下列属性：</p>
+<ul>
+<li>global: 布尔值，表示是否设置g标志。</li>
+<li>ignoreCase： 布尔值，表示是否设置i标志。</li>
+<li>lastIndex： 整数，表示开始搜索下一个匹配项的字符位置，从0开始。</li>
+<li>multiline： 布尔值，表示是否设置m标志。</li>
+<li>source： 正则表达式的字符串表示，按照字面量形式而非传入构造函数中的字符串模式返回。</li>
+</ul>
+<h3 id="Function-类型"><a href="#Function-类型" class="headerlink" title="Function 类型"></a>Function 类型</h3><p>函数声明和函数表达式：<br>在解析器中，会先读取函数声明，并使其在执行任何代码前可用；至于函数表达式，则必须等到解析器执行到它所在的代码行，才会真正被执行。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">alert(sum(<span class="number">10</span>,<span class="number">10</span>));<span class="comment">//正常执行</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">sum1,sum2</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> sum1+sum2;</div><div class="line">&#125;</div><div class="line"></div><div class="line">alert(sum(<span class="number">10</span>,<span class="number">10</span>)); <span class="comment">//产生错误</span></div><div class="line"><span class="keyword">var</span> sum = <span class="function"><span class="keyword">function</span>(<span class="params">num1, num2</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> sum1+sum2;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p>函数内部属性：</p>
+<ul>
+<li><p><strong>this</strong></p>
+<p>对于javaScript，万物皆对象，而<code>this</code>就执行着当前对象</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="string">"天气："</span>+<span class="keyword">this</span>.weather;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> sunDay&#123;</div><div class="line">  <span class="attr">palyer</span> : liming;</div><div class="line">  weather : hot;</div><div class="line">  hh : f</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> monDay&#123;</div><div class="line">  <span class="attr">palyer</span> : lihua;</div><div class="line">  weather : cool;</div><div class="line">  hh :f</div><div class="line">&#125;</div><div class="line">alert(sunDay.hh);<span class="comment">//天气：hot</span></div><div class="line">alert(monDay.hh);<span class="comment">//天气：cool</span></div></pre></td></tr></table></figure>
+<p><code>this</code>是非常灵活的，但是有时我们也需要将其固定下来。<code>javascript</code>提供了三个方法<code>apply bind call</code>来固定\切换<code>this</code>的指向</p>
+<ul>
+<li><code>call</code></li>
+</ul>
+<p>指定<code>this</code>的指向，然后在所指定的作用域，调用其函数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">sum1,sum2</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> sum1+sum2;</div><div class="line">&#125;</div><div class="line"> <span class="function"><span class="keyword">function</span> <span class="title">callSum</span>(<span class="params">num1,num2</span>)</span>&#123;</div><div class="line">   <span class="keyword">return</span> sum.call(<span class="keyword">this</span>, num1, num2);</div><div class="line"> &#125;</div><div class="line"> alter(callSum(<span class="number">10</span>,<span class="number">10</span>));  <span class="comment">//20</span></div></pre></td></tr></table></figure>
+<ul>
+<li><code>apply</code></li>
+</ul>
+<p><code>apply</code>方法与<code>call</code>相似，只不过传递的是数组。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">num1, num2</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> num1+num2;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">callSum1</span>(<span class="params">num1,num2</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> sum.apply(<span class="keyword">this</span> ,<span class="built_in">arguments</span>);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">callSum2</span>(<span class="params">num1, num2</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> sum.apply(<span class="keyword">this</span> , [num1,num2]);</div><div class="line">&#125;</div><div class="line">alter(callSum1(<span class="number">10</span>,<span class="number">10</span>)); <span class="comment">//20</span></div><div class="line">alter(callSum2(<span class="number">10</span>,<span class="number">10</span>)); <span class="comment">//20</span></div></pre></td></tr></table></figure>
+<ul>
+<li><code>bind</code></li>
+</ul>
+<p><code>bind</code>方法用于将函数体内的<code>this</code>绑定到某个对象，然后返回一个新函数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> add = <span class="function"><span class="keyword">function</span> (<span class="params">x, y</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> x * <span class="keyword">this</span>.m + y * <span class="keyword">this</span>.n;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line">  <span class="attr">m</span>: <span class="number">2</span>,</div><div class="line">  <span class="attr">n</span>: <span class="number">2</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> newAdd = add.bind(obj, <span class="number">5</span>);</div><div class="line"></div><div class="line">newAdd(<span class="number">5</span>)</div><div class="line"><span class="comment">// 20</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="基本包装类型"><a href="#基本包装类型" class="headerlink" title="基本包装类型"></a>基本包装类型</h3><p>从代码来看<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> s1 = <span class="string">"some text"</span>;</div><div class="line"><span class="keyword">var</span> s2 = s1.subString(<span class="number">2</span>);</div><div class="line"><span class="string">`</span></div></pre></td></tr></table></figure></p>
+<p>在执行上述代码时后台操作是：</p>
+<ol>
+<li>创建String类型的一个实例。</li>
+<li>在实例上调用指定的方法。</li>
+<li>销毁这个实例。<br>操作如同下面的代码：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> s1 = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"some text"</span>);</div><div class="line"><span class="keyword">var</span> s2 = s1.subString(<span class="number">2</span>);</div><div class="line">s1 = <span class="literal">null</span>;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>引用类型与基本包装类型的区别就是对象的生存期。使用<code>new</code>操作符创建的引用类型的实例，在执行流离开当前作用域之前一直保存在内存中。而<br>自动创建的基本包装类型对象，则只存在于一行代码的瞬间执行，然后销毁。这意味着我们并不能在运行时为基本类型添加属性和方法。</p>
+<p><code>Boolean</code>类型</p>
+<p>  不建议使用</p>
+<p><code>Number</code>类型</p>
+<p>  要创建Number对象，可以调用Number构造函数时向其中传递相应的数值<br><code>var numberObject = new Number(10);</code></p>
+<p><code>String</code>类型</p>
+<p>  <code>String</code>类型是字符串的对象包装类型，可以像下面这样使用<code>String</code>构造函数来创建<br><code>var stringObject = new String(&quot;hello world&quot;);</code></p>
+<ol>
+<li><p>字符方法</p>
+<p><code>charAt() charCodeAt()</code>,例如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> stringValue = <span class="string">"hello world"</span>;</div><div class="line">alert(stringValue.charAt(<span class="number">1</span>)); <span class="comment">//"e" ,输出的是字符</span></div><div class="line">alert(stringValue.charCodeAt(<span class="number">1</span>)); <span class="comment">//"101" 输出的是字符编码（utf-8）</span></div><div class="line">alert(stringValue[<span class="number">1</span>]); <span class="comment">//"e"</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>字符串操作方法</p>
+<p><code>conact</code>字符串拼接</p>
+<p><code>slice、substr、substring</code>三种创新字符串的方法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> stringValue = <span class="string">"hello world"</span>;</div><div class="line">alert(stringValue.slice(<span class="number">-3</span>));<span class="comment">//"rld"</span></div><div class="line">alert(stringValue.substring(<span class="number">-3</span>);<span class="comment">//"hello world"  负值会被转化成0</span></div><div class="line">alert(stringValue.substr(<span class="number">-3</span>));<span class="comment">//"rld"</span></div><div class="line">alert(stringValue.slice(<span class="number">3</span>,<span class="number">-4</span>));<span class="comment">//"lo w"</span></div><div class="line">alert(stringValue.substring(<span class="number">3</span>,<span class="number">-4</span>));<span class="comment">//"hel"</span></div><div class="line">alert(stringValue.substr(<span class="number">3</span>,<span class="number">-4</span>));<span class="comment">//""</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>字符串位置方法</p>
+<p><code>indexOf、lastIndexOf</code></p>
+</li>
+<li><p><code>trim</code></p>
+<p>删除字符串前后的空格</p>
+</li>
+<li><p>字符串大小写转换方法</p>
+</li>
+<li>字符串模式匹配</li>
+<li><p><code>localeCompare</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> stringValue = <span class="string">"yellow"</span>;</div><div class="line"></div><div class="line">alert(stringValue.localeCompare(<span class="string">"brick"</span>));  <span class="comment">//1</span></div><div class="line">alert(stringValue.localeCompare(<span class="string">"yellow"</span>)); <span class="comment">//0</span></div><div class="line">alert(stringValue.localeCompare(<span class="string">"zoo"</span>));    <span class="comment">//-1</span></div></pre></td></tr></table></figure>
+</li>
+<li><p><code>fromCharCode</code></p>
+<p>将字符编码转换为字符串</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alert(<span class="built_in">String</span>.fromCharCode(<span class="number">104</span>, <span class="number">101</span>, <span class="number">108</span>, <span class="number">108</span>,<span class="number">111</span>)); <span class="comment">//"hello"</span></div></pre></td></tr></table></figure>
+</li>
+<li><p><code>eval</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">eval</span>(<span class="string">"alert('hi')"</span>);</div><div class="line">alert(<span class="string">'hi'</span>);  <span class="comment">//两句完全相同</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>random</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">值 = <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random()*可能值的总数+第一个可能的值)</div></pre></td></tr></table></figure>
+</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;对javascript中的基础做一些总结，使用版本为ECMAScript 3.1.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="编程" scheme="http://yoursite.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+      <category term="ECMAScript" scheme="http://yoursite.com/tags/ECMAScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript学习笔记</title>
+    <link href="http://yoursite.com/2016/08/16/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2016/08/16/JavaScript学习笔记/</id>
+    <published>2016-08-16T10:41:42.000Z</published>
+    <updated>2016-08-16T11:44:36.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>JavaScript是一种专为网页交互设计的脚本语言。<br>JavaScript由三部分组成：</p>
+<ul>
+<li>ECMAScript</li>
+<li>文档对象模型（DOM）</li>
+<li>浏览器对象模型（BOM）</li>
+</ul>
+<p>js的学习我也分这三部分做笔记。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;JavaScript是一种专为网页交互设计的脚本语言。&lt;br&gt;JavaScript由三部分组成：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ECMAScript&lt;/li&gt;
+&lt;li&gt;文档对象模型（DOM）&lt;/li&gt;
+&lt;li&gt;浏览器对象模型（BOM）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;js的学习我也
+    
+    </summary>
+    
+      <category term="编程" scheme="http://yoursite.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java之旅</title>
+    <link href="http://yoursite.com/2016/08/11/Java%E4%B9%8B%E6%97%85/"/>
+    <id>http://yoursite.com/2016/08/11/Java之旅/</id>
+    <published>2016-08-11T04:42:22.000Z</published>
+    <updated>2016-08-11T04:45:06.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>开始学Java，定期整理学习笔记，就这样吧。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;开始学Java，定期整理学习笔记，就这样吧。&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="Java" scheme="http://yoursite.com/categories/Java/"/>
+    
+    
+      <category term="java" scheme="http://yoursite.com/tags/java/"/>
+    
+      <category term="Java学习" scheme="http://yoursite.com/tags/Java%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>STM32 ADC使用（基础篇）</title>
+    <link href="http://yoursite.com/2016/07/11/STM32%20ADC%E4%BD%BF%E7%94%A8%EF%BC%88%E5%9F%BA%E7%A1%80%E7%AF%87%EF%BC%89/"/>
+    <id>http://yoursite.com/2016/07/11/STM32 ADC使用（基础篇）/</id>
+    <published>2016-07-11T09:39:14.000Z</published>
+    <updated>2016-08-18T00:39:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>STM32上集成的ADC（Analog to Digital Convert）外设很强大。在以前用89C51时，还需要芯片来处理AD/DA,而现在用stm32显然方便很多。<br><a id="more"></a></p>
+<p>STM32（F10x系列）有3个12位的ADC，每个ADC有12个通道。各个通道的A/D转换可以单次也可以多次，连续，扫描，间断执行。ADC的结果可以左对齐或者右对齐的方式进行存储在16位的数据寄存器中。模拟看门狗允许应用程序检测电压是否超出规定阈值。</p>
+<p>ADC基本配置可以参考《STM32库开发实战指南》,至于在ADC转换的过程中使用注入、中断、看门狗等在进阶篇再介绍，在此只详细记录三种AD转换。</p>
+<blockquote>
+<ol>
+<li>ADC单通道转换。</li>
+<li>ADC单通道转换（DMA方式）。</li>
+<li>ADC多通道转换（DMA方式）。</li>
+</ol>
+</blockquote>
+<h2 id="ADC单通道转换"><a href="#ADC单通道转换" class="headerlink" title="ADC单通道转换"></a>ADC单通道转换</h2><h4 id="直接贴代码叙述"><a href="#直接贴代码叙述" class="headerlink" title="直接贴代码叙述"></a>直接贴代码叙述</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span>  <span class="title">Adc_Init</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">    &#123;   </div><div class="line">        ADC_InitTypeDef ADC_InitStructure;</div><div class="line">        GPIO_InitTypeDef GPIO_InitStructure;</div><div class="line"></div><div class="line">        RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA |RCC_APB2Periph_ADC1, ENABLE );  </div><div class="line">        <span class="comment">//使能ADC1通道时钟，并使能接受ADC转换的GPIO</span></div><div class="line">        RCC_ADCCLKConfig(RCC_PCLK2_Div6);   </div><div class="line">        <span class="comment">//设置ADC分频因子6 72M/6=12,ADC最大时间不能超过14M，（可设置的分频系数为2、4、6、8）</span></div><div class="line"></div><div class="line">         <span class="comment">//PA1 作为模拟通道输入引脚                         </span></div><div class="line">        GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1;</div><div class="line">        GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AIN;                   <span class="comment">//模拟输入引脚</span></div><div class="line">        GPIO_Init(GPIOA, &amp;GPIO_InitStructure);  </div><div class="line"></div><div class="line">        ADC_DeInit(ADC1);  <span class="comment">//复位ADC1</span></div><div class="line">        ADC_InitStructure.ADC_Mode = ADC_Mode_Independent;  <span class="comment">//ADC工作模式:STM32有多种工作模式，而不同的ADC又是共用通道，当两个ADC采集同一个通道的先后顺序和时间间隔不同，就有不同的方式。具体的各个方式可在手册中查询。</span></div><div class="line">        ADC_InitStructure.ADC_ScanConvMode = DISABLE;   <span class="comment">//模数转换工作在单通道模式。当多通道需要ADC采集时，可把ADC配置为按一定顺序对各个通道进行扫描转换，即进行轮流采集各通道的值。若采集多个通道，则必须开启此模式。</span></div><div class="line">        ADC_InitStructure.ADC_ContinuousConvMode = DISABLE; <span class="comment">//模数转换工作在单次转换模式。可设置为连续和单次。</span></div><div class="line">        ADC_InitStructure.ADC_ExternalTrigConv = ADC_ExternalTrigConv_None; <span class="comment">//转换由软件而不是外部触发启动</span></div><div class="line">        ADC_InitStructure.ADC_DataAlign = ADC_DataAlign_Right;  <span class="comment">//ADC数据右对齐（ADC的转换精度为12位，而ADC的数据存储器-ADC_DR为16位，所以就有了左对齐和右对齐）</span></div><div class="line">        ADC_InitStructure.ADC_NbrOfChannel = <span class="number">1</span>; <span class="comment">//顺序进行规则转换的ADC通道的数目（1-16)</span></div><div class="line">        ADC_Init(ADC1, &amp;ADC_InitStructure); <span class="comment">//根据ADC_InitStruct中指定的参数初始化外设ADCx的寄存器   </span></div><div class="line"></div><div class="line"></div><div class="line">        ADC_Cmd(ADC1, ENABLE);  <span class="comment">//使能指定的ADC1</span></div><div class="line">        ADC_ResetCalibration(ADC1); <span class="comment">//使能复位校准  </span></div><div class="line">        <span class="keyword">while</span>(ADC_GetResetCalibrationStatus(ADC1)); <span class="comment">//等待复位校准结束</span></div><div class="line">        ADC_StartCalibration(ADC1);  <span class="comment">//开启AD校准</span></div><div class="line">        <span class="keyword">while</span>(ADC_GetCalibrationStatus(ADC1));   <span class="comment">//等待校准结束</span></div><div class="line">    <span class="comment">//  ADC_SoftwareStartConvCmd(ADC1, ENABLE);     //使能指定的ADC1的软件转换启动功能</span></div><div class="line">     &#125;</div><div class="line"></div><div class="line"></div><div class="line">    <span class="comment">//获得ADC值</span></div><div class="line">    <span class="comment">//ch:通道值 0~3 ADC_Channel_0(0-17)</span></div><div class="line">    <span class="function">u16 <span class="title">Get_Adc</span><span class="params">(u8 ch)</span>   </span></div><div class="line">    &#123;</div><div class="line">        <span class="comment">//设置指定ADC的规则组通道，一个序列，采样时间</span></div><div class="line">        ADC_RegularChannelConfig(ADC1, ch, <span class="number">1</span>, ADC_SampleTime_239Cycles5 );  <span class="comment">//ADC1,ADC通道,采样时间为239.5周期（T=采样周期+12.5个周期）</span></div><div class="line">        ADC_SoftwareStartConvCmd(ADC1, ENABLE);     <span class="comment">//使能指定的ADC1的软件转换启动功能    </span></div><div class="line">        <span class="keyword">while</span>(!ADC_GetFlagStatus(ADC1, ADC_FLAG_EOC ));<span class="comment">//等待转换结束</span></div><div class="line"></div><div class="line">        <span class="keyword">return</span> ADC_GetConversionValue(ADC1);    <span class="comment">//返回最近一次ADC1规则组的转换结果</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function">u16 <span class="title">Get_Adc_Average</span><span class="params">(u8 ch,u8 times)</span></span></div><div class="line">    &#123;</div><div class="line">        u32 temp_val=<span class="number">0</span>;</div><div class="line">        u8 t;</div><div class="line">        <span class="keyword">for</span>(t=<span class="number">0</span>;t&lt;times;t++)</div><div class="line">        &#123;</div><div class="line">            temp_val+=Get_Adc(ch);</div><div class="line">            delay_ms(<span class="number">5</span>);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> temp_val/times;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>在<code>main</code>函数中只要调用<code>adcx=Get_Adc_Average(ADC_Channel_1,10);</code>之类的就可以读取转换的值。</p>
+<h2 id="ADC单通道转换-DMA方式"><a href="#ADC单通道转换-DMA方式" class="headerlink" title="ADC单通道转换(DMA方式)"></a>ADC单通道转换(DMA方式)</h2><h4 id="为什么要用DMA方式"><a href="#为什么要用DMA方式" class="headerlink" title="为什么要用DMA方式"></a>为什么要用DMA方式</h4><p>在上述的ADC转换中，CPU要处理由ADC外设采集回来的数据时，CPU首先要把数据从ADC外设的寄存器读取到CPU内存中，然后进行运算。但是用CPU来转换数据是有些<strong>杀鸡用牛刀</strong>，用DMA方式可以大大减轻CPU工作，从而提高运算效率。</p>
+<h4 id="贴代码"><a href="#贴代码" class="headerlink" title="贴代码"></a>贴代码</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> ADC1_DR_Address    ((u32)0x40012400+0x4c)<span class="comment">//DMA传输的外设地址ADC1_DR_Address是一个自定义的宏ADC_DR保存了ADC转换的值，以它作为DMA传输的源地址。</span></span></div><div class="line"></div><div class="line">__IO <span class="keyword">uint16_t</span> ADC_ConvertedValue;<span class="comment">//在传输地址中定义一个基地址</span></div><div class="line"><span class="comment">//__IO u16 ADC_ConvertedValueLocal;</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">ADC1_GPIO_Config</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">&#123;</div><div class="line">    GPIO_InitTypeDef GPIO_InitStructure;</div><div class="line"></div><div class="line">    <span class="comment">/* 使能DMA时钟 */</span></div><div class="line">    RCC_AHBPeriphClockCmd(RCC_AHBPeriph_DMA1, ENABLE);</div><div class="line">    RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC1 | RCC_APB2Periph_GPIOC, ENABLE);</div><div class="line"></div><div class="line">    <span class="comment">/* 输入的GPIO口定义*/</span></div><div class="line">    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1;</div><div class="line">    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AIN;<span class="comment">//ADC必须为模拟输入（输入后ADC转换为二进制）</span></div><div class="line">    GPIO_Init(GPIOC, &amp;GPIO_InitStructure);              <span class="comment">// PC1,输入时不用设置速率</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">ADC1_Mode_Config</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">&#123;</div><div class="line">    DMA_InitTypeDef DMA_InitStructure;</div><div class="line">    ADC_InitTypeDef ADC_InitStructure;</div><div class="line"></div><div class="line">    <span class="comment">/* DMA channel1 configuration */</span></div><div class="line">    DMA_DeInit(DMA1_Channel1);</div><div class="line">    DMA_InitStructure.DMA_PeripheralBaseAddr = ADC1_DR_Address;  <span class="comment">//ADC地址</span></div><div class="line">    DMA_InitStructure.DMA_MemoryBaseAddr = (u32)&amp;ADC_ConvertedValue;<span class="comment">//内存地址</span></div><div class="line">    DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralSRC;</div><div class="line">    DMA_InitStructure.DMA_BufferSize = <span class="number">1</span>;</div><div class="line">    DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable;<span class="comment">//外设地址固定</span></div><div class="line">    DMA_InitStructure.DMA_MemoryInc = DMA_MemoryInc_Disable;  <span class="comment">//内存地址固定</span></div><div class="line">    DMA_InitStructure.DMA_PeripheralDataSize = DMA_PeripheralDataSize_HalfWord; <span class="comment">//半字</span></div><div class="line">    DMA_InitStructure.DMA_MemoryDataSize = DMA_MemoryDataSize_HalfWord;</div><div class="line">    DMA_InitStructure.DMA_Mode = DMA_Mode_Circular;     <span class="comment">//循环传输</span></div><div class="line">    DMA_InitStructure.DMA_Priority = DMA_Priority_High;</div><div class="line">    DMA_InitStructure.DMA_M2M = DMA_M2M_Disable;</div><div class="line">    DMA_Init(DMA1_Channel1, &amp;DMA_InitStructure);</div><div class="line"></div><div class="line">    <span class="comment">/* Enable DMA channel1 */</span></div><div class="line">    DMA_Cmd(DMA1_Channel1, ENABLE);</div><div class="line"></div><div class="line">    <span class="comment">/* ADC1 configuration */</span></div><div class="line"></div><div class="line">    ADC_InitStructure.ADC_Mode = ADC_Mode_Independent;  <span class="comment">//独立ADC模式</span></div><div class="line">    ADC_InitStructure.ADC_ScanConvMode = DISABLE ;   <span class="comment">//禁止扫描模式，扫描模式用于多通道采集</span></div><div class="line">    ADC_InitStructure.ADC_ContinuousConvMode = ENABLE;  <span class="comment">//开启连续转换模式，即不停地进行ADC转换</span></div><div class="line">    ADC_InitStructure.ADC_ExternalTrigConv = ADC_ExternalTrigConv_None; <span class="comment">//不使用外部触发转换</span></div><div class="line">    ADC_InitStructure.ADC_DataAlign = ADC_DataAlign_Right;  <span class="comment">//采集数据右对齐</span></div><div class="line">    ADC_InitStructure.ADC_NbrOfChannel = <span class="number">1</span>;     <span class="comment">//要转换的通道数目1</span></div><div class="line">    ADC_Init(ADC1, &amp;ADC_InitStructure);</div><div class="line"></div><div class="line">    <span class="comment">/*配置ADC时钟，为PCLK2的8分频，即9Hz*/</span></div><div class="line">    RCC_ADCCLKConfig(RCC_PCLK2_Div8);</div><div class="line">    <span class="comment">/*配置ADC1的通道11为55.   5个采样周期，序列为1 */</span></div><div class="line">    ADC_RegularChannelConfig(ADC1, ADC_Channel_11, <span class="number">1</span>, ADC_SampleTime_55Cycles5);</div><div class="line"></div><div class="line">    <span class="comment">/* Enable ADC1 DMA */</span></div><div class="line">    ADC_DMACmd(ADC1, ENABLE);</div><div class="line"></div><div class="line">    <span class="comment">/* Enable ADC1 */</span></div><div class="line">    ADC_Cmd(ADC1, ENABLE);</div><div class="line"></div><div class="line">    <span class="comment">/*复位校准寄存器 */</span>   </div><div class="line">    ADC_ResetCalibration(ADC1);</div><div class="line">    <span class="comment">/*等待校准寄存器复位完成 */</span></div><div class="line">    <span class="keyword">while</span>(ADC_GetResetCalibrationStatus(ADC1));</div><div class="line"></div><div class="line">    <span class="comment">/* ADC校准 */</span></div><div class="line">    ADC_StartCalibration(ADC1);</div><div class="line">    <span class="comment">/* 等待校准完成*/</span></div><div class="line">    <span class="keyword">while</span>(ADC_GetCalibrationStatus(ADC1));</div><div class="line"></div><div class="line">    <span class="comment">/* 由于没有采用外部触发，所以使用软件触发ADC转换 */</span></div><div class="line">    ADC_SoftwareStartConvCmd(ADC1, ENABLE);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">ADC1_Init</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">&#123;</div><div class="line">    ADC1_GPIO_Config();</div><div class="line">    ADC1_Mode_Config();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>在<code>main</code>函数中读取<code>ADC_ConvertedValue</code>就为转换的到的值（一般来说转换为电压较好<code>ADC_ConvertedValueLocal =(float) ADC_ConvertedValue/4096*3.3;</code>)，记住必须在前面<code>extern</code>下。</p>
+<h2 id="ADC多通道转换（ADC多通道转换必须为DMA方式）"><a href="#ADC多通道转换（ADC多通道转换必须为DMA方式）" class="headerlink" title="ADC多通道转换（ADC多通道转换必须为DMA方式）"></a>ADC多通道转换（ADC多通道转换必须为DMA方式）</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div></pre></td><td class="code"><pre><div class="line"> u8 DMA1_MEM_LEN;</div><div class="line"><span class="comment">//DMA1的各通道配置</span></div><div class="line"><span class="comment">//这里的传输形式是固定的,这点要根据不同的情况来修改</span></div><div class="line"><span class="comment">//从外设模式-&gt;存储器/16位数据宽度/存储器增量模式</span></div><div class="line"> <span class="comment">//cmar:存储器地址（自己定义的存储地址AD_DATA[4]） cndtr:数据传输量,实际上就是ADC要转换的路数（N）</span></div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> ADC1_DR_Address  ((u32)0x40012400+0x4c)<span class="comment">//DMA传输的外设地址ADC1_DR_Address是一个自定义的宏ADC_DR保存了ADC转换的值，以它作为DMA传输的源地址。</span></span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">DMA_Config</span><span class="params">(u32 cmar,u16 cndtr)</span></span></div><div class="line">&#123;     </div><div class="line">    DMA_InitTypeDef DMA_InitStructure;</div><div class="line">    RCC_AHBPeriphClockCmd(RCC_AHBPeriph_DMA1, ENABLE);  <span class="comment">//使能DMA时钟</span></div><div class="line"></div><div class="line">    DMA_DeInit(DMA1_Channel1);   <span class="comment">//使用DMA的通道1，stm32有两个DMA，每个有7个通道</span></div><div class="line">    DMA_InitStructure.DMA_PeripheralBaseAddr = ADC1_DR_Address;  <span class="comment">//DMA外设基地址</span></div><div class="line">    DMA_InitStructure.DMA_MemoryBaseAddr = cmar;  <span class="comment">//DMA内存基地址</span></div><div class="line">    DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralSRC;  <span class="comment">//数据传输方向，从外设发送到内存  DMA_CCRX位4</span></div><div class="line">    DMA_InitStructure.DMA_BufferSize = cndtr;  <span class="comment">//DMA通道的DMA缓存的大小</span></div><div class="line">    DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable;  <span class="comment">//外设地址寄存器不变</span></div><div class="line">    DMA_InitStructure.DMA_MemoryInc = DMA_MemoryInc_Enable;  <span class="comment">//内存地址寄存器递增</span></div><div class="line">    DMA_InitStructure.DMA_PeripheralDataSize = DMA_PeripheralDataSize_HalfWord;  <span class="comment">//外设数据宽度为16位</span></div><div class="line">    DMA_InitStructure.DMA_MemoryDataSize = DMA_MemoryDataSize_HalfWord; <span class="comment">//内存数据宽度为16位</span></div><div class="line">    DMA_InitStructure.DMA_Mode = DMA_Mode_Circular;  <span class="comment">//工作在循环缓存模式</span></div><div class="line">    DMA_InitStructure.DMA_Priority = DMA_Priority_High; <span class="comment">//DMA通道 x拥有高优先级</span></div><div class="line">    DMA_InitStructure.DMA_M2M = DMA_M2M_Disable;  <span class="comment">//DMA通道x没有设置为内存到内存传输</span></div><div class="line">    DMA_Init(DMA1_Channel1, &amp;DMA_InitStructure);  <span class="comment">//根据DMA_InitStruct中指定的参数初始化DMA的通道USART1_Tx_DMA_Channel所标识的寄存器</span></div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N  4<span class="comment">//ADC1的通道数</span></span></div><div class="line"><span class="keyword">extern</span> u16 AD_DATA[<span class="number">4</span>];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span>  <span class="title">Adc_Init</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">&#123;</div><div class="line">  ADC_InitTypeDef ADC_InitStructure;</div><div class="line">  GPIO_InitTypeDef GPIO_InitStructure;</div><div class="line"></div><div class="line">  RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA |RCC_APB2Periph_ADC1,ENABLE );<span class="comment">//使能端口1的时钟和ADC1的时钟，因为ADC1的通道1在PA1上</span></div><div class="line">  RCC_ADCCLKConfig(RCC_PCLK2_Div6);   <span class="comment">//设置ADC分频因子6 72M/6=12M,ADC最大时间不能超过14M，也就是ADC的时钟频率为12MHz</span></div><div class="line"></div><div class="line">  <span class="comment">//PAx 作为模拟通道输入引脚                         </span></div><div class="line">  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0|GPIO_Pin_1|GPIO_Pin_3|GPIO_Pin_2;</div><div class="line">  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AIN;     <span class="comment">//模拟输入引脚</span></div><div class="line">  GPIO_Init(GPIOA, &amp;GPIO_InitStructure);</div><div class="line"></div><div class="line">  ADC_DeInit(ADC1);  <span class="comment">//复位ADC1,将外设 ADC1 的全部寄存器重设为缺省值</span></div><div class="line">  ADC_InitStructure.ADC_Mode = ADC_Mode_Independent;    <span class="comment">//本次实验使用的是ADC1，并ADC1工作在独立模式ADC_CR1的位19:16,即这几位为0000</span></div><div class="line">  ADC_InitStructure.ADC_ScanConvMode = ENABLE;  <span class="comment">//ADC_ScanConvMode 用来设置是否开启扫描模式，本实验开启扫面模式.ADC_CR1的位8</span></div><div class="line">  ADC_InitStructure.ADC_ContinuousConvMode = ENABLE;    <span class="comment">//ADC_ContinuousConvMode 用来设置是否开启连续转换模式 模数转换工作在连续转换模式，ADC_CR2的位1</span></div><div class="line">  ADC_InitStructure.ADC_ExternalTrigConv = ADC_ExternalTrigConv_None;   <span class="comment">//转换由软件而不是外部触发启动 ADC_CR2的位19:17</span></div><div class="line">  ADC_InitStructure.ADC_DataAlign = ADC_DataAlign_Right;    <span class="comment">//ADC数据右对齐ADC_CR2的位11</span></div><div class="line">  ADC_InitStructure.ADC_NbrOfChannel = N;   <span class="comment">//顺序进行规则转换的ADC通道的数目ADC_SQR1位23:20</span></div><div class="line">  ADC_Init(ADC1, &amp;ADC_InitStructure);   <span class="comment">//根据ADC_InitStruct中指定的参数初始化外设ADCx的寄存器   </span></div><div class="line"></div><div class="line">  ADC_RegularChannelConfig(ADC1, ADC_Channel_0, <span class="number">1</span>, ADC_SampleTime_55Cycles5 );<span class="comment">//ADC1；ADC1通道0；第1转换；采样时间为55周期</span></div><div class="line">  ADC_RegularChannelConfig(ADC1, ADC_Channel_1, <span class="number">2</span>, ADC_SampleTime_55Cycles5 );<span class="comment">//ADC1；ADC1通道1；第2转换；采样时间为55周期</span></div><div class="line">  ADC_RegularChannelConfig(ADC1, ADC_Channel_2, <span class="number">3</span>, ADC_SampleTime_55Cycles5 );</div><div class="line">  <span class="comment">//ADC1；ADC1通道1；第3转换；采样时间为55周期</span></div><div class="line">    ADC_RegularChannelConfig(ADC1, ADC_Channel_3, <span class="number">4</span>, ADC_SampleTime_55Cycles5 );<span class="comment">//ADC1；ADC1通道3；第4转换；采样时间为55周期</span></div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line">这里的ADC_SampleTime可配置1.5、7.5、13.5、28.5、41.5、55.5、71.5、239.5 其计算公式为T=采样周期+12.5个周期</div><div class="line">本代码中转换时间T=（55.5+12.5）/12  ----12为ADC时钟配置</div><div class="line">注意你要输入的进行规则转换的通道数N要全部进行通道配置</div><div class="line">**/</div><div class="line">  ADC_DMACmd(ADC1, ENABLE); <span class="comment">//使能ADC1的DMA传输，ADC_CR2位8</span></div><div class="line"></div><div class="line">  ADC_Cmd(ADC1, ENABLE);    <span class="comment">//使能的ADC1,ADC_CR2位0</span></div><div class="line"></div><div class="line">  ADC_ResetCalibration(ADC1);   <span class="comment">//使能复位校准，ADC_CR2位3  </span></div><div class="line">  <span class="keyword">while</span>(ADC_GetResetCalibrationStatus(ADC1));   <span class="comment">//等待复位校准结束</span></div><div class="line"></div><div class="line">  ADC_StartCalibration(ADC1);    <span class="comment">//开启AD校准，ADC_CR2位2</span></div><div class="line">  <span class="keyword">while</span>(ADC_GetCalibrationStatus(ADC1));     <span class="comment">//等待校准结束</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>在<code>main</code>函数中先声明<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N  4<span class="comment">//ADC1的通道数</span></span></div><div class="line">u16 AD_DATA[N];<span class="comment">//AD转换的数字量</span></div><div class="line"><span class="keyword">float</span> value[N];<span class="comment">//AD转换的模拟量</span></div></pre></td></tr></table></figure></p>
+<p>然后启动DMA<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Adc_Init();</div><div class="line">DMA_Config((u32)&amp;AD_DATA,N)</div><div class="line">DMA_Cmd(DMA1_Channel1, ENABLE);<span class="comment">//启动DMA通道</span></div><div class="line">ADC_SoftwareStartConvCmd(ADC1, ENABLE);<span class="comment">//软件启动AD转换</span></div></pre></td></tr></table></figure></p>
+<p>最后转换为电压即可<br><code>value[i] =(float) AD_DATA[i]*(3.3/4095)</code></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;STM32上集成的ADC（Analog to Digital Convert）外设很强大。在以前用89C51时，还需要芯片来处理AD/DA,而现在用stm32显然方便很多。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="ARM学习" scheme="http://yoursite.com/categories/ARM%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="stm32" scheme="http://yoursite.com/tags/stm32/"/>
+    
+      <category term="ADC" scheme="http://yoursite.com/tags/ADC/"/>
+    
+  </entry>
+  
+</feed>
