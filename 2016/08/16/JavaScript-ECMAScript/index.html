@@ -11,16 +11,49 @@
   
   
   
-  <meta name="description" content="对javascript中的基础做一些总结，使用版本为ECMAScript 3.1.">
+  <meta name="description" content="JavaScript在HTML中使用
+内部嵌入
+1&amp;lt;script type=&quot;text/javascript&amp;gt;&amp;lt;/script&amp;gt;
+
+外部嵌入
+1&amp;lt;script  src=&quot;example.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+注意：
+
+第二个js脚本可能在第一个脚本之后进行覆盖，所以要确保不会发生冲突。
+在内部嵌入的js脚本要写在&amp;lt;body&amp;gt;&amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript-ECMAScript(基础)">
 <meta property="og:url" content="http://yoursite.com/2016/08/16/JavaScript-ECMAScript/index.html">
 <meta property="og:site_name" content="求索之路">
-<meta property="og:description" content="对javascript中的基础做一些总结，使用版本为ECMAScript 3.1.">
-<meta property="og:updated_time" content="2016-08-18T00:38:08.000Z">
+<meta property="og:description" content="JavaScript在HTML中使用
+内部嵌入
+1&amp;lt;script type=&quot;text/javascript&amp;gt;&amp;lt;/script&amp;gt;
+
+外部嵌入
+1&amp;lt;script  src=&quot;example.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+注意：
+
+第二个js脚本可能在第一个脚本之后进行覆盖，所以要确保不会发生冲突。
+在内部嵌入的js脚本要写在&amp;lt;body&amp;gt;&amp;">
+<meta property="og:updated_time" content="2017-05-16T12:28:39.743Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript-ECMAScript(基础)">
-<meta name="twitter:description" content="对javascript中的基础做一些总结，使用版本为ECMAScript 3.1.">
+<meta name="twitter:description" content="JavaScript在HTML中使用
+内部嵌入
+1&amp;lt;script type=&quot;text/javascript&amp;gt;&amp;lt;/script&amp;gt;
+
+外部嵌入
+1&amp;lt;script  src=&quot;example.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+注意：
+
+第二个js脚本可能在第一个脚本之后进行覆盖，所以要确保不会发生冲突。
+在内部嵌入的js脚本要写在&amp;lt;body&amp;gt;&amp;">
   
     <link rel="alternate" href="/atom.xml" title="求索之路" type="application/atom+xml">
   
@@ -56,7 +89,7 @@ var themeMenus = {};
 
   themeMenus["/archives"] = "Archives"; 
 
-  themeMenus["/categories"] = "Categories"; 
+  themeMenus["/categories"] = "Kategorien"; 
 
   themeMenus["/tags"] = "Tags"; 
 
@@ -91,7 +124,7 @@ var themeMenus = {};
                     
                       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Kategorien</a> </li>
                     
                       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
                     
@@ -160,8 +193,7 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>对javascript中的基础做一些总结，使用版本为ECMAScript 3.1.<br><a id="more"></a></p>
-<h1 id="JavaScript在HTML中使用"><a href="#JavaScript在HTML中使用" class="headerlink" title="JavaScript在HTML中使用"></a>JavaScript在HTML中使用</h1><ul>
+        <h1 id="JavaScript在HTML中使用"><a href="#JavaScript在HTML中使用" class="headerlink" title="JavaScript在HTML中使用"></a>JavaScript在HTML中使用</h1><ul>
 <li><p>内部嵌入</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript&gt;&lt;/script&gt;</span></span></div></pre></td></tr></table></figure>
 </li>
@@ -177,13 +209,16 @@ var themeMenus = {};
 <h1 id="JavaScript基本语法"><a href="#JavaScript基本语法" class="headerlink" title="JavaScript基本语法"></a>JavaScript基本语法</h1><h3 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h3><p>js的ECMAScript是区分大小写，其标识符由字母、数字、下划线、$构成，标识符的第一个字母不能为数字。</p>
 <h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>注释和C一样，分单行和多行。</p>
 <h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><ul>
-<li>typeof</li>
-<li><p>undefined</p>
+<li><p>typeof</p>
+<ul>
+<li>undefined</li>
+</ul>
 <p>使用<code>var</code>但没有对其初始化的变量的类型。</p>
-</li>
+<ul>
 <li>Null</li>
 <li>Boolean</li>
-<li><p>Number</p>
+<li>Number</li>
+</ul>
 <p>使用的是IEEE754格式</p>
 <ol>
 <li>浮点数</li>
@@ -201,17 +236,19 @@ var themeMenus = {};
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> num1 = <span class="built_in">parseInt</span>(<span class="string">"AF"</span>,<span class="number">16</span>)  <span class="comment">//175</span></div><div class="line"><span class="keyword">var</span> num2 = <span class="built_in">parseInt</span>(<span class="string">"AF"</span>);   <span class="comment">//NaN</span></div><div class="line"><span class="keyword">var</span> num3 = <span class="built_in">parseInt</span>(<span class="string">"10"</span>,<span class="number">2</span>); <span class="comment">//2（按照二进制）</span></div><div class="line"><span class="keyword">var</span> num3 = <span class="built_in">parseInt</span>(<span class="string">"10"</span>,<span class="number">8</span>); <span class="comment">//8</span></div><div class="line"><span class="keyword">var</span> num3 = <span class="built_in">parseInt</span>(<span class="string">"10"</span>,<span class="number">10</span>); <span class="comment">//10</span></div></pre></td></tr></table></figure>
 </li>
 </ol>
-</li>
-<li><p>String</p>
+<ul>
+<li>String</li>
+</ul>
 <p>js里面的单双引号的作用是相同的。</p>
-</li>
-<li><p>Object</p>
+<ul>
+<li>Object</li>
+</ul>
 </li>
 </ul>
 <h3 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h3><p>  <code>==</code>操作符</p>
 <p>  如果两个操作数相等，返回<code>true</code>，反之<code>false</code>。两个操作符在比较之时会先转换（强制转换），然后再进行比较。</p>
 <ul>
-<li>如果有一个操作数是布尔型，则比较的相等性时先将其转换为数值false转换为0，而true转换为1。</li>
+<li>如果有一个操作数是布尔型，则比较的相等性时先将其转换为数值false转换为0，而true转换为1。<ul>
 <li>如果有一个操作数是字符串，另一个是数值，在比较时先将字符串转换为数值。</li>
 <li>如果一个操作数是对象，另一个不是，则调用对象的<code>valueOf()</code>方法，用得到的基本类型值按照前面的规则比较。</li>
 <li><code>null</code>和<code>undefined</code>是相等的。</li>
@@ -219,11 +256,13 @@ var themeMenus = {};
 <li>如果有一个操作数是<code>NaN</code>，则相等操作符返回<code>false</code>。</li>
 <li>如果两个操作数都是对象，则比较它们是不是同一个对象。如果两个操作数是同一对象，则返回<code>true</code>，否则<code>false</code>。</li>
 </ul>
+</li>
+</ul>
 <p>  <code>===</code>操作符</p>
 <p>  在未转换的情况下进行比较。</p>
 <p>  <strong>其余操作符均与C、java相同。</strong></p>
 <h3 id="语句"><a href="#语句" class="headerlink" title="语句"></a>语句</h3><ul>
-<li>if</li>
+<li>if<ul>
 <li>do-while</li>
 <li>while</li>
 <li>for</li>
@@ -232,6 +271,8 @@ var themeMenus = {};
 <li>break,continue</li>
 <li>with</li>
 <li>switch</li>
+</ul>
+</li>
 </ul>
 <h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">functionName</span>(<span class="params">arg0,arg1,arg2,...,argN</span>)</span>&#123;</div><div class="line">  statements；</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>  <strong>没有重载</strong></p>
@@ -300,13 +341,12 @@ var themeMenus = {};
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> add = <span class="function"><span class="keyword">function</span> (<span class="params">x, y</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> x * <span class="keyword">this</span>.m + y * <span class="keyword">this</span>.n;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line">  <span class="attr">m</span>: <span class="number">2</span>,</div><div class="line">  <span class="attr">n</span>: <span class="number">2</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> newAdd = add.bind(obj, <span class="number">5</span>);</div><div class="line"></div><div class="line">newAdd(<span class="number">5</span>)</div><div class="line"><span class="comment">// 20</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="基本包装类型"><a href="#基本包装类型" class="headerlink" title="基本包装类型"></a>基本包装类型</h3><p>从代码来看<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> s1 = <span class="string">"some text"</span>;</div><div class="line"><span class="keyword">var</span> s2 = s1.subString(<span class="number">2</span>);</div><div class="line"><span class="string">`</span></div></pre></td></tr></table></figure></p>
+<h3 id="基本包装类型"><a href="#基本包装类型" class="headerlink" title="基本包装类型"></a>基本包装类型</h3><p>从代码来看<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> s1 = <span class="string">"some text"</span>;</div><div class="line"><span class="keyword">var</span> s2 = s1.subString(<span class="number">2</span>);</div><div class="line">​<span class="string">`</span></div></pre></td></tr></table></figure></p>
 <p>在执行上述代码时后台操作是：</p>
 <ol>
 <li>创建String类型的一个实例。</li>
 <li>在实例上调用指定的方法。</li>
-<li>销毁这个实例。<br>操作如同下面的代码：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> s1 = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"some text"</span>);</div><div class="line"><span class="keyword">var</span> s2 = s1.subString(<span class="number">2</span>);</div><div class="line">s1 = <span class="literal">null</span>;</div></pre></td></tr></table></figure>
-</li>
+<li>销毁这个实例。<br>操作如同下面的代码：<br>​<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> s1 = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"some text"</span>);</div><div class="line"><span class="keyword">var</span> s2 = s1.subString(<span class="number">2</span>);</div><div class="line">s1 = <span class="literal">null</span>;</div></pre></td></tr></table></figure></li>
 </ol>
 <p>引用类型与基本包装类型的区别就是对象的生存期。使用<code>new</code>操作符创建的引用类型的实例，在执行流离开当前作用域之前一直保存在内存中。而<br>自动创建的基本包装类型对象，则只存在于一行代码的瞬间执行，然后销毁。这意味着我们并不能在运行时为基本类型添加属性和方法。</p>
 <p><code>Boolean</code>类型</p>
@@ -392,7 +432,7 @@ var themeMenus = {};
 <nav id="article-nav">
   
     <a href="/2016/09/18/Java基本程序结构/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
+      <strong class="article-nav-caption">Neuer</strong>
       <div class="article-nav-title">
         
           Java基本程序结构
@@ -402,7 +442,7 @@ var themeMenus = {};
   
   
     <a href="/2016/08/16/JavaScript学习笔记/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">Älter</strong>
       <div class="article-nav-title">JavaScript学习笔记</div>
     </a>
   

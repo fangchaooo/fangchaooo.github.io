@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>python基础 | 求索之路</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="Python基础语法" />
+  
+  
+  
+  
+  <meta name="description" content="Python基础12345678910111213141516171819202122232425262728293031323334353637Beautiful is better than ugly.Explicit is better than implicit.Simple is better than complex.Complex is better than complicated">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python基础">
+<meta property="og:url" content="http://yoursite.com/2017/05/16/Python基础/index.html">
+<meta property="og:site_name" content="求索之路">
+<meta property="og:description" content="Python基础12345678910111213141516171819202122232425262728293031323334353637Beautiful is better than ugly.Explicit is better than implicit.Simple is better than complex.Complex is better than complicated">
+<meta property="og:updated_time" content="2017-05-16T12:31:11.646Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python基础">
+<meta name="twitter:description" content="Python基础12345678910111213141516171819202122232425262728293031323334353637Beautiful is better than ugly.Explicit is better than implicit.Simple is better than complex.Complex is better than complicated">
+  
+    <link rel="alternate" href="/atom.xml" title="求索之路" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/hiero.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+</head>
+
+<script>
+var themeMenus = {};
+
+  themeMenus["/"] = "Home"; 
+
+  themeMenus["/archives"] = "Archives"; 
+
+  themeMenus["/categories"] = "Kategorien"; 
+
+  themeMenus["/tags"] = "Tags"; 
+
+  themeMenus["/about"] = "About"; 
+
+</script>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  <header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="求索之路" rel="home"> 求索之路 </a>
+            
+          </h1>
+
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+            <div class="clearfix sf-menu">
+
+              <ul id="main-nav" class="nmenu sf-js-enabled">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Kategorien</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+
+      </div>
+  </div>
+</header>
+
+
+  <div style="background: #fff; width: 100%;">
+
+      <div style="max-height:600px; overflow: hidden;  display: flex; display: -webkit-flex; align-items: center;">
+        <img id="originBg" width="100%" alt="" src="">
+      </div>
+
+  </div>
+
+  <script>
+      var imgUrls = "css/images/pose.jpg,https://images.unsplash.com/photo-1464306208223-e0b4495a5553?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg=".split(",");
+      var random = Math.floor((Math.random() * imgUrls.length ));
+      if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+        document.getElementById("originBg").src=imgUrls[random];
+      } else {
+        document.getElementById("originBg").src='/' + imgUrls[random];
+      }
+  </script>
+
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-Python基础" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      Python基础
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2017/05/16/Python基础/" class="article-date">
+	  <time datetime="2017-05-16T12:30:11.000Z" itemprop="datePublished">May 16, 2017</time>
+	</a>
+
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Python基础"><a href="#Python基础" class="headerlink" title="Python基础"></a>Python基础</h1><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">Beautiful is better than ugly.</div><div class="line"></div><div class="line">Explicit is better than implicit.</div><div class="line"></div><div class="line">Simple is better than complex.</div><div class="line"></div><div class="line">Complex is better than complicated.</div><div class="line"></div><div class="line">Flat is better than nested.</div><div class="line"></div><div class="line">Sparse is better than dense.</div><div class="line"></div><div class="line">Readability counts.</div><div class="line"></div><div class="line">Special cases aren't special enough to break the rules.</div><div class="line"></div><div class="line">Although practicality beats purity.</div><div class="line"></div><div class="line">Errors should never pass silently.</div><div class="line"></div><div class="line">Unless explicitly silenced.</div><div class="line"></div><div class="line">In the face of ambiguity, refuse the temptation to guess.</div><div class="line"></div><div class="line">There should be one-- and preferably only one --obvious way to do it.</div><div class="line"></div><div class="line">Although that way may not be obvious at first unless you're Dutch.</div><div class="line"></div><div class="line">Now is better than never.</div><div class="line"></div><div class="line">Although never is often better than <span class="emphasis">*right*</span> now.</div><div class="line"></div><div class="line">If the implementation is hard to explain, it's a bad idea.</div><div class="line"></div><div class="line">If the implementation is easy to explain, it may be a good idea.</div><div class="line"></div><div class="line">Namespaces are one honking great idea -- let's do more of those!</div></pre></td></tr></table></figure>
+<h2 id="变量和简单数据类型"><a href="#变量和简单数据类型" class="headerlink" title="变量和简单数据类型"></a>变量和简单数据类型</h2><h4 id="输入输出"><a href="#输入输出" class="headerlink" title="输入输出"></a>输入输出</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#输出</span></div><div class="line">print(<span class="string">"Hello, World!"</span>)</div><div class="line"><span class="comment">#输入</span></div><div class="line">text = input(<span class="string">"Please input something"</span>)</div></pre></td></tr></table></figure>
+<h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><ul>
+<li>变量名只能包含字母、数字和下划线</li>
+<li>变量名不能包含空格</li>
+<li>不能将<code>Python</code>关键字当做变量名</li>
+</ul>
+<h4 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h4><p>用<code>&#39;&#39;</code>或者<code>&quot;&quot;</code>都可以包含字符串。对字符串中单词有常见的几种方法：</p>
+<ul>
+<li><p><code>.title()</code> 以首字母大写显示每个单词</p>
+</li>
+<li><p><code>.upper()</code> 字符串全为大写</p>
+</li>
+<li><p><code>.lower()</code> 字符串全为小写</p>
+</li>
+<li><p><code>.capitalize()</code> 字符串首字母大写</p>
+</li>
+<li><p><code>.swapcase()</code>字母大小写转换</p>
+</li>
+<li><p><code>+</code> 合并字符串</p>
+</li>
+<li><p><code>\t</code>和<code>\n</code>制造空白</p>
+</li>
+<li><p><code>.strip()</code>删除所有空白（删除的空白并没有保存到原字符串，下同）</p>
+</li>
+<li><p><code>.rstrip()</code>删除尾部空白</p>
+</li>
+<li><p><code>.lstrip()</code>删除首部空白</p>
+</li>
+<li><p><code>三重引号</code>在三重引号内字符串会把转义、制表符、换行都认定为字符串的一部分</p>
+</li>
+<li><p><code>in</code> <code>not in</code></p>
+</li>
+<li><p><code>isX</code></p>
+<ul>
+<li><code>.isupper()</code> <code>.islower()</code></li>
+<li><code>.isalpha()</code>如果字符串只包含字母，而且非空</li>
+<li><code>.isalnum()</code>如果字符串只包含字母和数字，并且非空</li>
+<li><code>.isdecimal()</code>如果字符串只包含数字字符，并且非空</li>
+<li><code>.isspace()</code>如果字符串只包含空格、制表符和换行，并且非空</li>
+<li><code>.istitle()</code></li>
+<li><code>.startswith()</code> <code>.endswith()</code></li>
+</ul>
+</li>
+<li><p><code>.find()</code></p>
+</li>
+<li><p><code>.count()</code></p>
+</li>
+<li><p><code>.split()</code> 分割</p>
+</li>
+<li><p><code>&#39;&#39;.join()</code> 合并</p>
+</li>
+</ul>
+<h4 id="数字"><a href="#数字" class="headerlink" title="数字"></a>数字</h4><ul>
+<li><p><code>0b/0B</code>二进制</p>
+</li>
+<li><p><code>0o/0O</code>八进制</p>
+</li>
+<li><p><code>0x/0X</code>十六进制</p>
+</li>
+</ul>
+<h4 id="浮点数（遵循IEEE754标准）"><a href="#浮点数（遵循IEEE754标准）" class="headerlink" title="浮点数（遵循IEEE754标准）"></a>浮点数（遵循<code>IEEE754</code>标准）</h4><p><code>int() float() str()</code>进行类型转换</p>
+<p><code>None</code>—-<code>NoneType</code></p>
+<h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p><code>python</code>中使用<code>#</code>来表示注释</p>
+<h2 id="列表-引用操作"><a href="#列表-引用操作" class="headerlink" title="列表(引用操作)"></a>列表(引用操作)</h2><p>列表是由一系列按特定顺序排列的元素组成的<strong>值</strong>。</p>
+<p>列表用下标取值。（从<code>0</code>开始，可取负值，从倒数开始<code>-1,-2</code>）</p>
+<h4 id="列表基础操作"><a href="#列表基础操作" class="headerlink" title="列表基础操作"></a>列表基础操作</h4><ul>
+<li><p><code>+</code>列表连接</p>
+</li>
+<li><p><code>.index()</code>列表索引</p>
+</li>
+<li><p>列表添加元素</p>
+<ul>
+<li><code>.append()</code>列表末尾添加元素</li>
+<li><code>.insert(index, obj)</code>特定位置添加元素</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>列表删除元素</p>
+<ul>
+<li>索引删除<ul>
+<li><code>del list[index]</code>删除元素，需指定元素索引，永久删除</li>
+<li><code>.pop(boj=list[-1])</code>默认弹出最后一个元素，也可弹出指定索引元素</li>
+</ul>
+</li>
+<li>值删除<ul>
+<li><code>.remove()</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>列表元素复制</p>
+<ul>
+<li><code>copy.copy()</code></li>
+<li><code>copy.deepcopy()</code></li>
+</ul>
+</li>
+<li><p>排序</p>
+<ul>
+<li><p><code>.sort()</code>对列表进行永久性排序</p>
+<p><code>.sort(reverse=True)</code>逆序排序</p>
+</li>
+<li><code>sorted()</code>不影响原始排列顺序的</li>
+</ul>
+</li>
+<li>列表反转<code>.reverse()</code>永久反转,反转的是<strong>列表元素的排列顺序</strong></li>
+</ul>
+<h4 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h4><p><code>for x in list</code></p>
+<h4 id="创建数值列表"><a href="#创建数值列表" class="headerlink" title="创建数值列表"></a>创建数值列表</h4><p><code>range(start, end, scan)</code>输出数值为<code>[start, start+1,...,end-1]</code></p>
+<h4 id="列表解析"><a href="#列表解析" class="headerlink" title="列表解析"></a>列表解析</h4><blockquote>
+<p>列表解析式是将一个列表（实际上适用于任何可迭代对象（iterable））转换成另一个列表的工具。在转换过程中，可以指定元素必须符合一定的条件，才能添加至新的列表中，这样每个元素都可以按需要进行转换。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">result = []</div><div class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">10</span>):</div><div class="line">  result = x*<span class="number">2</span></div><div class="line"><span class="comment">#列表解析式  </span></div><div class="line">result = [x*<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">10</span>)]</div></pre></td></tr></table></figure>
+<h4 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h4><p><code>[:]</code>提取从开头到结尾的整个字符串</p>
+<p><code>[start:]</code>从start提取到结尾</p>
+<p><code>[:end]</code>从开头提取到结尾-1</p>
+<p><code>[start:end]</code>从<code>start</code>提取到<code>end-1</code></p>
+<p><code>[start:end:step]</code>从<code>start</code>提取到<code>end-1</code>，每<code>step</code>个字符提取一个<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>spam = [<span class="string">'cat'</span>, <span class="string">'bat'</span>, <span class="string">'rat'</span>, <span class="string">'elephant'</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>spam[<span class="number">0</span>:<span class="number">3</span>]  <span class="comment">#从索引0开始到索引2，不包含3，共3个元素</span></div><div class="line">[<span class="string">'cat'</span>, <span class="string">'bat'</span>, <span class="string">'rat'</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>spam[<span class="number">1</span>:<span class="number">3</span>]</div><div class="line">[<span class="string">'bat'</span>, <span class="string">'rat'</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>spam[<span class="number">0</span>:<span class="number">-1</span>] <span class="comment">#从索引0到最后一个元素，不包含最后一个索引为-1的元素</span></div><div class="line">[<span class="string">'cat'</span>, <span class="string">'bat'</span>, <span class="string">'rat'</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>spam[:<span class="number">2</span>] <span class="comment">#从索引0到1</span></div><div class="line">[<span class="string">'cat'</span>, <span class="string">'bat'</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>spam[<span class="number">1</span>:] <span class="comment">#从索引1到end</span></div><div class="line">[<span class="string">'bat'</span>, <span class="string">'rat'</span>, <span class="string">'elephant'</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>spam[:] <span class="comment">#列表复制</span></div><div class="line">[<span class="string">'cat'</span>, <span class="string">'bat'</span>, <span class="string">'rat'</span>, <span class="string">'elephant'</span>]</div></pre></td></tr></table></figure></p>
+<h4 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h4><p>特殊的列表（不可变列表）</p>
+<p>修改元组只能重新赋值</p>
+<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><p><code>True</code> <code>False</code></p>
+<p><code>and</code> <code>or</code> <code>not</code> <code>in</code> <code>==</code></p>
+<p><code>if - else</code></p>
+<p><code>if - elif - else</code></p>
+<p><code>while</code></p>
+<p><code>for in</code></p>
+<h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><p><code>d = {key1: value1, key2: value2}</code></p>
+<p>字典是<strong>不排序</strong>的</p>
+<h4 id="对字典的基本操作"><a href="#对字典的基本操作" class="headerlink" title="对字典的基本操作"></a>对字典的基本操作</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#访问字典中的值</span></div><div class="line">print(d[key1]） <span class="comment">#value1</span></div><div class="line"></div><div class="line"><span class="comment">#添加键值</span></div><div class="line">d[<span class="string">'like'</span>] = <span class="string">'cat'</span></div><div class="line"></div><div class="line"><span class="comment">#创建空字典</span></div><div class="line">mycat = &#123;&#125;</div><div class="line"></div><div class="line"><span class="comment">#修改值</span></div><div class="line">d[<span class="string">'like'</span>] = <span class="string">'dog'</span></div><div class="line"></div><div class="line"><span class="comment">#删除键-值对</span></div><div class="line"><span class="keyword">del</span> d[<span class="string">'like'</span>]</div></pre></td></tr></table></figure>
+<h4 id="字典的遍历"><a href="#字典的遍历" class="headerlink" title="字典的遍历"></a>字典的遍历</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment"># 遍历键</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>a = &#123;<span class="string">'like'</span>: <span class="string">'cat'</span>, <span class="string">'heat'</span> : <span class="string">'dog'</span>&#125;</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> k <span class="keyword">in</span> a:</div><div class="line">	   print(k)</div><div class="line"></div><div class="line">heat</div><div class="line">like</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> k <span class="keyword">in</span> a.keys():</div><div class="line">	print(k.title())</div><div class="line"><span class="comment"># keys() 并非只能用于遍历，实际上它返回的是一个列表，其中包含字典中的所有键</span></div><div class="line"></div><div class="line">Heat</div><div class="line">Like</div><div class="line"><span class="comment"># 遍历值</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> v <span class="keyword">in</span> a.values():</div><div class="line">	print(v.upper())</div><div class="line"></div><div class="line"></div><div class="line">DOG</div><div class="line">CAT</div><div class="line"></div><div class="line"><span class="comment"># 遍历键-值</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> k, v <span class="keyword">in</span> a.items():</div><div class="line">	   print(k+ <span class="string">' '</span>+ v)</div><div class="line"></div><div class="line"></div><div class="line">heat dog</div><div class="line">like cat</div></pre></td></tr></table></figure>
+<p>用<code>in</code>检查字典中是否存在键或值</p>
+<p><code>.get(s1, s2)</code></p>
+<ul>
+<li><p><code>s1</code>要取得的值得键</p>
+</li>
+<li><p><code>s2</code>如果键不存在返回的备用值</p>
+</li>
+</ul>
+<p><code>.setdefault(x1, x2)</code></p>
+<ul>
+<li><p><code>x1</code>要检查的键</p>
+</li>
+<li><p><code>x2</code>如果该键不存在时要设置的值（如果该键确实存在，方法会返回键的值）</p>
+</li>
+</ul>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun_name</span><span class="params">(参数...)</span>:</span></div><div class="line">  <span class="keyword">return</span> <span class="comment">#如果函数没有return，python会自动在函数末尾加 return None</span></div></pre></td></tr></table></figure>
+<h4 id="参数传递"><a href="#参数传递" class="headerlink" title="参数传递"></a>参数传递</h4><ul>
+<li>关键字实参</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun1</span><span class="params">(para1, para2)</span>:</span></div><div class="line">	...</div><div class="line">    </div><div class="line">fun1(para1 = <span class="string">'xx'</span>, para2 = <span class="string">'xx'</span>)</div><div class="line">fun1(para2 = <span class="string">'xx'</span>, para1 = <span class="string">'xx'</span>)</div></pre></td></tr></table></figure>
+<p>指定函数参数的值，直接在实参中将名称和值关联起来</p>
+<ul>
+<li>默认值</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun2</span><span class="params">(para1, para2 = <span class="string">'xx'</span>)</span>:</span></div><div class="line">	...</div><div class="line">    </div><div class="line">fun2(x1,)</div></pre></td></tr></table></figure>
+<p>在使用默认值时，在形参列表中必须先列出没有默认值的形参，再列出有默认值的实参。</p>
+<h4 id="让实参变为可选"><a href="#让实参变为可选" class="headerlink" title="让实参变为可选"></a>让实参变为可选</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_formatted_name</span><span class="params">(first_name, last_name, middle_name=<span class="string">''</span>)</span>:</span></div><div class="line">    ...</div></pre></td></tr></table></figure>
+<p>空字符串为<code>False</code>，但如果调用过中提供了<code>middle_name</code>，那么它将为<code>True</code>。</p>
+<h4 id="禁止函数修改列表"><a href="#禁止函数修改列表" class="headerlink" title="禁止函数修改列表"></a>禁止函数修改列表</h4><p><code>function_name(list_name[:])</code></p>
+<h4 id="传递任意数量的实参"><a href="#传递任意数量的实参" class="headerlink" title="传递任意数量的实参"></a>传递任意数量的实参</h4><ul>
+<li>使用<code>*para_name</code>作为形参接受任意数量实参</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">fun1</span><span class="params">(*names)</span>:</span></div><div class="line">	print(names)</div><div class="line"></div><div class="line">	</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>fun1(<span class="string">"fc"</span>)</div><div class="line">(<span class="string">'fc'</span>,)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>fun1(<span class="string">"aa"</span>,<span class="string">"bb"</span>,<span class="string">"cc"</span>)</div><div class="line">(<span class="string">'aa'</span>, <span class="string">'bb'</span>, <span class="string">'cc'</span>)</div></pre></td></tr></table></figure>
+<ul>
+<li>使用任意数量的关键字实参</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">build_profile</span><span class="params">(first, last, **user_info)</span>:</span></div><div class="line">	profile = &#123;&#125;</div><div class="line">	profile[<span class="string">'first_name'</span>] = first</div><div class="line">	profile[<span class="string">'last_name'</span>] = last</div><div class="line">	<span class="keyword">for</span> key, value <span class="keyword">in</span> user_info.items():</div><div class="line">		profile[key] = value</div><div class="line">	<span class="keyword">return</span> profile</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>user_profile = build_profile(<span class="string">'albert'</span>, <span class="string">'einstein'</span>,</div><div class="line">			     location=<span class="string">'preiceton'</span>,</div><div class="line">			     field=<span class="string">'physics'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>print(user_profile)</div><div class="line">&#123;<span class="string">'first_name'</span>: <span class="string">'albert'</span>, <span class="string">'location'</span>: <span class="string">'preiceton'</span>, <span class="string">'field'</span>: <span class="string">'physics'</span>, <span class="string">'last_name'</span>: <span class="string">'einstein'</span>&#125;</div></pre></td></tr></table></figure>
+<h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><p>导入整个模块：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> module_name</div><div class="line"></div><div class="line">modul_name.function_name()</div></pre></td></tr></table></figure>
+<p>导入特定函数：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> module_name <span class="keyword">import</span> function_name(,function_name2,...)</div><div class="line"></div><div class="line">function_name()</div></pre></td></tr></table></figure>
+<p>用<code>as</code>指定别名</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> module_name <span class="keyword">import</span> function_name(,function_name2,...) <span class="keyword">as</span> fn(,fn1,...)</div><div class="line"></div><div class="line">fn()</div></pre></td></tr></table></figure>
+<p>用<code>as</code>给模块指定别名</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> module_name <span class="keyword">as</span> mn</div><div class="line"></div><div class="line">mn.function_name()</div></pre></td></tr></table></figure>
+<p>导入模块中所有函数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> module_name <span class="keyword">import</span> *</div><div class="line"></div><div class="line">Every_function()</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基础语法/">基础语法</a></li></ul>
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yODAyOS80NjA2">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/05/14/Django入门/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">Django入门</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Python基础"><span class="nav-number">1.</span> <span class="nav-text">Python基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#变量和简单数据类型"><span class="nav-number">1.1.</span> <span class="nav-text">变量和简单数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#输入输出"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">输入输出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变量"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数字"><span class="nav-number">1.1.0.4.</span> <span class="nav-text">数字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#浮点数（遵循IEEE754标准）"><span class="nav-number">1.1.0.5.</span> <span class="nav-text">浮点数（遵循IEEE754标准）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注释"><span class="nav-number">1.1.0.6.</span> <span class="nav-text">注释</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#列表-引用操作"><span class="nav-number">1.2.</span> <span class="nav-text">列表(引用操作)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#列表基础操作"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">列表基础操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遍历"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">遍历</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建数值列表"><span class="nav-number">1.2.0.3.</span> <span class="nav-text">创建数值列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#列表解析"><span class="nav-number">1.2.0.4.</span> <span class="nav-text">列表解析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#切片"><span class="nav-number">1.2.0.5.</span> <span class="nav-text">切片</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#元组"><span class="nav-number">1.2.0.6.</span> <span class="nav-text">元组</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#流程"><span class="nav-number">1.3.</span> <span class="nav-text">流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字典"><span class="nav-number">1.4.</span> <span class="nav-text">字典</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#对字典的基本操作"><span class="nav-number">1.4.0.1.</span> <span class="nav-text">对字典的基本操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字典的遍历"><span class="nav-number">1.4.0.2.</span> <span class="nav-text">字典的遍历</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数"><span class="nav-number">1.5.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#参数传递"><span class="nav-number">1.5.0.1.</span> <span class="nav-text">参数传递</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#让实参变为可选"><span class="nav-number">1.5.0.2.</span> <span class="nav-text">让实参变为可选</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#禁止函数修改列表"><span class="nav-number">1.5.0.3.</span> <span class="nav-text">禁止函数修改列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#传递任意数量的实参"><span class="nav-number">1.5.0.4.</span> <span class="nav-text">传递任意数量的实参</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模块"><span class="nav-number">1.6.</span> <span class="nav-text">模块</span></a></li></ol></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+      <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2017 求索之路 All Rights Reserved.
+          
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hiero" target="_blank">hiero</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var contentdiv = document.getElementById("content");
+
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+</script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

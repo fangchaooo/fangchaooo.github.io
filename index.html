@@ -50,7 +50,7 @@ var themeMenus = {};
 
   themeMenus["/archives"] = "Archives"; 
 
-  themeMenus["/categories"] = "Categories"; 
+  themeMenus["/categories"] = "Kategorien"; 
 
   themeMenus["/tags"] = "Tags"; 
 
@@ -85,7 +85,7 @@ var themeMenus = {};
                     
                       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Kategorien</a> </li>
                     
                       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
                     
@@ -128,6 +128,288 @@ var themeMenus = {};
         
           <section id="main">
   
+    <article id="post-Python基础"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/05/16/Python基础/">Python基础</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2017/05/16/Python基础/" class="article-date">
+	  <time datetime="2017-05-16T12:30:11.000Z" itemprop="datePublished">May 16, 2017</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Python基础"><a href="#Python基础" class="headerlink" title="Python基础"></a>Python基础</h1><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">Beautiful is better than ugly.</div><div class="line"></div><div class="line">Explicit is better than implicit.</div><div class="line"></div><div class="line">Simple is better than complex.</div><div class="line"></div><div class="line">Complex is better than complicated.</div><div class="line"></div><div class="line">Flat is better than nested.</div><div class="line"></div><div class="line">Sparse is better than dense.</div><div class="line"></div><div class="line">Readability counts.</div><div class="line"></div><div class="line">Special cases aren't special enough to break the rules.</div><div class="line"></div><div class="line">Although practicality beats purity.</div><div class="line"></div><div class="line">Errors should never pass silently.</div><div class="line"></div><div class="line">Unless explicitly silenced.</div><div class="line"></div><div class="line">In the face of ambiguity, refuse the temptation to guess.</div><div class="line"></div><div class="line">There should be one-- and preferably only one --obvious way to do it.</div><div class="line"></div><div class="line">Although that way may not be obvious at first unless you're Dutch.</div><div class="line"></div><div class="line">Now is better than never.</div><div class="line"></div><div class="line">Although never is often better than <span class="emphasis">*right*</span> now.</div><div class="line"></div><div class="line">If the implementation is hard to explain, it's a bad idea.</div><div class="line"></div><div class="line">If the implementation is easy to explain, it may be a good idea.</div><div class="line"></div><div class="line">Namespaces are one honking great idea -- let's do more of those!</div></pre></td></tr></table></figure>
+<h2 id="变量和简单数据类型"><a href="#变量和简单数据类型" class="headerlink" title="变量和简单数据类型"></a>变量和简单数据类型</h2><h4 id="输入输出"><a href="#输入输出" class="headerlink" title="输入输出"></a>输入输出</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#输出</span></div><div class="line">print(<span class="string">"Hello, World!"</span>)</div><div class="line"><span class="comment">#输入</span></div><div class="line">text = input(<span class="string">"Please input something"</span>)</div></pre></td></tr></table></figure>
+<h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><ul>
+<li>变量名只能包含字母、数字和下划线</li>
+<li>变量名不能包含空格</li>
+<li>不能将<code>Python</code>关键字当做变量名</li>
+</ul>
+<h4 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h4><p>用<code>&#39;&#39;</code>或者<code>&quot;&quot;</code>都可以包含字符串。对字符串中单词有常见的几种方法：</p>
+<ul>
+<li><p><code>.title()</code> 以首字母大写显示每个单词</p>
+</li>
+<li><p><code>.upper()</code> 字符串全为大写</p>
+</li>
+<li><p><code>.lower()</code> 字符串全为小写</p>
+</li>
+<li><p><code>.capitalize()</code> 字符串首字母大写</p>
+</li>
+<li><p><code>.swapcase()</code>字母大小写转换</p>
+</li>
+<li><p><code>+</code> 合并字符串</p>
+</li>
+<li><p><code>\t</code>和<code>\n</code>制造空白</p>
+</li>
+<li><p><code>.strip()</code>删除所有空白（删除的空白并没有保存到原字符串，下同）</p>
+</li>
+<li><p><code>.rstrip()</code>删除尾部空白</p>
+</li>
+<li><p><code>.lstrip()</code>删除首部空白</p>
+</li>
+<li><p><code>三重引号</code>在三重引号内字符串会把转义、制表符、换行都认定为字符串的一部分</p>
+</li>
+<li><p><code>in</code> <code>not in</code></p>
+</li>
+<li><p><code>isX</code></p>
+<ul>
+<li><code>.isupper()</code> <code>.islower()</code></li>
+<li><code>.isalpha()</code>如果字符串只包含字母，而且非空</li>
+<li><code>.isalnum()</code>如果字符串只包含字母和数字，并且非空</li>
+<li><code>.isdecimal()</code>如果字符串只包含数字字符，并且非空</li>
+<li><code>.isspace()</code>如果字符串只包含空格、制表符和换行，并且非空</li>
+<li><code>.istitle()</code></li>
+<li><code>.startswith()</code> <code>.endswith()</code></li>
+</ul>
+</li>
+<li><p><code>.find()</code></p>
+</li>
+<li><p><code>.count()</code></p>
+</li>
+<li><p><code>.split()</code> 分割</p>
+</li>
+<li><p><code>&#39;&#39;.join()</code> 合并</p>
+</li>
+</ul>
+<h4 id="数字"><a href="#数字" class="headerlink" title="数字"></a>数字</h4><ul>
+<li><p><code>0b/0B</code>二进制</p>
+</li>
+<li><p><code>0o/0O</code>八进制</p>
+</li>
+<li><p><code>0x/0X</code>十六进制</p>
+</li>
+</ul>
+<h4 id="浮点数（遵循IEEE754标准）"><a href="#浮点数（遵循IEEE754标准）" class="headerlink" title="浮点数（遵循IEEE754标准）"></a>浮点数（遵循<code>IEEE754</code>标准）</h4><p><code>int() float() str()</code>进行类型转换</p>
+<p><code>None</code>—-<code>NoneType</code></p>
+<h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p><code>python</code>中使用<code>#</code>来表示注释</p>
+<h2 id="列表-引用操作"><a href="#列表-引用操作" class="headerlink" title="列表(引用操作)"></a>列表(引用操作)</h2><p>列表是由一系列按特定顺序排列的元素组成的<strong>值</strong>。</p>
+<p>列表用下标取值。（从<code>0</code>开始，可取负值，从倒数开始<code>-1,-2</code>）</p>
+<h4 id="列表基础操作"><a href="#列表基础操作" class="headerlink" title="列表基础操作"></a>列表基础操作</h4><ul>
+<li><p><code>+</code>列表连接</p>
+</li>
+<li><p><code>.index()</code>列表索引</p>
+</li>
+<li><p>列表添加元素</p>
+<ul>
+<li><code>.append()</code>列表末尾添加元素</li>
+<li><code>.insert(index, obj)</code>特定位置添加元素</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>列表删除元素</p>
+<ul>
+<li>索引删除<ul>
+<li><code>del list[index]</code>删除元素，需指定元素索引，永久删除</li>
+<li><code>.pop(boj=list[-1])</code>默认弹出最后一个元素，也可弹出指定索引元素</li>
+</ul>
+</li>
+<li>值删除<ul>
+<li><code>.remove()</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>列表元素复制</p>
+<ul>
+<li><code>copy.copy()</code></li>
+<li><code>copy.deepcopy()</code></li>
+</ul>
+</li>
+<li><p>排序</p>
+<ul>
+<li><p><code>.sort()</code>对列表进行永久性排序</p>
+<p><code>.sort(reverse=True)</code>逆序排序</p>
+</li>
+<li><code>sorted()</code>不影响原始排列顺序的</li>
+</ul>
+</li>
+<li>列表反转<code>.reverse()</code>永久反转,反转的是<strong>列表元素的排列顺序</strong></li>
+</ul>
+<h4 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h4><p><code>for x in list</code></p>
+<h4 id="创建数值列表"><a href="#创建数值列表" class="headerlink" title="创建数值列表"></a>创建数值列表</h4><p><code>range(start, end, scan)</code>输出数值为<code>[start, start+1,...,end-1]</code></p>
+<h4 id="列表解析"><a href="#列表解析" class="headerlink" title="列表解析"></a>列表解析</h4><blockquote>
+<p>列表解析式是将一个列表（实际上适用于任何可迭代对象（iterable））转换成另一个列表的工具。在转换过程中，可以指定元素必须符合一定的条件，才能添加至新的列表中，这样每个元素都可以按需要进行转换。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">result = []</div><div class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">10</span>):</div><div class="line">  result = x*<span class="number">2</span></div><div class="line"><span class="comment">#列表解析式  </span></div><div class="line">result = [x*<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">10</span>)]</div></pre></td></tr></table></figure>
+<h4 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h4><p><code>[:]</code>提取从开头到结尾的整个字符串</p>
+<p><code>[start:]</code>从start提取到结尾</p>
+<p><code>[:end]</code>从开头提取到结尾-1</p>
+<p><code>[start:end]</code>从<code>start</code>提取到<code>end-1</code></p>
+<p><code>[start:end:step]</code>从<code>start</code>提取到<code>end-1</code>，每<code>step</code>个字符提取一个<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>spam = [<span class="string">'cat'</span>, <span class="string">'bat'</span>, <span class="string">'rat'</span>, <span class="string">'elephant'</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>spam[<span class="number">0</span>:<span class="number">3</span>]  <span class="comment">#从索引0开始到索引2，不包含3，共3个元素</span></div><div class="line">[<span class="string">'cat'</span>, <span class="string">'bat'</span>, <span class="string">'rat'</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>spam[<span class="number">1</span>:<span class="number">3</span>]</div><div class="line">[<span class="string">'bat'</span>, <span class="string">'rat'</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>spam[<span class="number">0</span>:<span class="number">-1</span>] <span class="comment">#从索引0到最后一个元素，不包含最后一个索引为-1的元素</span></div><div class="line">[<span class="string">'cat'</span>, <span class="string">'bat'</span>, <span class="string">'rat'</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>spam[:<span class="number">2</span>] <span class="comment">#从索引0到1</span></div><div class="line">[<span class="string">'cat'</span>, <span class="string">'bat'</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>spam[<span class="number">1</span>:] <span class="comment">#从索引1到end</span></div><div class="line">[<span class="string">'bat'</span>, <span class="string">'rat'</span>, <span class="string">'elephant'</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>spam[:] <span class="comment">#列表复制</span></div><div class="line">[<span class="string">'cat'</span>, <span class="string">'bat'</span>, <span class="string">'rat'</span>, <span class="string">'elephant'</span>]</div></pre></td></tr></table></figure></p>
+<h4 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h4><p>特殊的列表（不可变列表）</p>
+<p>修改元组只能重新赋值</p>
+<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><p><code>True</code> <code>False</code></p>
+<p><code>and</code> <code>or</code> <code>not</code> <code>in</code> <code>==</code></p>
+<p><code>if - else</code></p>
+<p><code>if - elif - else</code></p>
+<p><code>while</code></p>
+<p><code>for in</code></p>
+<h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><p><code>d = {key1: value1, key2: value2}</code></p>
+<p>字典是<strong>不排序</strong>的</p>
+<h4 id="对字典的基本操作"><a href="#对字典的基本操作" class="headerlink" title="对字典的基本操作"></a>对字典的基本操作</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#访问字典中的值</span></div><div class="line">print(d[key1]） <span class="comment">#value1</span></div><div class="line"></div><div class="line"><span class="comment">#添加键值</span></div><div class="line">d[<span class="string">'like'</span>] = <span class="string">'cat'</span></div><div class="line"></div><div class="line"><span class="comment">#创建空字典</span></div><div class="line">mycat = &#123;&#125;</div><div class="line"></div><div class="line"><span class="comment">#修改值</span></div><div class="line">d[<span class="string">'like'</span>] = <span class="string">'dog'</span></div><div class="line"></div><div class="line"><span class="comment">#删除键-值对</span></div><div class="line"><span class="keyword">del</span> d[<span class="string">'like'</span>]</div></pre></td></tr></table></figure>
+<h4 id="字典的遍历"><a href="#字典的遍历" class="headerlink" title="字典的遍历"></a>字典的遍历</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment"># 遍历键</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>a = &#123;<span class="string">'like'</span>: <span class="string">'cat'</span>, <span class="string">'heat'</span> : <span class="string">'dog'</span>&#125;</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> k <span class="keyword">in</span> a:</div><div class="line">	   print(k)</div><div class="line"></div><div class="line">heat</div><div class="line">like</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> k <span class="keyword">in</span> a.keys():</div><div class="line">	print(k.title())</div><div class="line"><span class="comment"># keys() 并非只能用于遍历，实际上它返回的是一个列表，其中包含字典中的所有键</span></div><div class="line"></div><div class="line">Heat</div><div class="line">Like</div><div class="line"><span class="comment"># 遍历值</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> v <span class="keyword">in</span> a.values():</div><div class="line">	print(v.upper())</div><div class="line"></div><div class="line"></div><div class="line">DOG</div><div class="line">CAT</div><div class="line"></div><div class="line"><span class="comment"># 遍历键-值</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> k, v <span class="keyword">in</span> a.items():</div><div class="line">	   print(k+ <span class="string">' '</span>+ v)</div><div class="line"></div><div class="line"></div><div class="line">heat dog</div><div class="line">like cat</div></pre></td></tr></table></figure>
+<p>用<code>in</code>检查字典中是否存在键或值</p>
+<p><code>.get(s1, s2)</code></p>
+<ul>
+<li><p><code>s1</code>要取得的值得键</p>
+</li>
+<li><p><code>s2</code>如果键不存在返回的备用值</p>
+</li>
+</ul>
+<p><code>.setdefault(x1, x2)</code></p>
+<ul>
+<li><p><code>x1</code>要检查的键</p>
+</li>
+<li><p><code>x2</code>如果该键不存在时要设置的值（如果该键确实存在，方法会返回键的值）</p>
+</li>
+</ul>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun_name</span><span class="params">(参数...)</span>:</span></div><div class="line">  <span class="keyword">return</span> <span class="comment">#如果函数没有return，python会自动在函数末尾加 return None</span></div></pre></td></tr></table></figure>
+<h4 id="参数传递"><a href="#参数传递" class="headerlink" title="参数传递"></a>参数传递</h4><ul>
+<li>关键字实参</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun1</span><span class="params">(para1, para2)</span>:</span></div><div class="line">	...</div><div class="line">    </div><div class="line">fun1(para1 = <span class="string">'xx'</span>, para2 = <span class="string">'xx'</span>)</div><div class="line">fun1(para2 = <span class="string">'xx'</span>, para1 = <span class="string">'xx'</span>)</div></pre></td></tr></table></figure>
+<p>指定函数参数的值，直接在实参中将名称和值关联起来</p>
+<ul>
+<li>默认值</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun2</span><span class="params">(para1, para2 = <span class="string">'xx'</span>)</span>:</span></div><div class="line">	...</div><div class="line">    </div><div class="line">fun2(x1,)</div></pre></td></tr></table></figure>
+<p>在使用默认值时，在形参列表中必须先列出没有默认值的形参，再列出有默认值的实参。</p>
+<h4 id="让实参变为可选"><a href="#让实参变为可选" class="headerlink" title="让实参变为可选"></a>让实参变为可选</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_formatted_name</span><span class="params">(first_name, last_name, middle_name=<span class="string">''</span>)</span>:</span></div><div class="line">    ...</div></pre></td></tr></table></figure>
+<p>空字符串为<code>False</code>，但如果调用过中提供了<code>middle_name</code>，那么它将为<code>True</code>。</p>
+<h4 id="禁止函数修改列表"><a href="#禁止函数修改列表" class="headerlink" title="禁止函数修改列表"></a>禁止函数修改列表</h4><p><code>function_name(list_name[:])</code></p>
+<h4 id="传递任意数量的实参"><a href="#传递任意数量的实参" class="headerlink" title="传递任意数量的实参"></a>传递任意数量的实参</h4><ul>
+<li>使用<code>*para_name</code>作为形参接受任意数量实参</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">fun1</span><span class="params">(*names)</span>:</span></div><div class="line">	print(names)</div><div class="line"></div><div class="line">	</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>fun1(<span class="string">"fc"</span>)</div><div class="line">(<span class="string">'fc'</span>,)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>fun1(<span class="string">"aa"</span>,<span class="string">"bb"</span>,<span class="string">"cc"</span>)</div><div class="line">(<span class="string">'aa'</span>, <span class="string">'bb'</span>, <span class="string">'cc'</span>)</div></pre></td></tr></table></figure>
+<ul>
+<li>使用任意数量的关键字实参</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">build_profile</span><span class="params">(first, last, **user_info)</span>:</span></div><div class="line">	profile = &#123;&#125;</div><div class="line">	profile[<span class="string">'first_name'</span>] = first</div><div class="line">	profile[<span class="string">'last_name'</span>] = last</div><div class="line">	<span class="keyword">for</span> key, value <span class="keyword">in</span> user_info.items():</div><div class="line">		profile[key] = value</div><div class="line">	<span class="keyword">return</span> profile</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>user_profile = build_profile(<span class="string">'albert'</span>, <span class="string">'einstein'</span>,</div><div class="line">			     location=<span class="string">'preiceton'</span>,</div><div class="line">			     field=<span class="string">'physics'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>print(user_profile)</div><div class="line">&#123;<span class="string">'first_name'</span>: <span class="string">'albert'</span>, <span class="string">'location'</span>: <span class="string">'preiceton'</span>, <span class="string">'field'</span>: <span class="string">'physics'</span>, <span class="string">'last_name'</span>: <span class="string">'einstein'</span>&#125;</div></pre></td></tr></table></figure>
+<h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><p>导入整个模块：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> module_name</div><div class="line"></div><div class="line">modul_name.function_name()</div></pre></td></tr></table></figure>
+<p>导入特定函数：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> module_name <span class="keyword">import</span> function_name(,function_name2,...)</div><div class="line"></div><div class="line">function_name()</div></pre></td></tr></table></figure>
+<p>用<code>as</code>指定别名</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> module_name <span class="keyword">import</span> function_name(,function_name2,...) <span class="keyword">as</span> fn(,fn1,...)</div><div class="line"></div><div class="line">fn()</div></pre></td></tr></table></figure>
+<p>用<code>as</code>给模块指定别名</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> module_name <span class="keyword">as</span> mn</div><div class="line"></div><div class="line">mn.function_name()</div></pre></td></tr></table></figure>
+<p>导入模块中所有函数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> module_name <span class="keyword">import</span> *</div><div class="line"></div><div class="line">Every_function()</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基础语法/">基础语法</a></li></ul>
+
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-Django入门"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/05/14/Django入门/">Django入门</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2017/05/14/Django入门/" class="article-date">
+	  <time datetime="2017-05-14T15:14:48.000Z" itemprop="datePublished">May 14, 2017</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h1><p>为了着重于代码本身，使用<code>IDE</code>-<code>Pycharm</code>来开始我的<code>Django</code>学习。</p>
+<p> 本机使用环境</p>
+<ul>
+<li>Python 3.5</li>
+<li>Pycharm 2017.1</li>
+<li>Django 1.11</li>
+</ul>
+<p>直接建立<code>Django</code>工程</p>
+<p><img src="pic\1.png" alt="Creat Django Project using Pycharm"></p>
+<p>工程结构如下：</p>
+<p>启动工程：</p>
+<p>使用<code>Ctrl</code>+<code>Alt</code>+<code>R</code>启动<code>python manage.py</code>环境，执行：</p>
+<blockquote>
+<p>runserver</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Django/">Django</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Pycharm/">Pycharm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web开发，-后端/">Web开发， 后端</a></li></ul>
+
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
     <article id="post-Markdown-简介及进阶"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -152,108 +434,928 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="Markdown-简介及进阶"><a href="#Markdown-简介及进阶" class="headerlink" title="Markdown 简介及进阶"></a>Markdown 简介及进阶</h1><h2 id="Markdown简介"><a href="#Markdown简介" class="headerlink" title="Markdown简介"></a>Markdown简介</h2><p><strong>Markdown</strong> 是一种<a href="https://zh.wikipedia.org/wiki/%E8%BD%BB%E9%87%8F%E7%BA%A7%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80" target="_blank" rel="external">轻量级标记语言</a>，创始人为<a href="https://zh.wikipedia.org/wiki/%E7%B4%84%E7%BF%B0%C2%B7%E6%A0%BC%E9%AD%AF%E4%BC%AF" target="_blank" rel="external">约翰·格鲁伯</a>（John Gruber）。它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的<a href="https://zh.wikipedia.org/wiki/XHTML" target="_blank" rel="external">XHTML</a>(或者<a href="https://zh.wikipedia.org/wiki/HTML" target="_blank" rel="external">HTML</a>)文档”。这种语言吸收了很多在<a href="https://zh.wikipedia.org/wiki/%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6" target="_blank" rel="external">电子邮件</a>中已有的纯文本标记的特性<a href="维基百科中Markdown的介绍。">^0</a>。</p>
+<p>本文所用<strong>Markdown</strong> 语法基于<a href="https://help.github.com/articles/github-flavored-markdown/" target="_blank" rel="external">GitHub Flavored Markdown</a> 。</p>
+<h2 id="Markdown语法"><a href="#Markdown语法" class="headerlink" title="Markdown语法"></a>Markdown语法</h2><h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3>  <figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="section"># 一级标题</span></div><div class="line"><span class="section">## 二级标题</span></div><div class="line"><span class="section">### 三级标题</span></div><div class="line"><span class="section">#### 四级标题</span></div><div class="line"><span class="section">##### 五级标题</span></div><div class="line"><span class="section">###### 六级标题</span></div></pre></td></tr></table></figure>
+<p>示例：<br><img src="C:\Users\fc\Pictures\markd\标题.png" alt="标题"></p>
+<p>也可以加<code>=====</code>和<code>-----</code>来生成标题。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="section">这是一个一级标题</span></div><div class="line">==============</div><div class="line"></div><div class="line"></div><div class="line"><span class="section">这是一个二级标题</span></div><div class="line">----------------</div></pre></td></tr></table></figure>
+<h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">使用<span class="strong">**粗体**</span>表示粗体</div><div class="line"></div><div class="line">使用<span class="emphasis">*斜体*</span>表示斜体</div><div class="line"></div><div class="line">使用<span class="strong">***加粗斜体**</span>*表示加粗斜体</div><div class="line"></div><div class="line">使用~~删除线~~表示删除线</div></pre></td></tr></table></figure>
+<p>示例：</p>
+<p><strong>粗体</strong></p>
+<p><em>斜体</em></p>
+<p><strong><em>加粗斜体</em></strong></p>
+<p><del>删除线</del></p>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><ul>
+<li><p>无序列表</p>
+<p>使用<code>+ * -</code>表示无序列表</p>
+<p>示例：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="bullet">- </span>Unordered list1</div><div class="line"><span class="bullet">- </span>Unordered list2</div><div class="line"><span class="bullet">- </span>Unordered list3</div></pre></td></tr></table></figure>
+<ul>
+<li>Unordered list1</li>
+<li>Unordered list2</li>
+<li>Unordered list3</li>
+</ul>
+</li>
+<li><p>有序列表</p>
+<p>使用<code>数字和点生成</code>生成有序列表</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="bullet">1. </span>Ordered list1</div><div class="line"><span class="bullet">2. </span>Ordered list2</div><div class="line"><span class="bullet">3. </span>Ordered list3</div></pre></td></tr></table></figure>
+<ol>
+<li>Ordered list1</li>
+<li>Ordered list2</li>
+<li>Ordered list3</li>
+</ol>
+</li>
+</ul>
+<h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><ul>
+<li><p>行内链接</p>
+<ul>
+<li><p>文字链接</p>
+<p>使用<code>[描述](链接地址)</code>为文字加外链接。</p>
+<p>示例：</p>
+<p>这是<a href="http://www.bilibili.com/" target="_blank" rel="external">B站</a>的官网。</p>
+</li>
+<li><p>图片链接<br>使用<code>![描述](链接地址)</code>添加图片.</p>
+<p><img src="C:\Hexo\source\_posts\pic\2.jpg" alt="本地图片" title="beautiful picture"></p>
+<blockquote>
+<p>注：<strong>图片最好还是存到云上,比如放到Github上,然后用其链接作图片地址.</strong></p>
+</blockquote>
+</li>
+<li><p>自动链接</p>
+ <figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">http:</span>//<span class="attr">www.baidu.com</span>/&gt;</span></span></div></pre></td></tr></table></figure>
+<p> <a href="http://www.baidu.com/" target="_blank" rel="external">http://www.baidu.com/</a></p>
+</li>
+</ul>
+</li>
+<li><p>引用链接</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">上面的图片是我从[<span class="string">视觉中国</span>][<span class="symbol">1</span>]中找的素材，我想把它存到[<span class="string">Github</span>][<span class="symbol">2</span>]上。</div><div class="line"></div><div class="line">[<span class="symbol">1</span>]:<span class="link">https://www.vcg.com "vcg"</span></div><div class="line">[<span class="symbol">2</span>]:<span class="link">https://github.com "Github"</span></div></pre></td></tr></table></figure>
+<p> 上面的图片是我从<a href="https://www.vcg.com" title="vcg" target="_blank" rel="external">视觉中国</a>中找的素材，我想把它存到<a href="https://github.com" title="Github" target="_blank" rel="external">Github</a>上。</p>
+</li>
+</ul>
+<h3 id="文字引用"><a href="#文字引用" class="headerlink" title="文字引用"></a>文字引用</h3><p>使用<code>&gt;</code>表示文字引用</p>
+<p>示例：</p>
+<blockquote>
+<p>苟利国家生死以，岂因祸福避趋之。</p>
+</blockquote>
+<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><ul>
+<li><p>行内代码块</p>
+<p>使用<code>`` </code>表示行内代码</p>
+<p>示例：</p>
+<p><code>print(&quot;hello,world&quot;)</code></p>
+</li>
+<li><p>加强的代码块</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">​```编程语言类型(python/java/.....)</div><div class="line">	code</div><div class="line">​</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">示例：</div><div class="line"></div><div class="line">```c++</div><div class="line">/**</div><div class="line">​```c++</div><div class="line">	code</div><div class="line">​</div></pre></td></tr></table></figure>
+<p>**/<br>#include <iostream><br>using namespace std;<br>int main()<br>{</iostream></p>
+<pre><code>cout &lt;&lt; &quot;Hello, world!&quot; &lt;&lt; endl;
+return 0;
+</code></pre><p>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">### 表格</div><div class="line"></div><div class="line">```markdown</div><div class="line">| Item       |    Value | Qty  |</div><div class="line">| :--------- | -------: | :--: |</div><div class="line">| 短线分隔了表头和表身 |    |      |</div><div class="line">| :在左边表示此列左对齐| :在右边表示此列右对齐 |  两边都有冒号表示此列居中   |</div><div class="line">| Phone      |   12 USD |  12  |</div><div class="line">| Pipe       |    1 USD | 234  |</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Item</th>
+<th style="text-align:right">Value</th>
+<th style="text-align:center">Qty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">短线分隔了表头和表身</td>
+<td style="text-align:right"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>:</code>在左边表示此列左对齐</td>
+<td style="text-align:right"><code>:</code>在右边表示此列右对齐</td>
+<td style="text-align:center">两边都有<code>:</code>表示此列居中</td>
+</tr>
+<tr>
+<td style="text-align:left">Phone</td>
+<td style="text-align:right">12 USD</td>
+<td style="text-align:center">12</td>
+</tr>
+<tr>
+<td style="text-align:left">Pipe</td>
+<td style="text-align:right">1 USD</td>
+<td style="text-align:center">234</td>
+</tr>
+</tbody>
+</table>
+<h3 id="注脚"><a href="#注脚" class="headerlink" title="注脚"></a>注脚</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">使用 Markdown[^1]可以效率的书写文档, 直接转换成 HTML[^2], 你可以使用 Typora[^Le] 编辑器进行书写。</div><div class="line"></div><div class="line">[<span class="symbol">^1</span>]:<span class="link">Markdown是一种纯文本标记语言</span></div><div class="line"></div><div class="line">[<span class="symbol">^2</span>]:<span class="link">HyperText Markup Language 超文本标记语言</span></div><div class="line"></div><div class="line">[<span class="symbol">^Le</span>]:<span class="link">免费Markdown编辑软件.</span></div></pre></td></tr></table></figure>
+<p>使用 Markdown<a href="Markdown是一种纯文本标记语言">^1</a>可以效率的书写文档, 直接转换成 HTML[^2], 你可以使用 Typora<a href="免费Markdown编辑软件.">^Le</a> 编辑器进行书写。</p>
+<p>[^2]: HyperText Markup Language 超文本标记语言</p>
+<blockquote>
+<p>注： <strong>脚注自动被搬运到最后面，请到文章末尾查看，并且脚注后方的链接可以直接跳转回到加注的地方。</strong></p>
+</blockquote>
+<h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><p>在想生成目录的地方输入<code>[TOC]</code></p>
+<h3 id="LaTex-公式"><a href="#LaTex-公式" class="headerlink" title="LaTex 公式"></a>LaTex 公式</h3><h4 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h4><h5 id="行中公式"><a href="#行中公式" class="headerlink" title="行中公式"></a>行中公式</h5><p><code>$ 数学公式$</code></p>
+<p>示例：</p>
+<p><code>质能守恒方式为：$E = mc^2$</code></p>
+<p> 质能守恒方式为：$E = mc^2$</p>
+<h5 id="独立公式"><a href="#独立公式" class="headerlink" title="独立公式"></a>独立公式</h5><p><code>$$ 数学公式 $$</code></p>
+<p>示例：</p>
+<p><code>这是一个不在行内的公式:$$\sum_{i=1}^n a_i=0$$</code></p>
+<p>这是一个在行内的公式:$\sum_{i=1}^n a_i=0$</p>
+<p>这是一个不在行中的公式：</p>
+<p>$$<br>\sum_{i=1}^n a_i=0<br>$$</p>
+<h5 id="自动编号的公式"><a href="#自动编号的公式" class="headerlink" title="自动编号的公式"></a>自动编号的公式</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">\begin&#123;equation&#125;</div><div class="line">数学公式</div><div class="line">\label&#123;eq:当前公式名&#125;</div><div class="line">\end&#123;equation&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">\begin&#123;equation&#125;</div><div class="line">x = \int _&#123;x&#125; ^\infty \frac &#123;x&#125;&#123;x+1&#125;</div><div class="line">\label&#123;eq:examp&#125;</div><div class="line">\end&#123;equation&#125;</div></pre></td></tr></table></figure>
+<p>$$<br>\begin{equation}<br>x = \int _{x} ^\infty \frac {x}{x+1}<br>\label{eq:1}<br>\end{equation}<br>$$</p>
+<h5 id="空格"><a href="#空格" class="headerlink" title="空格"></a>空格</h5><p>有四种宽度的空格可以使用： <code>\,</code>、<code>\;</code>、<code>\quad</code> 和 <code>\qquad</code> 。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$$ a \, b \mid a \; b \mid a \quad b \mid a \qquad b $$</div></pre></td></tr></table></figure>
+<p>$$<br>a \, b \mid a \; b \mid a \quad b \mid a \qquad b<br>$$</p>
+<h5 id="希腊字母"><a href="#希腊字母" class="headerlink" title="希腊字母"></a>希腊字母</h5><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>大写</th>
+<th>Tex</th>
+<th>小写</th>
+<th>Tex</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>alpha</td>
+<td>AA</td>
+<td>A</td>
+<td>αα</td>
+<td>\alpha</td>
+</tr>
+<tr>
+<td>beta</td>
+<td>BB</td>
+<td>B</td>
+<td>ββ</td>
+<td>\beta</td>
+</tr>
+<tr>
+<td>gamma</td>
+<td>ΓΓ</td>
+<td>\Gamma</td>
+<td>γγ</td>
+<td>\gamma</td>
+</tr>
+<tr>
+<td>delta</td>
+<td>ΔΔ</td>
+<td>\Delta</td>
+<td>δδ</td>
+<td>\delta</td>
+</tr>
+<tr>
+<td>epsilon</td>
+<td>EE</td>
+<td>E</td>
+<td>ϵϵ</td>
+<td>\epsilon</td>
+</tr>
+<tr>
+<td>zeta</td>
+<td>ZZ</td>
+<td>Z</td>
+<td>ζζ</td>
+<td>\zeta</td>
+</tr>
+<tr>
+<td>eta</td>
+<td>HH</td>
+<td>H</td>
+<td>ηη</td>
+<td>\eta</td>
+</tr>
+<tr>
+<td>theta</td>
+<td>ΘΘ</td>
+<td>\Theta</td>
+<td>θθ</td>
+<td>\theta</td>
+</tr>
+<tr>
+<td>iota</td>
+<td>II</td>
+<td>I</td>
+<td>ιι</td>
+<td>\iota</td>
+</tr>
+<tr>
+<td>kappa</td>
+<td>KK</td>
+<td>K</td>
+<td>κκ</td>
+<td>\kappa</td>
+</tr>
+<tr>
+<td>lambda</td>
+<td>ΛΛ</td>
+<td>\Lambda</td>
+<td>λλ</td>
+<td>\lambda</td>
+</tr>
+<tr>
+<td>mu</td>
+<td>MM</td>
+<td>M</td>
+<td>μμ</td>
+<td>\mu</td>
+</tr>
+<tr>
+<td>nu</td>
+<td>NN</td>
+<td>N</td>
+<td>νν</td>
+<td>\nu</td>
+</tr>
+<tr>
+<td>xi</td>
+<td>ΞΞ</td>
+<td>\Xi</td>
+<td>ξξ</td>
+<td>\xi</td>
+</tr>
+<tr>
+<td>omicron</td>
+<td>OO</td>
+<td>O</td>
+<td>οο</td>
+<td>\omicron</td>
+</tr>
+<tr>
+<td>pi</td>
+<td>ΠΠ</td>
+<td>\Pi</td>
+<td>ππ</td>
+<td>\pi</td>
+</tr>
+<tr>
+<td>rho</td>
+<td>PP</td>
+<td>P</td>
+<td>ρρ</td>
+<td>\rho</td>
+</tr>
+<tr>
+<td>sigma</td>
+<td>ΣΣ</td>
+<td>\Sigma</td>
+<td>σσ</td>
+<td>\sigma</td>
+</tr>
+<tr>
+<td>tau</td>
+<td>TT</td>
+<td>T</td>
+<td>ττ</td>
+<td>\tau</td>
+</tr>
+<tr>
+<td>upsilon</td>
+<td>ΥΥ</td>
+<td>\Upsilon</td>
+<td>υυ</td>
+<td>\upsilon</td>
+</tr>
+<tr>
+<td>phi</td>
+<td>ΦΦ</td>
+<td>\Phi</td>
+<td>ϕϕ</td>
+<td>\phi</td>
+</tr>
+<tr>
+<td>chi</td>
+<td>XX</td>
+<td>X</td>
+<td>χχ</td>
+<td>\chi</td>
+</tr>
+<tr>
+<td>psi</td>
+<td>ΨΨ</td>
+<td>\Psi</td>
+<td>ψψ</td>
+<td>\psi</td>
+</tr>
+<tr>
+<td>omega</td>
+<td>ΩΩ</td>
+<td>\Omega</td>
+<td>ωω</td>
+<td>\omega</td>
+</tr>
+</tbody>
+</table>
+<h5 id="上标和下标"><a href="#上标和下标" class="headerlink" title="上标和下标"></a>上标和下标</h5><p>上标和下标分别使用<code>^</code>和<code>_</code>,例如<code>$x_z^y$</code> ：$$x<em>z^y$$. 但是上下标仅仅对下一个组起作用。一个组即单个字符或者<code>{...}</code>包围起来的内容。如上面的公式，我要得到 $$x</em>{z^y}$$ 这个公式就必须用括号<code>$x_{z^y}$</code>。对于单个字符也要用括号，要得到公式 $$x^{10}$$ ,就必须带大括号<code>$x^{10}$</code>，否则<code>$x^10$</code>：$$x^10$$，那就贻笑大方了。</p>
+<h5 id="括号"><a href="#括号" class="headerlink" title="括号"></a>括号</h5><ol>
+<li><p>小括号和方括号：<code>() []</code></p>
+</li>
+<li><p>大括号：大括号用来分组，因此要用<code>\{和\}</code>表示大括号,也可以用<code>\lbrace和\rbrace</code>。如<code>$x = \{1,2,3,4,...n\}$</code> ：  $$x = {1,2,3,4,…n}$$</p>
+</li>
+<li><p>使用<code>\langle</code> 和<code>\rangle</code>表示左，右尖括号。$\langle$  $\rangle$</p>
+</li>
+<li><p>上取整 <code>\lceil x \rceil</code> ： $$\lceil x \rceil$$</p>
+</li>
+<li><p>下取整<code>\lfloor x \rfloor</code> ：$$\lfloor x \rfloor$$</p>
+</li>
+<li><p>显示大号的括号或分隔符时，用<code>\left</code>和<code>\right</code>命令。</p>
+<p>示例：</p>
+<p><code>$$f(x,y,z) = x^2 + x^y \left(3+\frac{7x+5}{1+y^z} \right)$$</code></p>
+<p>​<br>$$<br>f(x,y,z) = x^2 + x^y \left( 3+\frac{7x+5}{1+y^z} \right)<br>$$<br>​<br>​</p>
+</li>
+</ol>
+<h5 id="累加，累乘，交集，并集"><a href="#累加，累乘，交集，并集" class="headerlink" title="累加，累乘，交集，并集"></a>累加，累乘，交集，并集</h5><p><code>\sum_{下标表达式}^{上标表达式}{累加表达式}</code>和<code>\prod</code> <code>\bigcup</code> <code>\bigcap</code> 用来表示累加，累乘，病机，交集。</p>
+<p>示例：</p>
+<p><code>$$\sum_1^n {i^2}$$</code>：$$\sum_1^n{i^2}$$</p>
+<p><code>$$\prod_{i=0}^n \frac 1 a $$</code>：$$\prod_{i=0}^n \frac 1 a$$  </p>
+<p><code>$$\bigcup _i \infty n$$</code> ：$$\bigcup _i^\infty n$$</p>
+<p><code>$$\bigccp _i \infty n$$</code> ：$$\bigcap _i^\infty n$$</p>
+<h5 id="极限和积分符号"><a href="#极限和积分符号" class="headerlink" title="极限和积分符号"></a>极限和积分符号</h5><p><code>\int</code>用来表示积分符号，同样地，其上下标表示积分的上下限。如，<code>$\int_1^\infty dx$</code>：$$\int_1^\infty dx$$。</p>
+<p>与此类似的符号还有<code>\iint</code>：$$\iint$$ ，<code>\iiint</code> ：$$\iiint$$</p>
+<h5 id="分式和根式"><a href="#分式和根式" class="headerlink" title="分式和根式"></a>分式和根式</h5><ul>
+<li><p>分式</p>
+<p><code>$\frac 1 3$</code> ： $$\frac 1 3$$</p>
+<p><code>$\frac {1+x^2}{1-x^3}$</code>  ： $$\frac {1+x^2}{1-x^3}$$</p>
+<p><code>$a+b\over c+d$</code>： ：$$a+b\over c+d$$</p>
+</li>
+<li><p>根式</p>
+<p><code>$\sqrt[3]{x^2\overy}$</code> ：$$\sqrt[3]{x^2\over y}$$</p>
+</li>
+</ul>
+<h5 id="省略号"><a href="#省略号" class="headerlink" title="省略号"></a>省略号</h5><p><code>\ldots</code>表示与文本线对齐的省略号，<code>\cdots</code>表示与文本中线对齐的省略号。</p>
+<p>示例：</p>
+<p><code>$f(x_1,x_2,x_3,\ldots,x_n) = x_1^2 + x_2^2 + x_3^2 + \cdots + x_n^2$</code></p>
+<p>$$<br>f(x_1,x_2,x_3,\ldots,x_n) = x_1^2 + x_2^2 + x_3^2 + \cdots + x_n^2<br>$$</p>
+<h5 id="矢量符号"><a href="#矢量符号" class="headerlink" title="矢量符号"></a>矢量符号</h5><p><code>\vec</code></p>
+<p>示例：</p>
+<p><code>$\vec{a} \cdot \vec{b} = 0$</code></p>
+<p>$$\vec{a} \cdot \vec{b} = 0$$</p>
+<h5 id="其他特使字符"><a href="#其他特使字符" class="headerlink" title="其他特使字符"></a>其他特使字符</h5><h6 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h6><table>
+<thead>
+<tr>
+<th>输入</th>
+<th style="text-align:center">显示</th>
+<th>输入</th>
+<th style="text-align:center">显示</th>
+<th>输入</th>
+<th style="text-align:center">显示</th>
+<th>输入</th>
+<th style="text-align:center">显示</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\pm</td>
+<td style="text-align:center">$\pm$</td>
+<td>\times</td>
+<td style="text-align:center">$\times$</td>
+<td>\div</td>
+<td style="text-align:center">$\div$</td>
+<td>\mid</td>
+<td style="text-align:center">$\mid$</td>
+</tr>
+<tr>
+<td>\nmid</td>
+<td style="text-align:center">$\nmid$</td>
+<td>\cdot</td>
+<td style="text-align:center">$\cdot$</td>
+<td>\circ</td>
+<td style="text-align:center">$\circ$</td>
+<td>\ast</td>
+<td style="text-align:center">$\ast$</td>
+</tr>
+<tr>
+<td>\bigodot</td>
+<td style="text-align:center">$\bigodot$</td>
+<td>\bigotimes</td>
+<td style="text-align:center">$\bigotimes$</td>
+<td>\bigoplus</td>
+<td style="text-align:center">$\bigoplus$</td>
+<td>\leq</td>
+<td style="text-align:center">$\leq$</td>
+</tr>
+<tr>
+<td>\geq</td>
+<td style="text-align:center">$\geq$</td>
+<td>\neq</td>
+<td style="text-align:center">$\neq$</td>
+<td>\approx</td>
+<td style="text-align:center">$\approx$</td>
+<td>\equiv</td>
+<td style="text-align:center">$\equiv$</td>
+</tr>
+<tr>
+<td>\sum</td>
+<td style="text-align:center">$\sum$</td>
+<td>\prod</td>
+<td style="text-align:center">$\prod$</td>
+<td>\coprod</td>
+<td style="text-align:center">$\coprod$</td>
+<td>\backslash</td>
+<td style="text-align:center">$\backslash$</td>
+</tr>
+</tbody>
+</table>
+<h6 id="集合运算符"><a href="#集合运算符" class="headerlink" title="集合运算符"></a>集合运算符</h6><table>
+<thead>
+<tr>
+<th>输入</th>
+<th style="text-align:center">显示</th>
+<th>输入</th>
+<th style="text-align:center">显示</th>
+<th>输入</th>
+<th style="text-align:center">显示</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\emptyset</td>
+<td style="text-align:center">$\emptyset$</td>
+<td>\in</td>
+<td style="text-align:center">$\in$</td>
+<td>\notin</td>
+<td style="text-align:center">$\notin$</td>
+</tr>
+<tr>
+<td>\subset</td>
+<td style="text-align:center">$\subset$</td>
+<td>\supset</td>
+<td style="text-align:center">$\supset$</td>
+<td>\subseteq</td>
+<td style="text-align:center">$\subseteq$</td>
+</tr>
+<tr>
+<td>\supseteq</td>
+<td style="text-align:center">$\supseteq$</td>
+<td>\bigcap</td>
+<td style="text-align:center">$\bigcap$</td>
+<td>\bigcup</td>
+<td style="text-align:center">$\bigcup$</td>
+</tr>
+<tr>
+<td>\bigvee</td>
+<td style="text-align:center">$\bigvee$</td>
+<td>\bigwedge</td>
+<td style="text-align:center">$\bigwedge$</td>
+<td>\biguplus</td>
+<td style="text-align:center">$\biguplus$</td>
+</tr>
+</tbody>
+</table>
+<h6 id="对数运算符"><a href="#对数运算符" class="headerlink" title="对数运算符"></a>对数运算符</h6><table>
+<thead>
+<tr>
+<th>输入</th>
+<th style="text-align:center">显示</th>
+<th>输入</th>
+<th style="text-align:center">显示</th>
+<th>输入</th>
+<th style="text-align:center">显示</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\log</td>
+<td style="text-align:center">$\log$</td>
+<td>\lg</td>
+<td style="text-align:center">$\lg$</td>
+<td>\ln</td>
+<td style="text-align:center">$\ln$</td>
+</tr>
+</tbody>
+</table>
+<h6 id="三角运算符"><a href="#三角运算符" class="headerlink" title="三角运算符"></a>三角运算符</h6><table>
+<thead>
+<tr>
+<th>输入</th>
+<th style="text-align:center">显示</th>
+<th style="text-align:left">输入</th>
+<th style="text-align:center">显示</th>
+<th>输入</th>
+<th style="text-align:center">显示</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>30^\circ</td>
+<td style="text-align:center">$30^\circ$</td>
+<td style="text-align:left">\bot</td>
+<td style="text-align:center">$\bot$</td>
+<td>\angle A</td>
+<td style="text-align:center">$\angle A$</td>
+</tr>
+<tr>
+<td>\sin</td>
+<td style="text-align:center">$\sin$</td>
+<td style="text-align:left">\cos</td>
+<td style="text-align:center">$\cos$</td>
+<td>\tan</td>
+<td style="text-align:center">$\tan$</td>
+</tr>
+<tr>
+<td>\csc</td>
+<td style="text-align:center">$\csc$</td>
+<td style="text-align:left">\sec</td>
+<td style="text-align:center">$\sec$</td>
+<td>\cot</td>
+<td style="text-align:center">$\cot$</td>
+</tr>
+</tbody>
+</table>
+<h6 id="微积分运算符"><a href="#微积分运算符" class="headerlink" title="微积分运算符"></a>微积分运算符</h6><table>
+<thead>
+<tr>
+<th>输入</th>
+<th style="text-align:center">显示</th>
+<th>输入</th>
+<th style="text-align:center">显示</th>
+<th>输入</th>
+<th style="text-align:center">显示</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\int</td>
+<td style="text-align:center">$\int$</td>
+<td>\iint</td>
+<td style="text-align:center">$\iint$</td>
+<td>\iiint</td>
+<td style="text-align:center">$\iiint$</td>
+</tr>
+<tr>
+<td>\iiiint</td>
+<td style="text-align:center">$\iiiint$</td>
+<td>\oint</td>
+<td style="text-align:center">$\oint$</td>
+<td>\prime</td>
+<td style="text-align:center">$\prime$</td>
+</tr>
+<tr>
+<td>\lim</td>
+<td style="text-align:center">$\lim$</td>
+<td>\infty</td>
+<td style="text-align:center">$\infty$</td>
+<td>\nabla</td>
+<td style="text-align:center">$\nabla$</td>
+</tr>
+</tbody>
+</table>
+<h6 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h6><table>
+<thead>
+<tr>
+<th>输入</th>
+<th style="text-align:center">显示</th>
+<th>输入</th>
+<th style="text-align:center">显示</th>
+<th>输入</th>
+<th style="text-align:center">显示</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\because</td>
+<td style="text-align:center">$\because$</td>
+<td>\therefore</td>
+<td style="text-align:center">$\therefore$</td>
+<td></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>\forall</td>
+<td style="text-align:center">$\forall$</td>
+<td>\exists</td>
+<td style="text-align:center">$\exists$</td>
+<td>\not\subset</td>
+<td style="text-align:center">$\not\subset$</td>
+</tr>
+<tr>
+<td>\not&lt;</td>
+<td style="text-align:center">$\not&lt;$</td>
+<td>\not&gt;</td>
+<td style="text-align:center">$\not&gt;$</td>
+<td>\not=</td>
+<td style="text-align:center">$\not=$</td>
+</tr>
+</tbody>
+</table>
+<h6 id="戴帽符号"><a href="#戴帽符号" class="headerlink" title="戴帽符号"></a>戴帽符号</h6><table>
+<thead>
+<tr>
+<th>输入</th>
+<th style="text-align:center">显示</th>
+<th>输入</th>
+<th style="text-align:center">显示</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\hat{xy}</td>
+<td style="text-align:center">$\hat{xy}$</td>
+<td>\widehat{xyz}</td>
+<td style="text-align:center">$\widehat{xyz}$</td>
+</tr>
+<tr>
+<td>\tilde{xy}</td>
+<td style="text-align:center">$\tilde{xy}$</td>
+<td>\widetilde{xyz}</td>
+<td style="text-align:center">$\widetilde{xyz}$</td>
+</tr>
+<tr>
+<td>\check{x}</td>
+<td style="text-align:center">$\check{x}$</td>
+<td>\breve{y}</td>
+<td style="text-align:center">$\breve{y}$</td>
+</tr>
+<tr>
+<td>\grave{x}</td>
+<td style="text-align:center">$\grave{x}$</td>
+<td>\acute{y}</td>
+<td style="text-align:center">$\acute{y}$</td>
+</tr>
+</tbody>
+</table>
+<h6 id="连线符号"><a href="#连线符号" class="headerlink" title="连线符号"></a>连线符号</h6><table>
+<thead>
+<tr>
+<th>输入</th>
+<th style="text-align:center">显示</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\fbox{a+b+c+d}</td>
+<td style="text-align:center">$\fbox{a+b+c+d}$</td>
+</tr>
+<tr>
+<td>\overleftarrow{a+b+c+d}</td>
+<td style="text-align:center">$\overleftarrow{a+b+c+d}$</td>
+</tr>
+<tr>
+<td>\overrightarrow{a+b+c+d}</td>
+<td style="text-align:center">$\overrightarrow{a+b+c+d}$</td>
+</tr>
+<tr>
+<td>\overleftrightarrow{a+b+c+d}</td>
+<td style="text-align:center">$\overleftrightarrow{a+b+c+d}$</td>
+</tr>
+<tr>
+<td>\underleftarrow{a+b+c+d}</td>
+<td style="text-align:center">$\underleftarrow{a+b+c+d}$</td>
+</tr>
+<tr>
+<td>\underrightarrow{a+b+c+d}</td>
+<td style="text-align:center">$\underrightarrow{a+b+c+d}$</td>
+</tr>
+<tr>
+<td>\underleftrightarrow{a+b+c+d}</td>
+<td style="text-align:center">$\underleftrightarrow{a+b+c+d}$</td>
+</tr>
+<tr>
+<td>\overline{a+b+c+d}</td>
+<td style="text-align:center">$\overline{a+b+c+d}$</td>
+</tr>
+<tr>
+<td>\underline{a+b+c+d}</td>
+<td style="text-align:center">$\underline{a+b+c+d}$</td>
+</tr>
+<tr>
+<td>\overbrace{a+b+c+d}^{Sample}</td>
+<td style="text-align:center">$\overbrace{a+b+c+d}^{Sample}$</td>
+</tr>
+<tr>
+<td>\underbrace{a+b+c+d}_{Sample}</td>
+<td style="text-align:center">$\underbrace{a+b+c+d}_{Sample}$</td>
+</tr>
+<tr>
+<td>\overbrace{a+\underbrace{b+c}_{1.0}+d}^{2.0}</td>
+<td style="text-align:center">$\overbrace{a+\underbrace{b+c}_{1.0}+d}^{2.0}$</td>
+</tr>
+<tr>
+<td>\underbrace{a\cdot a\cdots a}_{b\text{ times}}</td>
+<td style="text-align:center">$\underbrace{a\cdot a\cdots a}_{b\text{ times}}$</td>
+</tr>
+</tbody>
+</table>
+<h6 id="箭头符号"><a href="#箭头符号" class="headerlink" title="箭头符号"></a>箭头符号</h6><ul>
+<li>推荐使用符号：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>输入</th>
+<th style="text-align:center">显示</th>
+<th>输入</th>
+<th style="text-align:center">显示</th>
+<th>输入</th>
+<th style="text-align:center">显示</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\to</td>
+<td style="text-align:center">$\to$</td>
+<td>\mapsto</td>
+<td style="text-align:center">$\mapsto$</td>
+<td></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>\implies</td>
+<td style="text-align:center">$\implies$</td>
+<td>\iff</td>
+<td style="text-align:center">$\iff$</td>
+<td>\impliedby</td>
+<td style="text-align:center">$\impliedby$</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>其它可用符号：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>输入</th>
+<th style="text-align:center">显示</th>
+<th>输入</th>
+<th style="text-align:center">显示</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\uparrow</td>
+<td style="text-align:center">$\uparrow$</td>
+<td>\Uparrow</td>
+<td style="text-align:center">$\Uparrow$</td>
+</tr>
+<tr>
+<td>\downarrow</td>
+<td style="text-align:center">$\downarrow$</td>
+<td>\Downarrow</td>
+<td style="text-align:center">$\Downarrow$</td>
+</tr>
+<tr>
+<td>\leftarrow</td>
+<td style="text-align:center">$ \leftarrow$</td>
+<td>\Leftarrow</td>
+<td style="text-align:center">$\Leftarrow$</td>
+</tr>
+<tr>
+<td>\rightarrow</td>
+<td style="text-align:center">$\rightarrow$</td>
+<td>\Rightarrow</td>
+<td style="text-align:center">$\Rightarrow$</td>
+</tr>
+<tr>
+<td>\leftrightarrow</td>
+<td style="text-align:center">$\leftrightarrow$</td>
+<td>\Leftrightarrow</td>
+<td style="text-align:center">$\Leftrightarrow$</td>
+</tr>
+<tr>
+<td>\longleftarrow</td>
+<td style="text-align:center">$\longleftarrow$</td>
+<td>\Longleftarrow</td>
+<td style="text-align:center">$\Longleftarrow$</td>
+</tr>
+<tr>
+<td>\longrightarrow</td>
+<td style="text-align:center">$\longrightarrow$</td>
+<td>\Longrightarrow</td>
+<td style="text-align:center">$\Longrightarrow$</td>
+</tr>
+<tr>
+<td>\longleftrightarrow</td>
+<td style="text-align:center">$\longleftrightarrow$</td>
+<td>\Longleftrightarrow</td>
+<td style="text-align:center">$\Longleftrightarrow$</td>
+</tr>
+</tbody>
+</table>
+<h4 id="高级"><a href="#高级" class="headerlink" title="高级"></a>高级</h4><h5 id="如何进行字体转换"><a href="#如何进行字体转换" class="headerlink" title="如何进行字体转换"></a>如何进行字体转换</h5><p>若要对公式的某一部分字符进行字体转换，可以用 <code>{\字体 {需转换的部分字符}}</code> 命令，其中 <code>\字体</code> 部分可以参照下表选择合适的字体。一般情况下，公式默认为意大利体  。</p>
+<p>示例中 <strong>全部大写</strong> 的字体仅大写可用。</p>
+<table>
+<thead>
+<tr>
+<th>输入</th>
+<th>说明</th>
+<th style="text-align:center">显示</th>
+<th>输入</th>
+<th>说明</th>
+<th style="text-align:center">显示</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\rm</td>
+<td>罗马体</td>
+<td style="text-align:center">$\large\rm {sample}$</td>
+<td>\cal</td>
+<td>花体</td>
+<td style="text-align:center">$\large\cal {sample}$</td>
+</tr>
+<tr>
+<td>\it</td>
+<td>意大利体</td>
+<td style="text-align:center">$\large\it {sample}$</td>
+<td>\Bbb</td>
+<td>黑板粗体</td>
+<td style="text-align:center">$\large\Bbb {sample}$</td>
+</tr>
+<tr>
+<td>\bf</td>
+<td>粗体</td>
+<td style="text-align:center">$\large \bf{sample}$</td>
+<td>\mit</td>
+<td>数学斜体</td>
+<td style="text-align:center">$\large \mit {sample}$</td>
+</tr>
+<tr>
+<td>\sf</td>
+<td>等线体</td>
+<td style="text-align:center">$\large \sf {sample}$</td>
+<td>\scr</td>
+<td>手写体</td>
+<td style="text-align:center">$\large \scr{sample}$</td>
+</tr>
+<tr>
+<td>\tt</td>
+<td>打字机体</td>
+<td style="text-align:center">$\large \tt {sample}$</td>
+<td></td>
+<td></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>\frak</td>
+<td>旧德式字体</td>
+<td style="text-align:center">$\large \frak{sample}$</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>转换字体十分常用，例如在积分中：</p>
+<ul>
+<li><p>例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">\begin&#123;array&#125;&#123;cc&#125;</div><div class="line">\mathrm&#123;Bad&#125; &amp; \mathrm&#123;Better&#125; \\</div><div class="line">\hline \\</div><div class="line">\int_0^1 x^2 dx &amp; \int_0^1 x^2 \,&#123;\rm d&#125;x</div><div class="line">\end&#123;array&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>显示：<br>$$<br>\begin{array}{cc}<br>\mathrm{Bad} &amp; \mathrm{Better} \<br>\hline \<br>\int_0^1 x^2 dx &amp; \int_0^1 x^2 \,{\rm d}x<br>\end{array}<br>$$</p>
+</li>
+</ul>
+<p>注意比较两个式子间$dx$ 与 ${\rm d}x$ 的不同。<br>使用 <code>\operatorname</code> 命令也可以达到相同的效果，详见 <a href="https://www.zybuluo.com/codeep/note/163962#1定义新的符号-operatorname" target="_blank" rel="external">定义新的符号 \operatorname</a> 。</p>
+<h5 id="大括号"><a href="#大括号" class="headerlink" title="大括号"></a>大括号</h5><p>使用 <code>\left</code> 和 <code>\right</code> 来创建自动匹配高度的 (圆括号)，[方括号] 和 {花括号} 。<br>在每个公式末尾前使用 <code>\tag{行标}</code> 来实现行标。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$$</div><div class="line">F^&#123;HLLC&#125;=\left\&#123;</div><div class="line">\begin&#123;array&#125;&#123;rl&#125;</div><div class="line">F_L       &amp;      &amp; &#123;0      &lt;      S_L&#125;\\</div><div class="line">F^*_L     &amp;      &amp; &#123;S_L \leq 0 &lt; S_M&#125;\\</div><div class="line">F^*_R     &amp;      &amp; &#123;S_M \leq 0 &lt; S_R&#125;\\</div><div class="line">F_R       &amp;      &amp; &#123;S_R \leq 0&#125;</div><div class="line">\end&#123;array&#125; \right.</div><div class="line">$$</div></pre></td></tr></table></figure>
+<p>$$<br>F^{HLLC}=\left{<br>\begin{array}{rl}<br>F_L       &amp;            &amp; {0      &lt;      S_L}\<br>F^<em>_L     &amp;      &amp;  {S_L \leq 0 &lt; S_M}   \<br>F^</em>_R     &amp;      &amp; {S_M \leq 0 &lt; S_R}\<br>F_R       &amp;      &amp; {S_R \leq 0}<br>\end{array} \right.<br>$$</p>
+<h5 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h5><p>使用<code>$$\begin{array}{列样式}…\end{array}$$</code>这样的形式来创建表格，列样式可以是<code>c</code> <code>l</code> <code>r</code>表示居中，左，右对齐，还可以使用<code>|</code>表示一条竖线。表格中 各行使用<code>\\</code>分隔，各列使用<code>&amp;</code>分隔。使用<code>\hline</code>在本行前加入一条直线。</p>
+<p>示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$$</div><div class="line">\begin&#123;array&#125;&#123;c|lcr&#125;</div><div class="line">n &amp; \text&#123;Left&#125; &amp; \text&#123;Center&#125; &amp; \text&#123;Right&#125; \\</div><div class="line">\hline</div><div class="line">1 &amp; 0.24 &amp; 1 &amp; 125 \\</div><div class="line">2 &amp; -1 &amp; 189 &amp; -8 \\</div><div class="line">3 &amp; -20 &amp; 2000 &amp; 1+10i \\</div><div class="line">\end&#123;array&#125;</div><div class="line">$$</div></pre></td></tr></table></figure>
+<p>$$<br>\large<br>\begin{array}{c|clr}<br>n &amp; \text{Left} &amp; \text{Center} &amp; \text{Right} \<br>\hline<br>1 &amp; 0.24 &amp; 1 &amp; 125 \<br>2 &amp; -1 &amp; 189 &amp; -8 \<br>3 &amp; -20 &amp; 2000 &amp; 1+10i \<br>\end{array}<br>$$</p>
+<h5 id="方程组"><a href="#方程组" class="headerlink" title="方程组"></a>方程组</h5><p>使用 <code>\begin{array}…\end{array}</code> 和 <code>\left\{…\right.</code> 来创建一个方程组。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$$</div><div class="line">\left\&#123;</div><div class="line">\begin&#123;array&#125;&#123;l&#125;</div><div class="line">x + y + z = 1 \\</div><div class="line">x^2 + z =2	  \\</div><div class="line">y*z = 10    \\</div><div class="line">\end&#123;array&#125;</div><div class="line">\right.</div><div class="line">$$</div></pre></td></tr></table></figure>
+<p>$$<br>\large<br>\left{<br>\begin{array}{l}<br>x + y + z = 1 \<br>x^2 + z =2      \<br>y*z = 10    \<br>\end{array}<br>\right.<br>$$</p>
+<p>使用条件表达式组 <code>\begin{cases}…\end{cases}</code> 更方便：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$$</div><div class="line">\begin&#123;cases&#125;</div><div class="line">a_1x+b_1y+c_1z=d_1 \\</div><div class="line">a_2x+b_2y+c_2z=d_2 \\</div><div class="line">a_3x+b_3y+c_3z=d_3</div><div class="line">\end&#123;cases&#125;</div><div class="line">$$</div></pre></td></tr></table></figure>
+<p>$$<br>\large<br>\begin{cases}<br>a_1x+b_1y+c_1z=d_1 \<br>a_2x+b_2y+c_2z=d_2 \<br>a_3x+b_3y+c_3z=d_3<br>\end{cases}<br>$$</p>
+<h5 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h5><h6 id="无框矩阵"><a href="#无框矩阵" class="headerlink" title="无框矩阵"></a>无框矩阵</h6><p>在开头使用 <code>begin{matrix}</code>，在结尾使用 <code>end{matrix}</code>，在中间插入矩阵元素，每个元素之间插入 <code>&amp;</code> ，并在每行结尾处使用 <code>\\</code> 。<br>使用矩阵时必须声明 <code>$</code> 或 <code>$$</code> 符号。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$$</div><div class="line">        \begin&#123;matrix&#125;</div><div class="line">        1 &amp; x &amp; x^2 \\</div><div class="line">        1 &amp; y &amp; y^2 \\</div><div class="line">        1 &amp; z &amp; z^2 \\</div><div class="line">        \end&#123;matrix&#125;</div><div class="line">$$</div></pre></td></tr></table></figure>
+<p>$$<br>        \begin{matrix}<br>        1 &amp; x &amp; x^2 \<br>        1 &amp; y &amp; y^2 \<br>        1 &amp; z &amp; z^2 \<br>        \end{matrix}<br>$$</p>
+<h6 id="边框矩阵"><a href="#边框矩阵" class="headerlink" title="边框矩阵"></a>边框矩阵</h6><p>在开头将 <code>matrix</code> 替换为 <code>pmatrix</code> <code>bmatrix</code> <code>Bmatrix</code> <code>vmatrix</code> <code>Vmatrix</code> 。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ \begin&#123;matrix&#125; 1 &amp; 2 \\ 3 &amp; 4 \\ \end&#123;matrix&#125; $</div><div class="line">$ \begin&#123;pmatrix&#125; 1 &amp; 2 \\ 3 &amp; 4 \\ \end&#123;pmatrix&#125; $</div><div class="line">$ \begin&#123;bmatrix&#125; 1 &amp; 2 \\ 3 &amp; 4 \\ \end&#123;bmatrix&#125; $</div><div class="line">$ \begin&#123;Bmatrix&#125; 1 &amp; 2 \\ 3 &amp; 4 \\ \end&#123;Bmatrix&#125; $</div><div class="line">$ \begin&#123;vmatrix&#125; 1 &amp; 2 \\ 3 &amp; 4 \\ \end&#123;vmatrix&#125; $</div><div class="line">$ \begin&#123;Vmatrix&#125; 1 &amp; 2 \\ 3 &amp; 4 \\ \end&#123;Vmatrix&#125; $</div></pre></td></tr></table></figure>
+<p>$$<br>\begin{matrix} 1 &amp; 2 \ 3 &amp; 4 \ \end{matrix}<br>\begin{pmatrix} 1 &amp; 2 \ 3 &amp; 4 \ \end{pmatrix}<br> \begin{bmatrix} 1 &amp; 2 \ 3 &amp; 4 \ \end{bmatrix}<br> \begin{Bmatrix} 1 &amp; 2 \ 3 &amp; 4 \ \end{Bmatrix}<br> \begin{vmatrix} 1 &amp; 2 \ 3 &amp; 4 \ \end{vmatrix}<br> \begin{Vmatrix} 1 &amp; 2 \ 3 &amp; 4 \ \end{Vmatrix}<br>$$</p>
+<h6 id="带省略符号的矩阵"><a href="#带省略符号的矩阵" class="headerlink" title="带省略符号的矩阵"></a>带省略符号的矩阵</h6><p>使用 <code>\cdots</code>   $\cdots$   , <code>\ddots</code>  $\ddots$   , <code>\vdots</code>   $\vdots$   来输入省略符号。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$$</div><div class="line">        \begin&#123;pmatrix&#125;</div><div class="line">        1 &amp; a_1 &amp; a_1^2 &amp; \cdots &amp; a_1^n \\</div><div class="line">        1 &amp; a_2 &amp; a_2^2 &amp; \cdots &amp; a_2^n \\</div><div class="line">        \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\</div><div class="line">        1 &amp; a_m &amp; a_m^2 &amp; \cdots &amp; a_m^n \\</div><div class="line">        \end&#123;pmatrix&#125;</div><div class="line">$$</div></pre></td></tr></table></figure>
+<p>$$<br>\begin{pmatrix}<br>        1 &amp; a_1 &amp; a_1^2 &amp; \cdots &amp; a_1^n \<br>        1 &amp; a_2 &amp; a_2^2 &amp; \cdots &amp; a_2^n \<br>        \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \<br>        1 &amp; a_m &amp; a_m^2 &amp; \cdots &amp; a_m^n \<br>        \end{pmatrix}<br>$$</p>
+<h6 id="增广矩阵"><a href="#增广矩阵" class="headerlink" title="增广矩阵"></a>增广矩阵</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$$</div><div class="line">\left[</div><div class="line">    \begin&#123;array&#125;&#123;cc|c&#125;</div><div class="line">      1&amp;2&amp;3\\</div><div class="line">      4&amp;5&amp;6</div><div class="line">    \end&#123;array&#125;</div><div class="line">\right]</div><div class="line">$$</div></pre></td></tr></table></figure>
+<p>$$<br>\left[<br>    \begin{array}{cc|c}<br>      1&amp;2&amp;3\<br>      4&amp;5&amp;6<br>    \end{array}<br>\right]<br>$$</p>
+<h5 id="分类表达式"><a href="#分类表达式" class="headerlink" title="分类表达式"></a>分类表达式</h5><p>定义函数的时候经常需要分情况给出表达式，可使用<code>\begin{cases}…\end{cases}</code>。其中，使用\来分类，使用&amp;指示需要对齐的位置。如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$$</div><div class="line">f(n) =</div><div class="line">\begin&#123;cases&#125;</div><div class="line">n &amp;\text&#123;if $n$ is even&#125;\\</div><div class="line">3n+1, &amp; \text&#123;if $n$ is odd&#125;\\</div><div class="line">\end&#123;cases&#125;</div><div class="line">$$</div></pre></td></tr></table></figure>
+<p>$$<br>f(n) =<br>\begin{cases}<br>n &amp;\text{if $n$ is even}\<br>3n+1, &amp; \text{if $n$ is odd}\<br> \end{cases}<br>$$</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$$</div><div class="line">        \left.</div><div class="line">        \begin&#123;array&#125;&#123;l&#125;</div><div class="line">        \text&#123;if $n$ is even:&#125;&amp; \frac n 2 \\</div><div class="line">        \text&#123;if $n$ is odd:&#125;&amp;3n+1</div><div class="line">        \end&#123;array&#125;</div><div class="line">        \right\&#125;</div><div class="line">        =f(n)</div><div class="line">$$</div></pre></td></tr></table></figure>
+<p>$$<br>\left.<br>        \begin{array}{l}<br>        \text{if $n$ is even:}&amp; \frac n 2   \[3ex]<br>        \text{if $n$ is odd:}&amp;3n+1 \[2ex]<br>        \end{array}<br>        \right}<br>        =f(n)<br>$$</p>
+<h3 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">st=&gt;start: Start:&gt;https://www.zybuluo.com</div><div class="line">io=&gt;inputoutput: verification</div><div class="line">op=&gt;operation: Your Operation</div><div class="line">cond=&gt;condition: Yes or No?</div><div class="line">sub=&gt;subroutine: Your Subroutine</div><div class="line">e=&gt;end</div><div class="line"></div><div class="line">st-&gt;io-&gt;op-&gt;cond</div><div class="line">cond(yes)-&gt;e</div><div class="line">cond(no)-&gt;sub-&gt;io</div></pre></td></tr></table></figure>
+<blockquote>
+<p>更多语法参考：<a href="http://adrai.github.io/flowchart.js/" target="_blank" rel="external">流程图语法参考</a> <a href="http://bramp.github.io/js-sequence-diagrams/" target="_blank" rel="external">序列图语法参考</a> <a href="https://knsv.github.io/mermaid/#gant-diagrams" target="_blank" rel="external">甘特图语法参考</a> <a href="https://knsv.github.io/mermaid/#sequence-diagrams" target="_blank" rel="external">Mermaid 序列图语法参考</a></p>
+</blockquote>
+<h2 id="Markdown编译器"><a href="#Markdown编译器" class="headerlink" title="Markdown编译器"></a>Markdown编译器</h2><ul>
+<li><a href="https://atom.io/" target="_blank" rel="external">atom</a></li>
+<li><a href="https://typora.io/" target="_blank" rel="external">Typora</a></li>
+<li><a href="https://www.zybuluo.com/cmd/" target="_blank" rel="external">Cmd Markdown</a></li>
+</ul>
 
-          
-            <div class="entry-summary" style="margin-left:0;">
-            Markdown简介
-Markdown 简介及进阶[TOC]
-Markdown简介Markdown 是一种轻量级标记语言，创始人为约翰·格鲁伯（John Gruber）。它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML(或者HTML)文档”。这种语言吸收了很多在电子邮件中已有的纯文本标记的特性^0。
-本文所用Markdown 语法基于GitHub Flavored Markdown 。
-Markdown语法标题  123456# 一级标题## 二级标题### 三级标题#### 四级标题##### 五级标题###### 六级标题
-示例：
-也可以加=====和-----来生成标题。
-123456这是一个一级标题==============这是一个二级标题------...
-          
-
-        
-          <p class="article-more-link">
-            <a href="/2017/05/05/Markdown-简介及进阶/#more">Continue Reading →</a>
-          </p>
-        </div>
       
     </div>
     <footer class="entry-meta entry-footer">
       
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-C-底层执行模型-CLR"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2016/11/27/C-底层执行模型-CLR/">C#底层执行模型-CLR</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	Posted on <a href="/2016/11/27/C-底层执行模型-CLR/" class="article-date">
-	  <time datetime="2016-11-27T08:05:59.000Z" itemprop="datePublished">November 27, 2016</time>
-	</a>
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/写作/">写作</a>
 
       
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具，写作/">工具，写作</a></li></ul>
 
-<!-- Table of Contents -->
-
-  
-    <article id="post-Java-类"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2016/10/02/Java-类/">Java-类</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	Posted on <a href="/2016/10/02/Java-类/" class="article-date">
-	  <time datetime="2016-10-02T08:20:31.000Z" itemprop="datePublished">October 2, 2016</time>
-	</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-      
       
     </footer>
   </div>
@@ -353,33 +1455,202 @@ float类型后加f,默认为’d...
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="JavaScript在HTML中使用"><a href="#JavaScript在HTML中使用" class="headerlink" title="JavaScript在HTML中使用"></a>JavaScript在HTML中使用</h1><ul>
+<li><p>内部嵌入</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript&gt;&lt;/script&gt;</span></span></div></pre></td></tr></table></figure>
+</li>
+<li><p>外部嵌入</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span>  <span class="attr">src</span>=<span class="string">"example.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>注意：</p>
+<ul>
+<li>第二个js脚本可能在第一个脚本之后进行覆盖，所以要确保不会发生冲突。</li>
+<li>在内部嵌入的js脚本要写在<code>&lt;body&gt;&lt;/body&gt;</code>的末尾，为了在加载js时不影响阅读。</li>
+</ul>
+<h1 id="JavaScript基本语法"><a href="#JavaScript基本语法" class="headerlink" title="JavaScript基本语法"></a>JavaScript基本语法</h1><h3 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h3><p>js的ECMAScript是区分大小写，其标识符由字母、数字、下划线、$构成，标识符的第一个字母不能为数字。</p>
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>注释和C一样，分单行和多行。</p>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><ul>
+<li><p>typeof</p>
+<ul>
+<li>undefined</li>
+</ul>
+<p>使用<code>var</code>但没有对其初始化的变量的类型。</p>
+<ul>
+<li>Null</li>
+<li>Boolean</li>
+<li>Number</li>
+</ul>
+<p>使用的是IEEE754格式</p>
+<ol>
+<li>浮点数</li>
+<li><p>数值范围</p>
+<p> ECMAScript的最小数值为<code>5e-324</code>，最大则是<code>1.79769313448623157e+308</code>。<br> 超过范围的数会被转换为<code>Infinity</code>和<code>-Infinity</code>.</p>
+</li>
+<li><p>NaN</p>
+<p>这是一个特殊的值，表示一个本来要返回数值的操作数未返回数值的情况。<br>涉及到<code>NaN</code>的操作都会返回<code>NaN</code>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">alert(<span class="literal">NaN</span> == <span class="literal">NaN</span>); <span class="comment">//false</span></div><div class="line">alert(<span class="number">0</span>/<span class="number">0</span>);   <span class="comment">//NaM</span></div><div class="line">alert(<span class="number">1</span>/<span class="number">0</span>);   <span class="comment">//Infinity</span></div><div class="line">alert(<span class="number">-1</span>/<span class="number">0</span>);  <span class="comment">//-Infinity</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>数值转换</p>
+<p>转换字符串 <code>parseInt()</code>-忽略前面的空格，直至找到第一个非空格字符，如果第一个字符不是数字字符或者负号，就会返回NaN。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> num1 = <span class="built_in">parseInt</span>（<span class="string">"1234blue"</span>); <span class="comment">//1234blue</span></div><div class="line"><span class="keyword">var</span> num2 = <span class="built_in">parseInt</span>(<span class="string">""</span>);          <span class="comment">//NaN</span></div><div class="line"><span class="keyword">var</span> num3 = <span class="built_in">parseInt</span>(<span class="string">"0xA"</span>);       <span class="comment">//10</span></div><div class="line"><span class="keyword">var</span> num4 = <span class="built_in">parseInt</span>(<span class="string">"22.5"</span>);      <span class="comment">//22</span></div></pre></td></tr></table></figure>
+<p>为了消除<code>parseInt</code>的一些影响，为其添加第二个参数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> num1 = <span class="built_in">parseInt</span>(<span class="string">"AF"</span>,<span class="number">16</span>)  <span class="comment">//175</span></div><div class="line"><span class="keyword">var</span> num2 = <span class="built_in">parseInt</span>(<span class="string">"AF"</span>);   <span class="comment">//NaN</span></div><div class="line"><span class="keyword">var</span> num3 = <span class="built_in">parseInt</span>(<span class="string">"10"</span>,<span class="number">2</span>); <span class="comment">//2（按照二进制）</span></div><div class="line"><span class="keyword">var</span> num3 = <span class="built_in">parseInt</span>(<span class="string">"10"</span>,<span class="number">8</span>); <span class="comment">//8</span></div><div class="line"><span class="keyword">var</span> num3 = <span class="built_in">parseInt</span>(<span class="string">"10"</span>,<span class="number">10</span>); <span class="comment">//10</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+<ul>
+<li>String</li>
+</ul>
+<p>js里面的单双引号的作用是相同的。</p>
+<ul>
+<li>Object</li>
+</ul>
+</li>
+</ul>
+<h3 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h3><p>  <code>==</code>操作符</p>
+<p>  如果两个操作数相等，返回<code>true</code>，反之<code>false</code>。两个操作符在比较之时会先转换（强制转换），然后再进行比较。</p>
+<ul>
+<li>如果有一个操作数是布尔型，则比较的相等性时先将其转换为数值false转换为0，而true转换为1。<ul>
+<li>如果有一个操作数是字符串，另一个是数值，在比较时先将字符串转换为数值。</li>
+<li>如果一个操作数是对象，另一个不是，则调用对象的<code>valueOf()</code>方法，用得到的基本类型值按照前面的规则比较。</li>
+<li><code>null</code>和<code>undefined</code>是相等的。</li>
+<li>要比较相等性之前，不能将<code>null</code>和<code>undefined</code>转换为其他值。</li>
+<li>如果有一个操作数是<code>NaN</code>，则相等操作符返回<code>false</code>。</li>
+<li>如果两个操作数都是对象，则比较它们是不是同一个对象。如果两个操作数是同一对象，则返回<code>true</code>，否则<code>false</code>。</li>
+</ul>
+</li>
+</ul>
+<p>  <code>===</code>操作符</p>
+<p>  在未转换的情况下进行比较。</p>
+<p>  <strong>其余操作符均与C、java相同。</strong></p>
+<h3 id="语句"><a href="#语句" class="headerlink" title="语句"></a>语句</h3><ul>
+<li>if<ul>
+<li>do-while</li>
+<li>while</li>
+<li>for</li>
+<li>for-in</li>
+<li>label</li>
+<li>break,continue</li>
+<li>with</li>
+<li>switch</li>
+</ul>
+</li>
+</ul>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">functionName</span>(<span class="params">arg0,arg1,arg2,...,argN</span>)</span>&#123;</div><div class="line">  statements；</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>  <strong>没有重载</strong></p>
+<p>  在ECMAScript中定义两个相同名字的函数，则该名字只属于后定义的函数。</p>
+<h1 id="基本类型"><a href="#基本类型" class="headerlink" title="基本类型"></a>基本类型</h1><p>ECMAScript变量包含两种不同数据类型的的值：基本类型值和引用类型值。</p>
+<p>ECMAScript中所有函数的参数都是按值传递的。很多同学都以为对象不是按值传递：<br>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">setName</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  obj.name = <span class="string">"Nichols"</span>;</div><div class="line">  obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">  obj.name = <span class="string">"Greg"</span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">setName(person);</div><div class="line">alert(person.name);<span class="comment">//"Nichols"</span></div><div class="line"><span class="comment">/*</span></div><div class="line">即使在函数内部改变参数的值，单原始的引用仍然没有变。</div><div class="line">实际上，当在函数内部重写obj的时候，这个变量引用的已经是一个局部对象了。这个对象会在函数执行完毕之后被销毁。</div><div class="line">*/</div></pre></td></tr></table></figure></p>
+<h3 id="引用类型-类"><a href="#引用类型-类" class="headerlink" title="引用类型-类"></a>引用类型-类</h3><p>引用类型的值（对象）是引用类型的实例。在ECMASript中，引用类型是一种数据结构，用于把数据和功能组织到一起。它也常被称作<strong>类</strong>。</p>
+<h3 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h3><p>创建Object实例有两种方法：</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>();<span class="comment">//第一种方法</span></div><div class="line">person.name = <span class="string">"wangli"</span>;</div><div class="line">person.age = <span class="number">18</span>;</div><div class="line"></div><div class="line"><span class="keyword">var</span> person = &#123;</div><div class="line">  <span class="attr">name</span> : <span class="string">"wangli"</span>;<span class="comment">//第二种方法</span></div><div class="line">  age : <span class="number">18</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h3><p>创建数组也有两种方法：<br>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>();</div><div class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">"red"</span>,<span class="string">"blue"</span>,<span class="string">"green"</span>);</div><div class="line"></div><div class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>,<span class="string">"blue"</span>];</div><div class="line"><span class="keyword">var</span> name = [];</div></pre></td></tr></table></figure></p>
+<p><strong>数组常用方法</strong></p>
+<ul>
+<li><p><code>toString</code></p>
+<p>返回由数组中每个值的字符串形式拼接而成的一个以逗号分隔的字符串。</p>
+</li>
+<li><code>pop(),push()</code></li>
+<li><p>队列方法（先进先出）</p>
+<p><code>shift(),unshift()</code>在数组第一位进行操作</p>
+</li>
+<li><p>排序</p>
+<p><code>sort() reverse()</code></p>
+</li>
+<li><p><code>concat(),slice(),splice()</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>,<span class="string">"green"</span>,<span class="string">"blue"</span>];</div><div class="line"><span class="keyword">var</span> color1 = colors.concat(<span class="string">"yellow"</span>,[<span class="string">"black"</span>,<span class="string">"brown"</span>]);</div><div class="line"><span class="keyword">var</span> color2 = colors.slice(<span class="number">1</span>);</div><div class="line"><span class="keyword">var</span> color3 = color1.slice(<span class="number">1</span>,<span class="number">3</span>);</div><div class="line">alert(colors);  <span class="comment">//red,green,blue</span></div><div class="line">alert(color1);  <span class="comment">//red,green,blue,yellow,black,brown</span></div><div class="line">alert(color2);  <span class="comment">//green,blue</span></div><div class="line">alert(color3);  <span class="comment">//grenn,blue,yellow</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>,<span class="string">"green"</span>,<span class="string">"blue"</span>];</div><div class="line"><span class="keyword">var</span> removed = color.splice(<span class="number">0</span>,<span class="number">1</span>);<span class="comment">//删除第一项</span></div><div class="line">alert(colors);  <span class="comment">//green,blue</span></div><div class="line">alert(removed); <span class="comment">//red</span></div><div class="line">removed = colors.splice(<span class="number">1</span>,<span class="number">0</span>,<span class="string">"yellow"</span>,<span class="string">"orange"</span>);<span class="comment">//从位置1处插入两项</span></div><div class="line">alert(colors);<span class="comment">//green,yellow,orange,blue</span></div><div class="line">alert(colors);<span class="comment">//返回一个空数组</span></div><div class="line">removed = colors.splice(<span class="number">1</span>,<span class="number">1</span>,<span class="string">"red"</span>,<span class="string">"purple"</span>)<span class="comment">//插入两项，删除一项</span></div><div class="line">alert(colors); <span class="comment">//green,red,purple,orange,blue</span></div><div class="line">alert(removed);<span class="comment">//yellow,返回的数组中只包含一项</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>位置方法</p>
+<p><code>indexOf()</code>从数组开头位置查找<br><code>lastIndexOf()</code>从数组末尾开始向前查找</p>
+</li>
+<li><p>迭代方法</p>
+<p><code>every</code>对数组的每一项运行指定函数，如果每项都返回true，则返回true。</p>
+<p><code>filter()</code>对数组中每个返回true的项组成数组并返回。</p>
+<p><code>map(),some()</code>都是用来查询数组中的项是否满足某个条件。对于every，传入的函数必须对每一项返回true,才会返回true，否则是false。而some（）则是只要有一项返回true，则返回true。</p>
+</li>
+<li>归并方法<br><code>reduce(),reduceRight()</code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> values = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</div><div class="line"><span class="keyword">var</span> sum = values.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">prex,cur,index,array</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> prev+cur;</div><div class="line">&#125;)  </div><div class="line">alert(sum); <span class="comment">//15</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Date类型"><a href="#Date类型" class="headerlink" title="Date类型"></a>Date类型</h3><h3 id="RegExp-类型"><a href="#RegExp-类型" class="headerlink" title="RegExp 类型"></a>RegExp 类型</h3><p>RegExp的每个实例都有下列属性：</p>
+<ul>
+<li>global: 布尔值，表示是否设置g标志。</li>
+<li>ignoreCase： 布尔值，表示是否设置i标志。</li>
+<li>lastIndex： 整数，表示开始搜索下一个匹配项的字符位置，从0开始。</li>
+<li>multiline： 布尔值，表示是否设置m标志。</li>
+<li>source： 正则表达式的字符串表示，按照字面量形式而非传入构造函数中的字符串模式返回。</li>
+</ul>
+<h3 id="Function-类型"><a href="#Function-类型" class="headerlink" title="Function 类型"></a>Function 类型</h3><p>函数声明和函数表达式：<br>在解析器中，会先读取函数声明，并使其在执行任何代码前可用；至于函数表达式，则必须等到解析器执行到它所在的代码行，才会真正被执行。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">alert(sum(<span class="number">10</span>,<span class="number">10</span>));<span class="comment">//正常执行</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">sum1,sum2</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> sum1+sum2;</div><div class="line">&#125;</div><div class="line"></div><div class="line">alert(sum(<span class="number">10</span>,<span class="number">10</span>)); <span class="comment">//产生错误</span></div><div class="line"><span class="keyword">var</span> sum = <span class="function"><span class="keyword">function</span>(<span class="params">num1, num2</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> sum1+sum2;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p>函数内部属性：</p>
+<ul>
+<li><p><strong>this</strong></p>
+<p>对于javaScript，万物皆对象，而<code>this</code>就执行着当前对象</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="string">"天气："</span>+<span class="keyword">this</span>.weather;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> sunDay&#123;</div><div class="line">  <span class="attr">palyer</span> : liming;</div><div class="line">  weather : hot;</div><div class="line">  hh : f</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> monDay&#123;</div><div class="line">  <span class="attr">palyer</span> : lihua;</div><div class="line">  weather : cool;</div><div class="line">  hh :f</div><div class="line">&#125;</div><div class="line">alert(sunDay.hh);<span class="comment">//天气：hot</span></div><div class="line">alert(monDay.hh);<span class="comment">//天气：cool</span></div></pre></td></tr></table></figure>
+<p><code>this</code>是非常灵活的，但是有时我们也需要将其固定下来。<code>javascript</code>提供了三个方法<code>apply bind call</code>来固定\切换<code>this</code>的指向</p>
+<ul>
+<li><code>call</code></li>
+</ul>
+<p>指定<code>this</code>的指向，然后在所指定的作用域，调用其函数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">sum1,sum2</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> sum1+sum2;</div><div class="line">&#125;</div><div class="line"> <span class="function"><span class="keyword">function</span> <span class="title">callSum</span>(<span class="params">num1,num2</span>)</span>&#123;</div><div class="line">   <span class="keyword">return</span> sum.call(<span class="keyword">this</span>, num1, num2);</div><div class="line"> &#125;</div><div class="line"> alter(callSum(<span class="number">10</span>,<span class="number">10</span>));  <span class="comment">//20</span></div></pre></td></tr></table></figure>
+<ul>
+<li><code>apply</code></li>
+</ul>
+<p><code>apply</code>方法与<code>call</code>相似，只不过传递的是数组。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">num1, num2</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> num1+num2;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">callSum1</span>(<span class="params">num1,num2</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> sum.apply(<span class="keyword">this</span> ,<span class="built_in">arguments</span>);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">callSum2</span>(<span class="params">num1, num2</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> sum.apply(<span class="keyword">this</span> , [num1,num2]);</div><div class="line">&#125;</div><div class="line">alter(callSum1(<span class="number">10</span>,<span class="number">10</span>)); <span class="comment">//20</span></div><div class="line">alter(callSum2(<span class="number">10</span>,<span class="number">10</span>)); <span class="comment">//20</span></div></pre></td></tr></table></figure>
+<ul>
+<li><code>bind</code></li>
+</ul>
+<p><code>bind</code>方法用于将函数体内的<code>this</code>绑定到某个对象，然后返回一个新函数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> add = <span class="function"><span class="keyword">function</span> (<span class="params">x, y</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> x * <span class="keyword">this</span>.m + y * <span class="keyword">this</span>.n;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line">  <span class="attr">m</span>: <span class="number">2</span>,</div><div class="line">  <span class="attr">n</span>: <span class="number">2</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> newAdd = add.bind(obj, <span class="number">5</span>);</div><div class="line"></div><div class="line">newAdd(<span class="number">5</span>)</div><div class="line"><span class="comment">// 20</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="基本包装类型"><a href="#基本包装类型" class="headerlink" title="基本包装类型"></a>基本包装类型</h3><p>从代码来看<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> s1 = <span class="string">"some text"</span>;</div><div class="line"><span class="keyword">var</span> s2 = s1.subString(<span class="number">2</span>);</div><div class="line">​<span class="string">`</span></div></pre></td></tr></table></figure></p>
+<p>在执行上述代码时后台操作是：</p>
+<ol>
+<li>创建String类型的一个实例。</li>
+<li>在实例上调用指定的方法。</li>
+<li>销毁这个实例。<br>操作如同下面的代码：<br>​<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> s1 = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"some text"</span>);</div><div class="line"><span class="keyword">var</span> s2 = s1.subString(<span class="number">2</span>);</div><div class="line">s1 = <span class="literal">null</span>;</div></pre></td></tr></table></figure></li>
+</ol>
+<p>引用类型与基本包装类型的区别就是对象的生存期。使用<code>new</code>操作符创建的引用类型的实例，在执行流离开当前作用域之前一直保存在内存中。而<br>自动创建的基本包装类型对象，则只存在于一行代码的瞬间执行，然后销毁。这意味着我们并不能在运行时为基本类型添加属性和方法。</p>
+<p><code>Boolean</code>类型</p>
+<p>  不建议使用</p>
+<p><code>Number</code>类型</p>
+<p>  要创建Number对象，可以调用Number构造函数时向其中传递相应的数值<br><code>var numberObject = new Number(10);</code></p>
+<p><code>String</code>类型</p>
+<p>  <code>String</code>类型是字符串的对象包装类型，可以像下面这样使用<code>String</code>构造函数来创建<br><code>var stringObject = new String(&quot;hello world&quot;);</code></p>
+<ol>
+<li><p>字符方法</p>
+<p><code>charAt() charCodeAt()</code>,例如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> stringValue = <span class="string">"hello world"</span>;</div><div class="line">alert(stringValue.charAt(<span class="number">1</span>)); <span class="comment">//"e" ,输出的是字符</span></div><div class="line">alert(stringValue.charCodeAt(<span class="number">1</span>)); <span class="comment">//"101" 输出的是字符编码（utf-8）</span></div><div class="line">alert(stringValue[<span class="number">1</span>]); <span class="comment">//"e"</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>字符串操作方法</p>
+<p><code>conact</code>字符串拼接</p>
+<p><code>slice、substr、substring</code>三种创新字符串的方法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> stringValue = <span class="string">"hello world"</span>;</div><div class="line">alert(stringValue.slice(<span class="number">-3</span>));<span class="comment">//"rld"</span></div><div class="line">alert(stringValue.substring(<span class="number">-3</span>);<span class="comment">//"hello world"  负值会被转化成0</span></div><div class="line">alert(stringValue.substr(<span class="number">-3</span>));<span class="comment">//"rld"</span></div><div class="line">alert(stringValue.slice(<span class="number">3</span>,<span class="number">-4</span>));<span class="comment">//"lo w"</span></div><div class="line">alert(stringValue.substring(<span class="number">3</span>,<span class="number">-4</span>));<span class="comment">//"hel"</span></div><div class="line">alert(stringValue.substr(<span class="number">3</span>,<span class="number">-4</span>));<span class="comment">//""</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>字符串位置方法</p>
+<p><code>indexOf、lastIndexOf</code></p>
+</li>
+<li><p><code>trim</code></p>
+<p>删除字符串前后的空格</p>
+</li>
+<li><p>字符串大小写转换方法</p>
+</li>
+<li>字符串模式匹配</li>
+<li><p><code>localeCompare</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> stringValue = <span class="string">"yellow"</span>;</div><div class="line"></div><div class="line">alert(stringValue.localeCompare(<span class="string">"brick"</span>));  <span class="comment">//1</span></div><div class="line">alert(stringValue.localeCompare(<span class="string">"yellow"</span>)); <span class="comment">//0</span></div><div class="line">alert(stringValue.localeCompare(<span class="string">"zoo"</span>));    <span class="comment">//-1</span></div></pre></td></tr></table></figure>
+</li>
+<li><p><code>fromCharCode</code></p>
+<p>将字符编码转换为字符串</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alert(<span class="built_in">String</span>.fromCharCode(<span class="number">104</span>, <span class="number">101</span>, <span class="number">108</span>, <span class="number">108</span>,<span class="number">111</span>)); <span class="comment">//"hello"</span></div></pre></td></tr></table></figure>
+</li>
+<li><p><code>eval</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">eval</span>(<span class="string">"alert('hi')"</span>);</div><div class="line">alert(<span class="string">'hi'</span>);  <span class="comment">//两句完全相同</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>random</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">值 = <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random()*可能值的总数+第一个可能的值)</div></pre></td></tr></table></figure>
+</li>
+</ol>
 
-          
-            <div class="entry-summary" style="margin-left:0;">
-            对javascript中的基础做一些总结，使用版本为ECMAScript 3.1.
-JavaScript在HTML中使用
-内部嵌入
-1&lt;script type="text/javascript&gt;&lt;/script&gt;
-
-外部嵌入
-1&lt;script  src="example.js"&gt;&lt;/script&gt;
-
-
-注意：
-
-第二个js脚本可能在第一个脚本之后进行覆盖，所以要确保不会发生冲突。
-在内部嵌入的js脚本要写在&lt;body&gt;&lt;/body&gt;的末尾，为了在加载js时不影响阅读。
-
-JavaScript基本语法标识符js的ECMAScript是区分大小写，其标识符由字母、数字、下划线、$构成，标识符的第一个字母不能为数字。
-注...
-          
-
-        
-          <p class="article-more-link">
-            <a href="/2016/08/16/JavaScript-ECMAScript/#more">Continue Reading →</a>
-          </p>
-        </div>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -452,52 +1723,6 @@ JavaScript基本语法标识符js的ECMAScript是区分大小写，其标识符�
 <!-- Table of Contents -->
 
   
-    <article id="post-Java之旅"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2016/08/11/Java之旅/">Java之旅</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	Posted on <a href="/2016/08/11/Java之旅/" class="article-date">
-	  <time datetime="2016-08-11T04:42:22.000Z" itemprop="datePublished">August 11, 2016</time>
-	</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>开始学Java，定期整理学习笔记，就这样吧。</p>
-
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/Java/">Java</a>
-
-      
-  <span class="ico-tags"></span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java学习/">Java学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
-
-      
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
     <article id="post-STM32 ADC使用（基础篇）"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -522,28 +1747,26 @@ JavaScript基本语法标识符js的ECMAScript是区分大小写，其标识符�
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="STM32-ADC"><a href="#STM32-ADC" class="headerlink" title="STM32 ADC"></a>STM32 ADC</h1><p>STM32上集成的ADC（Analog to Digital Convert）外设很强大。在以前用89C51时，还需要芯片来处理AD/DA,而现在用stm32显然方便很多。</p>
+<p>STM32（F10x系列）有3个12位的ADC，每个ADC有12个通道。各个通道的A/D转换可以单次也可以多次，连续，扫描，间断执行。ADC的结果可以左对齐或者右对齐的方式进行存储在16位的数据寄存器中。模拟看门狗允许应用程序检测电压是否超出规定阈值。</p>
+<p>ADC基本配置可以参考《STM32库开发实战指南》,至于在ADC转换的过程中使用注入、中断、看门狗等在进阶篇再介绍，在此只详细记录三种AD转换。</p>
+<blockquote>
+<ol>
+<li>ADC单通道转换。</li>
+<li>ADC单通道转换（DMA方式）。</li>
+<li>ADC多通道转换（DMA方式）。</li>
+</ol>
+</blockquote>
+<h2 id="ADC单通道转换"><a href="#ADC单通道转换" class="headerlink" title="ADC单通道转换"></a>ADC单通道转换</h2><h4 id="直接贴代码叙述"><a href="#直接贴代码叙述" class="headerlink" title="直接贴代码叙述"></a>直接贴代码叙述</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span>  <span class="title">Adc_Init</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">    &#123;   </div><div class="line">        ADC_InitTypeDef ADC_InitStructure;</div><div class="line">        GPIO_InitTypeDef GPIO_InitStructure;</div><div class="line"></div><div class="line">        RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA |RCC_APB2Periph_ADC1, ENABLE );  </div><div class="line">        <span class="comment">//使能ADC1通道时钟，并使能接受ADC转换的GPIO</span></div><div class="line">        RCC_ADCCLKConfig(RCC_PCLK2_Div6);   </div><div class="line">        <span class="comment">//设置ADC分频因子6 72M/6=12,ADC最大时间不能超过14M，（可设置的分频系数为2、4、6、8）</span></div><div class="line"></div><div class="line">         <span class="comment">//PA1 作为模拟通道输入引脚                         </span></div><div class="line">        GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1;</div><div class="line">        GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AIN;                   <span class="comment">//模拟输入引脚</span></div><div class="line">        GPIO_Init(GPIOA, &amp;GPIO_InitStructure);  </div><div class="line"></div><div class="line">        ADC_DeInit(ADC1);  <span class="comment">//复位ADC1</span></div><div class="line">        ADC_InitStructure.ADC_Mode = ADC_Mode_Independent;  <span class="comment">//ADC工作模式:STM32有多种工作模式，而不同的ADC又是共用通道，当两个ADC采集同一个通道的先后顺序和时间间隔不同，就有不同的方式。具体的各个方式可在手册中查询。</span></div><div class="line">        ADC_InitStructure.ADC_ScanConvMode = DISABLE;   <span class="comment">//模数转换工作在单通道模式。当多通道需要ADC采集时，可把ADC配置为按一定顺序对各个通道进行扫描转换，即进行轮流采集各通道的值。若采集多个通道，则必须开启此模式。</span></div><div class="line">        ADC_InitStructure.ADC_ContinuousConvMode = DISABLE; <span class="comment">//模数转换工作在单次转换模式。可设置为连续和单次。</span></div><div class="line">        ADC_InitStructure.ADC_ExternalTrigConv = ADC_ExternalTrigConv_None; <span class="comment">//转换由软件而不是外部触发启动</span></div><div class="line">        ADC_InitStructure.ADC_DataAlign = ADC_DataAlign_Right;  <span class="comment">//ADC数据右对齐（ADC的转换精度为12位，而ADC的数据存储器-ADC_DR为16位，所以就有了左对齐和右对齐）</span></div><div class="line">        ADC_InitStructure.ADC_NbrOfChannel = <span class="number">1</span>; <span class="comment">//顺序进行规则转换的ADC通道的数目（1-16)</span></div><div class="line">        ADC_Init(ADC1, &amp;ADC_InitStructure); <span class="comment">//根据ADC_InitStruct中指定的参数初始化外设ADCx的寄存器   </span></div><div class="line"></div><div class="line"></div><div class="line">        ADC_Cmd(ADC1, ENABLE);  <span class="comment">//使能指定的ADC1</span></div><div class="line">        ADC_ResetCalibration(ADC1); <span class="comment">//使能复位校准  </span></div><div class="line">        <span class="keyword">while</span>(ADC_GetResetCalibrationStatus(ADC1)); <span class="comment">//等待复位校准结束</span></div><div class="line">        ADC_StartCalibration(ADC1);  <span class="comment">//开启AD校准</span></div><div class="line">        <span class="keyword">while</span>(ADC_GetCalibrationStatus(ADC1));   <span class="comment">//等待校准结束</span></div><div class="line">    <span class="comment">//  ADC_SoftwareStartConvCmd(ADC1, ENABLE);     //使能指定的ADC1的软件转换启动功能</span></div><div class="line">     &#125;</div><div class="line"></div><div class="line"></div><div class="line">    <span class="comment">//获得ADC值</span></div><div class="line">    <span class="comment">//ch:通道值 0~3 ADC_Channel_0(0-17)</span></div><div class="line">    <span class="function">u16 <span class="title">Get_Adc</span><span class="params">(u8 ch)</span>   </span></div><div class="line">    &#123;</div><div class="line">        <span class="comment">//设置指定ADC的规则组通道，一个序列，采样时间</span></div><div class="line">        ADC_RegularChannelConfig(ADC1, ch, <span class="number">1</span>, ADC_SampleTime_239Cycles5 );  <span class="comment">//ADC1,ADC通道,采样时间为239.5周期（T=采样周期+12.5个周期）</span></div><div class="line">        ADC_SoftwareStartConvCmd(ADC1, ENABLE);     <span class="comment">//使能指定的ADC1的软件转换启动功能    </span></div><div class="line">        <span class="keyword">while</span>(!ADC_GetFlagStatus(ADC1, ADC_FLAG_EOC ));<span class="comment">//等待转换结束</span></div><div class="line"></div><div class="line">        <span class="keyword">return</span> ADC_GetConversionValue(ADC1);    <span class="comment">//返回最近一次ADC1规则组的转换结果</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function">u16 <span class="title">Get_Adc_Average</span><span class="params">(u8 ch,u8 times)</span></span></div><div class="line">    &#123;</div><div class="line">        u32 temp_val=<span class="number">0</span>;</div><div class="line">        u8 t;</div><div class="line">        <span class="keyword">for</span>(t=<span class="number">0</span>;t&lt;times;t++)</div><div class="line">        &#123;</div><div class="line">            temp_val+=Get_Adc(ch);</div><div class="line">            delay_ms(<span class="number">5</span>);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> temp_val/times;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>在<code>main</code>函数中只要调用<code>adcx=Get_Adc_Average(ADC_Channel_1,10);</code>之类的就可以读取转换的值。</p>
+<h2 id="ADC单通道转换-DMA方式"><a href="#ADC单通道转换-DMA方式" class="headerlink" title="ADC单通道转换(DMA方式)"></a>ADC单通道转换(DMA方式)</h2><h4 id="为什么要用DMA方式"><a href="#为什么要用DMA方式" class="headerlink" title="为什么要用DMA方式"></a>为什么要用DMA方式</h4><p>在上述的ADC转换中，CPU要处理由ADC外设采集回来的数据时，CPU首先要把数据从ADC外设的寄存器读取到CPU内存中，然后进行运算。但是用CPU来转换数据是有些<strong>杀鸡用牛刀</strong>，用DMA方式可以大大减轻CPU工作，从而提高运算效率。</p>
+<h4 id="贴代码"><a href="#贴代码" class="headerlink" title="贴代码"></a>贴代码</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> ADC1_DR_Address    ((u32)0x40012400+0x4c)<span class="comment">//DMA传输的外设地址ADC1_DR_Address是一个自定义的宏ADC_DR保存了ADC转换的值，以它作为DMA传输的源地址。</span></span></div><div class="line"></div><div class="line">__IO <span class="keyword">uint16_t</span> ADC_ConvertedValue;<span class="comment">//在传输地址中定义一个基地址</span></div><div class="line"><span class="comment">//__IO u16 ADC_ConvertedValueLocal;</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">ADC1_GPIO_Config</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">&#123;</div><div class="line">    GPIO_InitTypeDef GPIO_InitStructure;</div><div class="line"></div><div class="line">    <span class="comment">/* 使能DMA时钟 */</span></div><div class="line">    RCC_AHBPeriphClockCmd(RCC_AHBPeriph_DMA1, ENABLE);</div><div class="line">    RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC1 | RCC_APB2Periph_GPIOC, ENABLE);</div><div class="line"></div><div class="line">    <span class="comment">/* 输入的GPIO口定义*/</span></div><div class="line">    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1;</div><div class="line">    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AIN;<span class="comment">//ADC必须为模拟输入（输入后ADC转换为二进制）</span></div><div class="line">    GPIO_Init(GPIOC, &amp;GPIO_InitStructure);              <span class="comment">// PC1,输入时不用设置速率</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">ADC1_Mode_Config</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">&#123;</div><div class="line">    DMA_InitTypeDef DMA_InitStructure;</div><div class="line">    ADC_InitTypeDef ADC_InitStructure;</div><div class="line"></div><div class="line">    <span class="comment">/* DMA channel1 configuration */</span></div><div class="line">    DMA_DeInit(DMA1_Channel1);</div><div class="line">    DMA_InitStructure.DMA_PeripheralBaseAddr = ADC1_DR_Address;  <span class="comment">//ADC地址</span></div><div class="line">    DMA_InitStructure.DMA_MemoryBaseAddr = (u32)&amp;ADC_ConvertedValue;<span class="comment">//内存地址</span></div><div class="line">    DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralSRC;</div><div class="line">    DMA_InitStructure.DMA_BufferSize = <span class="number">1</span>;</div><div class="line">    DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable;<span class="comment">//外设地址固定</span></div><div class="line">    DMA_InitStructure.DMA_MemoryInc = DMA_MemoryInc_Disable;  <span class="comment">//内存地址固定</span></div><div class="line">    DMA_InitStructure.DMA_PeripheralDataSize = DMA_PeripheralDataSize_HalfWord; <span class="comment">//半字</span></div><div class="line">    DMA_InitStructure.DMA_MemoryDataSize = DMA_MemoryDataSize_HalfWord;</div><div class="line">    DMA_InitStructure.DMA_Mode = DMA_Mode_Circular;     <span class="comment">//循环传输</span></div><div class="line">    DMA_InitStructure.DMA_Priority = DMA_Priority_High;</div><div class="line">    DMA_InitStructure.DMA_M2M = DMA_M2M_Disable;</div><div class="line">    DMA_Init(DMA1_Channel1, &amp;DMA_InitStructure);</div><div class="line"></div><div class="line">    <span class="comment">/* Enable DMA channel1 */</span></div><div class="line">    DMA_Cmd(DMA1_Channel1, ENABLE);</div><div class="line"></div><div class="line">    <span class="comment">/* ADC1 configuration */</span></div><div class="line"></div><div class="line">    ADC_InitStructure.ADC_Mode = ADC_Mode_Independent;  <span class="comment">//独立ADC模式</span></div><div class="line">    ADC_InitStructure.ADC_ScanConvMode = DISABLE ;   <span class="comment">//禁止扫描模式，扫描模式用于多通道采集</span></div><div class="line">    ADC_InitStructure.ADC_ContinuousConvMode = ENABLE;  <span class="comment">//开启连续转换模式，即不停地进行ADC转换</span></div><div class="line">    ADC_InitStructure.ADC_ExternalTrigConv = ADC_ExternalTrigConv_None; <span class="comment">//不使用外部触发转换</span></div><div class="line">    ADC_InitStructure.ADC_DataAlign = ADC_DataAlign_Right;  <span class="comment">//采集数据右对齐</span></div><div class="line">    ADC_InitStructure.ADC_NbrOfChannel = <span class="number">1</span>;     <span class="comment">//要转换的通道数目1</span></div><div class="line">    ADC_Init(ADC1, &amp;ADC_InitStructure);</div><div class="line"></div><div class="line">    <span class="comment">/*配置ADC时钟，为PCLK2的8分频，即9Hz*/</span></div><div class="line">    RCC_ADCCLKConfig(RCC_PCLK2_Div8);</div><div class="line">    <span class="comment">/*配置ADC1的通道11为55.   5个采样周期，序列为1 */</span></div><div class="line">    ADC_RegularChannelConfig(ADC1, ADC_Channel_11, <span class="number">1</span>, ADC_SampleTime_55Cycles5);</div><div class="line"></div><div class="line">    <span class="comment">/* Enable ADC1 DMA */</span></div><div class="line">    ADC_DMACmd(ADC1, ENABLE);</div><div class="line"></div><div class="line">    <span class="comment">/* Enable ADC1 */</span></div><div class="line">    ADC_Cmd(ADC1, ENABLE);</div><div class="line"></div><div class="line">    <span class="comment">/*复位校准寄存器 */</span>   </div><div class="line">    ADC_ResetCalibration(ADC1);</div><div class="line">    <span class="comment">/*等待校准寄存器复位完成 */</span></div><div class="line">    <span class="keyword">while</span>(ADC_GetResetCalibrationStatus(ADC1));</div><div class="line"></div><div class="line">    <span class="comment">/* ADC校准 */</span></div><div class="line">    ADC_StartCalibration(ADC1);</div><div class="line">    <span class="comment">/* 等待校准完成*/</span></div><div class="line">    <span class="keyword">while</span>(ADC_GetCalibrationStatus(ADC1));</div><div class="line"></div><div class="line">    <span class="comment">/* 由于没有采用外部触发，所以使用软件触发ADC转换 */</span></div><div class="line">    ADC_SoftwareStartConvCmd(ADC1, ENABLE);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">ADC1_Init</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">&#123;</div><div class="line">    ADC1_GPIO_Config();</div><div class="line">    ADC1_Mode_Config();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>在<code>main</code>函数中读取<code>ADC_ConvertedValue</code>就为转换的到的值（一般来说转换为电压较好<code>ADC_ConvertedValueLocal =(float) ADC_ConvertedValue/4096*3.3;</code>)，记住必须在前面<code>extern</code>下。</p>
+<h2 id="ADC多通道转换（ADC多通道转换必须为DMA方式）"><a href="#ADC多通道转换（ADC多通道转换必须为DMA方式）" class="headerlink" title="ADC多通道转换（ADC多通道转换必须为DMA方式）"></a>ADC多通道转换（ADC多通道转换必须为DMA方式）</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div></pre></td><td class="code"><pre><div class="line"> u8 DMA1_MEM_LEN;</div><div class="line"><span class="comment">//DMA1的各通道配置</span></div><div class="line"><span class="comment">//这里的传输形式是固定的,这点要根据不同的情况来修改</span></div><div class="line"><span class="comment">//从外设模式-&gt;存储器/16位数据宽度/存储器增量模式</span></div><div class="line"> <span class="comment">//cmar:存储器地址（自己定义的存储地址AD_DATA[4]） cndtr:数据传输量,实际上就是ADC要转换的路数（N）</span></div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> ADC1_DR_Address  ((u32)0x40012400+0x4c)<span class="comment">//DMA传输的外设地址ADC1_DR_Address是一个自定义的宏ADC_DR保存了ADC转换的值，以它作为DMA传输的源地址。</span></span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">DMA_Config</span><span class="params">(u32 cmar,u16 cndtr)</span></span></div><div class="line">&#123;     </div><div class="line">    DMA_InitTypeDef DMA_InitStructure;</div><div class="line">    RCC_AHBPeriphClockCmd(RCC_AHBPeriph_DMA1, ENABLE);  <span class="comment">//使能DMA时钟</span></div><div class="line"></div><div class="line">    DMA_DeInit(DMA1_Channel1);   <span class="comment">//使用DMA的通道1，stm32有两个DMA，每个有7个通道</span></div><div class="line">    DMA_InitStructure.DMA_PeripheralBaseAddr = ADC1_DR_Address;  <span class="comment">//DMA外设基地址</span></div><div class="line">    DMA_InitStructure.DMA_MemoryBaseAddr = cmar;  <span class="comment">//DMA内存基地址</span></div><div class="line">    DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralSRC;  <span class="comment">//数据传输方向，从外设发送到内存  DMA_CCRX位4</span></div><div class="line">    DMA_InitStructure.DMA_BufferSize = cndtr;  <span class="comment">//DMA通道的DMA缓存的大小</span></div><div class="line">    DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable;  <span class="comment">//外设地址寄存器不变</span></div><div class="line">    DMA_InitStructure.DMA_MemoryInc = DMA_MemoryInc_Enable;  <span class="comment">//内存地址寄存器递增</span></div><div class="line">    DMA_InitStructure.DMA_PeripheralDataSize = DMA_PeripheralDataSize_HalfWord;  <span class="comment">//外设数据宽度为16位</span></div><div class="line">    DMA_InitStructure.DMA_MemoryDataSize = DMA_MemoryDataSize_HalfWord; <span class="comment">//内存数据宽度为16位</span></div><div class="line">    DMA_InitStructure.DMA_Mode = DMA_Mode_Circular;  <span class="comment">//工作在循环缓存模式</span></div><div class="line">    DMA_InitStructure.DMA_Priority = DMA_Priority_High; <span class="comment">//DMA通道 x拥有高优先级</span></div><div class="line">    DMA_InitStructure.DMA_M2M = DMA_M2M_Disable;  <span class="comment">//DMA通道x没有设置为内存到内存传输</span></div><div class="line">    DMA_Init(DMA1_Channel1, &amp;DMA_InitStructure);  <span class="comment">//根据DMA_InitStruct中指定的参数初始化DMA的通道USART1_Tx_DMA_Channel所标识的寄存器</span></div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N  4<span class="comment">//ADC1的通道数</span></span></div><div class="line"><span class="keyword">extern</span> u16 AD_DATA[<span class="number">4</span>];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span>  <span class="title">Adc_Init</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">&#123;</div><div class="line">  ADC_InitTypeDef ADC_InitStructure;</div><div class="line">  GPIO_InitTypeDef GPIO_InitStructure;</div><div class="line"></div><div class="line">  RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA |RCC_APB2Periph_ADC1,ENABLE );<span class="comment">//使能端口1的时钟和ADC1的时钟，因为ADC1的通道1在PA1上</span></div><div class="line">  RCC_ADCCLKConfig(RCC_PCLK2_Div6);   <span class="comment">//设置ADC分频因子6 72M/6=12M,ADC最大时间不能超过14M，也就是ADC的时钟频率为12MHz</span></div><div class="line"></div><div class="line">  <span class="comment">//PAx 作为模拟通道输入引脚                         </span></div><div class="line">  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0|GPIO_Pin_1|GPIO_Pin_3|GPIO_Pin_2;</div><div class="line">  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AIN;     <span class="comment">//模拟输入引脚</span></div><div class="line">  GPIO_Init(GPIOA, &amp;GPIO_InitStructure);</div><div class="line"></div><div class="line">  ADC_DeInit(ADC1);  <span class="comment">//复位ADC1,将外设 ADC1 的全部寄存器重设为缺省值</span></div><div class="line">  ADC_InitStructure.ADC_Mode = ADC_Mode_Independent;    <span class="comment">//本次实验使用的是ADC1，并ADC1工作在独立模式ADC_CR1的位19:16,即这几位为0000</span></div><div class="line">  ADC_InitStructure.ADC_ScanConvMode = ENABLE;  <span class="comment">//ADC_ScanConvMode 用来设置是否开启扫描模式，本实验开启扫面模式.ADC_CR1的位8</span></div><div class="line">  ADC_InitStructure.ADC_ContinuousConvMode = ENABLE;    <span class="comment">//ADC_ContinuousConvMode 用来设置是否开启连续转换模式 模数转换工作在连续转换模式，ADC_CR2的位1</span></div><div class="line">  ADC_InitStructure.ADC_ExternalTrigConv = ADC_ExternalTrigConv_None;   <span class="comment">//转换由软件而不是外部触发启动 ADC_CR2的位19:17</span></div><div class="line">  ADC_InitStructure.ADC_DataAlign = ADC_DataAlign_Right;    <span class="comment">//ADC数据右对齐ADC_CR2的位11</span></div><div class="line">  ADC_InitStructure.ADC_NbrOfChannel = N;   <span class="comment">//顺序进行规则转换的ADC通道的数目ADC_SQR1位23:20</span></div><div class="line">  ADC_Init(ADC1, &amp;ADC_InitStructure);   <span class="comment">//根据ADC_InitStruct中指定的参数初始化外设ADCx的寄存器   </span></div><div class="line"></div><div class="line">  ADC_RegularChannelConfig(ADC1, ADC_Channel_0, <span class="number">1</span>, ADC_SampleTime_55Cycles5 );<span class="comment">//ADC1；ADC1通道0；第1转换；采样时间为55周期</span></div><div class="line">  ADC_RegularChannelConfig(ADC1, ADC_Channel_1, <span class="number">2</span>, ADC_SampleTime_55Cycles5 );<span class="comment">//ADC1；ADC1通道1；第2转换；采样时间为55周期</span></div><div class="line">  ADC_RegularChannelConfig(ADC1, ADC_Channel_2, <span class="number">3</span>, ADC_SampleTime_55Cycles5 );</div><div class="line">  <span class="comment">//ADC1；ADC1通道1；第3转换；采样时间为55周期</span></div><div class="line">    ADC_RegularChannelConfig(ADC1, ADC_Channel_3, <span class="number">4</span>, ADC_SampleTime_55Cycles5 );<span class="comment">//ADC1；ADC1通道3；第4转换；采样时间为55周期</span></div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line">这里的ADC_SampleTime可配置1.5、7.5、13.5、28.5、41.5、55.5、71.5、239.5 其计算公式为T=采样周期+12.5个周期</div><div class="line">本代码中转换时间T=（55.5+12.5）/12  ----12为ADC时钟配置</div><div class="line">注意你要输入的进行规则转换的通道数N要全部进行通道配置</div><div class="line">**/</div><div class="line">  ADC_DMACmd(ADC1, ENABLE); <span class="comment">//使能ADC1的DMA传输，ADC_CR2位8</span></div><div class="line"></div><div class="line">  ADC_Cmd(ADC1, ENABLE);    <span class="comment">//使能的ADC1,ADC_CR2位0</span></div><div class="line"></div><div class="line">  ADC_ResetCalibration(ADC1);   <span class="comment">//使能复位校准，ADC_CR2位3  </span></div><div class="line">  <span class="keyword">while</span>(ADC_GetResetCalibrationStatus(ADC1));   <span class="comment">//等待复位校准结束</span></div><div class="line"></div><div class="line">  ADC_StartCalibration(ADC1);    <span class="comment">//开启AD校准，ADC_CR2位2</span></div><div class="line">  <span class="keyword">while</span>(ADC_GetCalibrationStatus(ADC1));     <span class="comment">//等待校准结束</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>在<code>main</code>函数中先声明<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N  4<span class="comment">//ADC1的通道数</span></span></div><div class="line">u16 AD_DATA[N];<span class="comment">//AD转换的数字量</span></div><div class="line"><span class="keyword">float</span> value[N];<span class="comment">//AD转换的模拟量</span></div></pre></td></tr></table></figure></p>
+<p>然后启动DMA<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Adc_Init();</div><div class="line">DMA_Config((u32)&amp;AD_DATA,N)</div><div class="line">DMA_Cmd(DMA1_Channel1, ENABLE);<span class="comment">//启动DMA通道</span></div><div class="line">ADC_SoftwareStartConvCmd(ADC1, ENABLE);<span class="comment">//软件启动AD转换</span></div></pre></td></tr></table></figure></p>
+<p>最后转换为电压即可<br><code>value[i] =(float) AD_DATA[i]*(3.3/4095)</code></p>
 
-          
-            <div class="entry-summary" style="margin-left:0;">
-            STM32上集成的ADC（Analog to Digital Convert）外设很强大。在以前用89C51时，还需要芯片来处理AD/DA,而现在用stm32显然方便很多。
-STM32（F10x系列）有3个12位的ADC，每个ADC有12个通道。各个通道的A/D转换可以单次也可以多次，连续，扫描，间断执行。ADC的结果可以左对齐或者右对齐的方式进行存储在16位的数据寄存器中。模拟看门狗允许应用程序检测电压是否超出规定阈值。
-ADC基本配置可以参考《STM32库开发实战指南》,至于在ADC转换的过程中使用注入、中断、看门狗等在进阶篇再介绍，在此只详细记录三种AD转换。
-
-
-ADC单通道转换。
-ADC单通道转换（DMA方式）。
-ADC多通道转换（DMA方式）。
-
-
-ADC单通道转换直接贴代...
-          
-
-        
-          <p class="article-more-link">
-            <a href="/2016/07/11/STM32 ADC使用（基础篇）/#more">Continue Reading →</a>
-          </p>
-        </div>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -575,9 +1798,9 @@ ADC单通道转换直接贴代...
     <form class="search-form">
         <label style="width: 75%;">
             <span class="screen-reader-text">Search for:</span>
-            <input type="search" class="search-field" style="height: 42px;" placeholder=" Search…" value="" name="s" title="Search for:">
+            <input type="search" class="search-field" style="height: 42px;" placeholder=" Suche…" value="" name="s" title="Search for:">
         </label>
-        <input type="submit" class="search-form-submit" value="Search">
+        <input type="submit" class="search-form-submit" value="Suche">
     </form>
     <div class="ins-search">
     <div class="ins-search-mask"></div>
@@ -676,7 +1899,7 @@ ADC单通道转换直接贴代...
     
   <div class="widget_athemes_tabs">
     <ul id="widget-tab" class="clearfix widget-tab-nav">
-      <li class="active"><a>Recent Posts</a></li>
+      <li class="active"><a>letzter Beitrag</a></li>
     </ul>
     <div class="widget">
       <ul>
@@ -687,32 +1910,32 @@ ADC单通道转换直接贴代...
               <div class="widget-entry-summary" style="margin: 0;">
             
 
+              <h6 style="margin: 0;"><a href="/2017/05/16/Python基础/">Python基础</a></h6>
+              <span>May 16, 2017</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2017/05/14/Django入门/">Django入门</a></h6>
+              <span>May 14, 2017</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
               <h6 style="margin: 0;"><a href="/2017/05/05/Markdown-简介及进阶/">Markdown 简介及进阶</a></h6>
               <span>May 5, 2017</span>
-            </div>
-
-          </li>
-        
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2016/11/27/C-底层执行模型-CLR/">C#底层执行模型-CLR</a></h6>
-              <span>November 27, 2016</span>
-            </div>
-
-          </li>
-        
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2016/10/02/Java-类/">Java-类</a></h6>
-              <span>October 2, 2016</span>
             </div>
 
           </li>
@@ -760,9 +1983,9 @@ ADC单通道转换直接贴代...
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">Kategorien</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ARM学习/">ARM学习</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/编程/">编程</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ARM学习/">ARM学习</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/写作/">写作</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/编程/">编程</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -772,7 +1995,7 @@ ADC单通道转换直接贴代...
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ADC/">ADC</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ECMAScript/">ECMAScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java学习/">Java学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stm32/">stm32</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ADC/">ADC</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Django/">Django</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ECMAScript/">ECMAScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Pycharm/">Pycharm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web开发，-后端/">Web开发， 后端</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stm32/">stm32</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/基础语法/">基础语法</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具，写作/">工具，写作</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -782,17 +2005,17 @@ ADC单通道转换直接贴代...
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/ADC/" style="font-size: 10px;">ADC</a> <a href="/tags/ECMAScript/" style="font-size: 10px;">ECMAScript</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Java学习/" style="font-size: 10px;">Java学习</a> <a href="/tags/java/" style="font-size: 20px;">java</a> <a href="/tags/stm32/" style="font-size: 10px;">stm32</a>
+      <a href="/tags/ADC/" style="font-size: 10px;">ADC</a> <a href="/tags/Django/" style="font-size: 10px;">Django</a> <a href="/tags/ECMAScript/" style="font-size: 10px;">ECMAScript</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Pycharm/" style="font-size: 10px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Web开发，-后端/" style="font-size: 10px;">Web开发， 后端</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/stm32/" style="font-size: 10px;">stm32</a> <a href="/tags/基础语法/" style="font-size: 10px;">基础语法</a> <a href="/tags/工具，写作/" style="font-size: 10px;">工具，写作</a>
     </div>
   </div>
 
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archiv</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
